@@ -1492,15 +1492,23 @@ section {
 
 .gradient-custom {
   /* fallback for old browsers */
-  background: #f6d365;
+  background: rgb(31, 165, 202);
   
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right bottom, #4A707A, #DDDDDA);
+  background: -webkit-linear-gradient(to right bottom, rgb(9, 75, 94), rgb(31, 31, 30));
   
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right bottom, #4A707A, #DDDDDA);
+  background: linear-gradient(to right bottom, rgb(9, 75, 94), rgb(31, 31, 30));
 
   text-align: center;
-  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
   border-bottom-left-radius: .5rem;
+}
+
+ul, li {
+  list-style: none;
+}
+
+#pagination-section {
+  visibility: hidden;
 }

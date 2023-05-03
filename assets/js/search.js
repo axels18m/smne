@@ -842,34 +842,64 @@ const searchByEntitySelect = document.getElementById('searchByEntity');
 
 // Btns
 const clearFiltersBtn = document.querySelector('#clearFiltersBtn');
-clearFiltersBtn.addEventListener('click', clearSearchResults);
 const searchFilterBtn = document.querySelector('#searchFilterBtn');
-searchFilterBtn.addEventListener('click', searchSpecialist);
 
 // Results
 const results = document.getElementById('searchResults');
 
+// Pagination
+var paginationDoctors = [];
+var currentPage = 1;
+var prevIndexSelected = -1;
+var currIndexSelected = 1;
+const doctorsPerPage = 10;
+const paginationContainer = document.getElementById('pagination');
+const prevPageButton = document.getElementById('prevPageButton');
+const nextPageButton = document.getElementById('nextPageButton');
+const paginationSection = document.getElementById('pagination-section');
+const paginationLinks = paginationContainer.getElementsByClassName('page-item');
+
+
+var totalPages = Math.ceil(doctors.length / doctorsPerPage);
+
+//Listeners
+prevPageButton.addEventListener('click', prevPage);
+nextPageButton.addEventListener('click', nextPage);
+clearFiltersBtn.addEventListener('click', clearSearchResults);
+searchFilterBtn.addEventListener('click', searchSpecialist);
+
 // Load specialities and states ----------------------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-    // 1 Get the select elements
-    const specialityOptions = document.getElementById("searchBySpeciality");
+document.addEventListener("DOMContentLoaded", async function () {
+    loadStates();
+    loadSpecialists();
+    loadPagination(doctors);
+});
+
+function loadStates() {
     const stateOptions = document.getElementById("searchByEntity");
 
-
-    specialists.forEach((specialty, index) => {
-        const option = document.createElement("option");
-        option.value = index + 1;
-        option.text = specialty;
-        specialityOptions.appendChild(option);
-    });
-
+    // States
     states.forEach((state, index) => {
         const option = document.createElement("option");
         option.value = index + 1;
         option.text = state;
         stateOptions.appendChild(option);
     });
-});
+}
+
+function loadSpecialists() {
+    const specialityOptions = document.getElementById("searchBySpeciality");
+
+    // Specialists
+    specialists.forEach((specialty, index) => {
+        const option = document.createElement("option");
+        option.value = index + 1;
+        option.text = specialty;
+        specialityOptions.appendChild(option);
+    });
+}
+
+
 
 // Methods  ----------------------------------------------------------------------------------------
 function searchSpecialist() {
@@ -879,6 +909,7 @@ function searchSpecialist() {
     const entityValue = searchByEntitySelect.value.toLowerCase();
 
     if (!lastName && !city && specialityValue === '0' && entityValue === '0') {
+        paginationDoctors = doctors;
         return displayResults(doctors);
     }
 
@@ -901,34 +932,48 @@ function searchSpecialist() {
         return true;
     });
 
-    return displayResults(filteredDoctors);
+    paginationDoctors = filteredDoctors;
+    displayResults(filteredDoctors);
 }
 
 
+const displayResults = (doctorResults) => {
+    // 1. Calculate the start and end index for the current page
+    const startIndex = (currentPage - 1) * doctorsPerPage;
+    const endIndex = startIndex + doctorsPerPage;
 
-const displayResults = (doctors) => {
+    // 2. Slice the doctors array to get only the doctors for the current page
+    const doctorsForPage = doctorResults.slice(startIndex, endIndex);
+    totalPages = Math.ceil(doctorResults.length / doctorsPerPage);
+
+
+    // 3. Clear previous results
     results.innerHTML = '';
-    console.log(doctors);
 
-    if (doctors.length === 0) {
+
+    // 4. Doctors array validation
+    if (doctorResults.length === 0) {
         results.innerHTML = `
           <div class="alert alert-warning mt-3" role="alert">
             No results found.
           </div>
         `;
+
+        showPaginationSection(false);
         return;
     }
 
+    // 5. Add results
     let cardsHtml = '';
-    doctors.forEach((doctor) => {
-
+    doctorsForPage.forEach((doctor) => {
         const card = `
             <div class="col col-lg-6 mb-4 mb-lg-0">
                 <div class="card mb-3" style="border-radius: .5rem;">
                     <div class="row g-0">
                         <div class="col-md-4 gradient-custom text-center text-white">
+                            <h5 class="mt-4">${doctor.firstName} ${doctor.lastName}</h5>
                             <img src="${doctor.profileImg}"alt="Avatar" class="img-fluid my-5" style="max-width: 150px;" />
-                            <h5>${doctor.firstName} ${doctor.lastName}</h5>
+                            
                             <p>${doctor.speciality}</p>
                             <i class="far fa-edit mb-5"></i>
                         </div>
@@ -958,6 +1003,11 @@ const displayResults = (doctors) => {
                                         <p class="text-muted">${doctor.state}</p>
                                     </div>
                                     <div class="col-6 mb-3">
+                                        <h6>City</h6>
+                                        <p class="text-muted">${doctor.city ? doctor.city : "Monterrey"}</p>
+                                    </div>
+
+                                    <div class="col-6 mb-3">
                                         <h6>Town</h6>
                                         <p class="text-muted">${doctor.town}</p>
                                     </div>
@@ -972,12 +1022,75 @@ const displayResults = (doctors) => {
     });
 
     results.innerHTML = cardsHtml;
+
+    // 6. Update the pagination buttons
+    loadPagination(totalPages);
+    updatePagination(totalPages);
+    showPaginationSection(true);
 };
 
+function loadPagination(totalPages) {
+    // Generate the HTML for the pagination links
+    let paginationHtml = '';
 
+    for (let i = 1; i <= totalPages; i++) {
+        paginationHtml += `<li class="page-item ${i === currentPage ? 'active' : ''}" id="on-paginate"><a class="page-link" onclick="onPaginateEvent(${i})" href="#busqueda">${i}</a></li>`;
+    }
+
+    paginationContainer.innerHTML = `
+        <ul class="pagination">
+            ${paginationHtml}
+        </ul>
+    `;
+}
+
+// Update the pagination buttons
+function updatePagination(totalPages) {
+
+    // Enable/disable the previous button based on the current page
+    if (currentPage === 1) {
+        prevPageButton.disabled = true;
+    } else {
+        prevPageButton.disabled = false;
+    }
+
+    // Enable/disable the next button based on the current page
+    if (currentPage === totalPages) {
+        nextPageButton.disabled = true;
+    } else {
+        nextPageButton.disabled = false;
+    }
+
+}
+
+// Navigate to the previous page
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        displayResults(paginationDoctors);
+    }
+}
+
+// Navigate to the next page
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        displayResults(paginationDoctors);
+    }
+}
+
+function showPaginationSection(state) {
+    paginationSection.style.visibility = state ? 'visible' : 'hidden';
+}
+
+function onPaginateEvent(index) {
+    prevIndexSelected = index - 1;
+    currIndexSelected = index;
+    currentPage = currIndexSelected;
+    displayResults(paginationDoctors);
+}
 
 function clearSearchResults() {
-    // Add event listener to the clear filters button
     // Reset all input fields and select dropdowns
     searchByLastNameInput.value = '';
     searchByCityInput.value = '';
