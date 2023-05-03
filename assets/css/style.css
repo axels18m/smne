@@ -1488,3 +1488,19 @@ section {
 #footer .credits a {
   color: #9eccf4;
 }
+
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom, #4A707A, #DDDDDA);
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, #4A707A, #DDDDDA);
+
+  text-align: center;
+  border-top-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
