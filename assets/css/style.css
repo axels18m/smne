@@ -1492,13 +1492,7 @@ section {
 
 .gradient-custom {
   /* fallback for old browsers */
-  background: rgb(31, 165, 202);
-  
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right bottom, rgb(9, 75, 94), rgb(31, 31, 30));
-  
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right bottom, rgb(9, 75, 94), rgb(31, 31, 30));
+  background: black;
 
   text-align: center;
   border-top-left-radius: .5rem;

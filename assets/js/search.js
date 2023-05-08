@@ -834,6 +834,10 @@ const doctors = [
         "zipcode": "989-2433"
     }
 ]
+
+// Table headers
+const tableHeaders = ["", "Ful Name", "Speciality", "State", "Email", "Phone", ""];
+
 // Filters
 const searchByLastNameInput = document.getElementById('searchByLastName');
 const searchByCityInput = document.getElementById('searchByCity');
@@ -843,9 +847,12 @@ const searchByEntitySelect = document.getElementById('searchByEntity');
 // Btns
 const clearFiltersBtn = document.querySelector('#clearFiltersBtn');
 const searchFilterBtn = document.querySelector('#searchFilterBtn');
+const modalBtn = document.querySelector("#showDoctorModal");
+const closeButton = document.querySelector(".btn-close");
 
 // Results
 const results = document.getElementById('searchResults');
+var displayResultsAsCard = false; // 
 
 // Pagination
 var paginationDoctors = [];
@@ -858,15 +865,25 @@ const prevPageButton = document.getElementById('prevPageButton');
 const nextPageButton = document.getElementById('nextPageButton');
 const paginationSection = document.getElementById('pagination-section');
 const paginationLinks = paginationContainer.getElementsByClassName('page-item');
-
-
 var totalPages = Math.ceil(doctors.length / doctorsPerPage);
+
+// Modal
+const modal = document.getElementById("showDoctorModal");
+const bootstrapModal = new bootstrap.Modal(document.getElementById("showDoctorModal"));
+const title = modal.querySelector(".modal-title");
+const body = modal.querySelector(".modal-body");
+const state = modal.querySelector("#doctorModalState");
+const city = modal.querySelector("#doctorModalSuburb");;
+const town = modal.querySelector("#doctorModalTown");
+const zipcode = modal.querySelector("#doctorModalZipCode");
 
 //Listeners
 prevPageButton.addEventListener('click', prevPage);
 nextPageButton.addEventListener('click', nextPage);
 clearFiltersBtn.addEventListener('click', clearSearchResults);
 searchFilterBtn.addEventListener('click', searchSpecialist);
+modalBtn.addEventListener("click", showModalListener);
+closeButton.addEventListener("click", () => bootstrapModal.hide());
 
 // Load specialities and states ----------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", async function () {
@@ -898,7 +915,6 @@ function loadSpecialists() {
         specialityOptions.appendChild(option);
     });
 }
-
 
 
 // Methods  ----------------------------------------------------------------------------------------
@@ -964,62 +980,7 @@ const displayResults = (doctorResults) => {
     }
 
     // 5. Add results
-    let cardsHtml = '';
-    doctorsForPage.forEach((doctor) => {
-        const card = `
-            <div class="col col-lg-6 mb-4 mb-lg-0">
-                <div class="card mb-3" style="border-radius: .5rem;">
-                    <div class="row g-0">
-                        <div class="col-md-4 gradient-custom text-center text-white">
-                            <h5 class="mt-4">${doctor.firstName} ${doctor.lastName}</h5>
-                            <img src="${doctor.profileImg}"alt="Avatar" class="img-fluid my-5" style="max-width: 150px;" />
-                            
-                            <p>${doctor.speciality}</p>
-                            <i class="far fa-edit mb-5"></i>
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="card-body p-4">
-                                <h6><strong>Information</strong></h6>
-                                <hr class="mt-0 mb-4">
-
-                                <div class="row pt-1">
-                                    <div class="col-6 mb-3">
-                                        <h6>Email</h6>
-                                        <p class="text-muted">${doctor.email}</p>
-                                    </div>
-                                    <div class="col-6 mb-3">
-                                        <h6>Phone</h6>
-                                        <p class="text-muted">${doctor.phone}</p>
-                                    </div>
-                                </div>
-
-                                <h6><strong>Address</strong></h6>
-                                <hr class="mt-0 mb-4">
-
-                                <div class="row pt-1">
-                                    <div class="col-6 mb-3">
-                                        <h6>State</h6>
-                                        <p class="text-muted">${doctor.state}</p>
-                                    </div>
-                                    <div class="col-6 mb-3">
-                                        <h6>City</h6>
-                                        <p class="text-muted">${doctor.city ? doctor.city : "Monterrey"}</p>
-                                    </div>
-
-                                    <div class="col-6 mb-3">
-                                        <h6>Town</h6>
-                                        <p class="text-muted">${doctor.town}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        cardsHtml += card;
-    });
+    let cardsHtml = displayResultsAsCard ? showDoctorsAsCards(doctorsForPage) : showDoctorsAsList(doctorsForPage);
 
     results.innerHTML = cardsHtml;
 
@@ -1098,4 +1059,136 @@ function clearSearchResults() {
     searchByEntitySelect.selectedIndex = 0;
 
     results.innerHTML = '';
+
+    // hide pagination
+    showPaginationSection(false);
 }
+
+function changeResultViewState(state) {
+    displayResultsAsCard = state;
+    displayResults(paginationDoctors);
+}
+
+function showDoctorsAsList(doctorsForPage) {
+    // 1. Clear previous results
+    if (!showDoctorsAsCards) results.innerHTML = '';
+
+    var result = '';
+    doctorsForPage.forEach((doctor, index) => {
+        result += `
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: .5rem;">
+                    <div class="row g-0">
+                        <div class="col-md-4 gradient-custom text-center text-white">
+                            <h5 class="mt-4">${doctor.firstName} ${doctor.lastName}</h5>
+                            <img src="${doctor.profileImg}" alt="Avatar" class="img-fluid my-5" style="max-width: 150px;" />
+                            
+                            <p>${doctor.speciality}</p>
+                            <i class="far fa-edit mb-5"></i>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <h6><strong>Information</strong></h6>
+                                <hr class="mt-0 mb-4">
+
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">${doctor.email}</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone</h6>
+                                        <p class="text-muted">${doctor.phone}</p>
+                                    </div>
+                                </div>
+
+                                <h6><strong>Address</strong></h6>
+                                <hr class="mt-0 mb-4">
+
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>State</h6>
+                                        <p class="text-muted">${doctor.state}</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>City</h6>
+                                        <p class="text-muted">${doctor.city ? doctor.suburb : "Monterrey"}</p>
+                                    </div>
+
+                                    <div class="col-6 mb-3">
+                                        <h6>Town</h6>
+                                        <p class="text-muted">${doctor.town}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    return result;
+}
+
+function showDoctorsAsCards(doctorsForPage) {
+    // 1. Clear previous results
+    if (showDoctorsAsCards) results.innerHTML = '';
+
+    var headers = '';
+    tableHeaders.forEach((header) => {
+        headers += `<th scope="col">${header}</th>`;
+    });
+
+    var data = '';
+    doctorsForPage.forEach((doctor, index) => {
+        data += `
+            <tr>
+                <th scope="row"><img src="${doctor.profileImg}" class="img-fluid" style="max-width: 40px;" /> </th>
+                <td>${doctor.firstName} ${doctor.lastName}</td>
+                <td>${doctor.speciality}</td>
+                <td>${doctor.state}</td>
+                <td>${doctor.email}</td>
+                <td>${doctor.state}</td>
+
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" onClick="showModalListener(${doctor.id})">Ver más</button>
+                </td>
+            </tr>
+        `;
+    });
+
+    return `
+        <div class="table-responsive">
+            <table class="table table-hover my-4">
+                <thead class="table-dark">
+                    <tr>
+                        ${headers}
+                    </tr>
+                </thead>
+                <tbody class="text-align-center align-middle">
+                    ${data}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+
+function showModalListener(doctorId) {
+    var modalDoctor = doctors.filter((doc) => doc.id === doctorId);
+
+    if (modalDoctor.length > 0) {
+        modalDoctor = modalDoctor[0];
+        title.textContent = "Dr. " + modalDoctor.firstName + " " + modalDoctor.lastName;
+        state.textContent = modalDoctor.state;
+        city.textContent = modalDoctor.suburb ? modalDoctor.suburb : "Not specified";
+        town.textContent = modalDoctor.town;
+        zipcode.textContent = modalDoctor.zipcode;
+    }
+
+    bootstrapModal.show();
+}
+
+

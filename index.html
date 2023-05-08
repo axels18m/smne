@@ -411,119 +411,90 @@
             style="font-family: 'Raleway', sans-serif;    font-size: 28px;     color: #1c5c93; text-transform: uppercase; font-style: normal;">
             Búsqueda de Especialistas</p>
         </div>
-        <!--
-          <div class="row">
-          <div class="col-lg-12 col-md-6" data-aos="fade-up">
 
-            <form class="row g-3">
-              <div class="col-md-2">
-                <label for="validationDefault01" class="form-label">Apellido paterno:</label>
-                <input type="text" class="form-control" id="validationDefault01" value="" required>
-              </div>
-              <div class="col-md-2">
-                <label for="validationDefault02" class="form-label">Buscar por ciudad:</label>
-                <input type="text" class="form-control" id="validationDefault02" value="" required>
-              </div>
-
-              <div class="col-md-3">
-                <label for="validationDefault04" class="form-label">Buscar por especialidad:</label>
-                <select class="form-select" id="validationDefault04" required>
-                  <option selected disabled value="">Seleccione una especialidad...</option>
-                  <option>Alta especialidad en obesidad</option>
-                  <option>Andrología</option>
-                </select>
-              </div>
-
-              <div class="col-md-3">
-                <label for="validationDefault04" class="form-label">Buscar por entidad:</label>
-                <select class="form-select" id="validationDefault04" required>
-                  <option selected disabled value="">Seleccione un estado...</option>
-                  <option>Nuevo León</option>
-                  <option>Coahuila</option>
-                </select>
-              </div>
-
-              <div class="col-2" style="padding-top: 30px;">
-                <span> <button class="btn btn-primary" type="submit">Buscar</button> <button class="btn btn-primary"
-                    type="submit">Limpiar</button>
-                </span>
-              </div>
-            </form>
-
-
-          </div>
-        </div>
-        -->
         <div class="row">
-           <div class="col-lg-12 col-md-6" data-aos="fade-up">
+          <div class="col-lg-12 col-md-6" data-aos="fade-up">
             <form class="row g-3">
-              <div class="col-md-2">
+              <div class="col-md">
                 <label for="searchByLastName" class="form-label">Apellido paterno:</label>
                 <input type="text" class="form-control" id="searchByLastName">
               </div>
-              <div class="col-md-2">
+              <div class="col-md">
                 <label for="searchByCity" class="form-label">Buscar por ciudad:</label>
                 <input type="text" class="form-control" id="searchByCity">
               </div>
-              <div class="col-md-3">
+              <div class="col-md">
                 <label for="searchBySpeciality" class="form-label">Buscar por especialidad:</label>
                 <select class="form-select" id="searchBySpeciality">
                   <option selected disabled value="0">Seleccione una especialidad...</option>
                 </select>
               </div>
-              <div class="col-md-3">
+              <div class="col-md">
                 <label for="searchByEntity" class="form-label">Buscar por entidad:</label>
                 <select class="form-select" id="searchByEntity">
                   <option selected disabled value="0">Seleccione un estado...</option>
                 </select>
               </div>
-              <div class="col-md-2" style="padding-top: 30px;">
+              <div class="col-md" style="padding-top: 30px;">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button class="btn btn-primary me-md-2 mb-2" type="button" id="searchFilterBtn">Buscar</button>
                   <button class="btn btn-primary mb-2" type="button" id="clearFiltersBtn">Limpiar</button>
                 </div>
               </div>
+
+              <div class="col-md" style="padding-top: 30px;">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-dark" type="button" onclick="changeResultViewState(false)"
+                    id="showDoctorsAsList">
+                    <i class="bx bx-grid-alt"></i>
+                    
+                  </button>
+                  <button class="btn btn-primary" type="button" onclick="changeResultViewState(true)"
+                    id="showDoctorsAsCards">
+                    <i class="bx bx-list-ul"></i>
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
-          
-          
 
           <div class="container">
-            <div id="searchResults" class="row mt-3 mb-3 d-flex justify-content-center align-items-center" data-aos="fade-up"></div>
+            <div id="searchResults" class="row mt-3 mb-3 d-flex justify-content-center align-items-center"
+              data-aos="fade-up">
+            </div>
+
             <div class="d-flex justify-content-center" id="pagination-section">
               <div class="row justify-content-center">
                 <div class="col-auto">
                   <ul class="pagination">
                     <li class="page-item" id="prevPageButton">
-                      <button class="page-link" href="#busqueda" aria-label="Previous">
+                      <a class="page-link" href="#busqueda" aria-label="Previous">
                         <strong>
                           <span aria-hidden="true">&laquo;</span>
                         </strong>
-                      </button>
+                      </a>
                     </li>
                   </ul>
                 </div>
-          
+
                 <div class="col-auto" id="pagination">
                   <ul class="pagination"></ul>
                 </div>
-          
+
                 <div class="col-auto">
                   <ul class="pagination">
                     <li class="page-item" id="nextPageButton">
-                      <button class="page-link" href="#busqueda" aria-label="Next">
+                      <a class="page-link" href="#busqueda" aria-label="Next">
                         <strong>
                           <span aria-hidden="true">&raquo;</span>
                         </strong>
-                      </button>
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          
-          
         </div>
 
 
@@ -645,7 +616,54 @@
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section> End Our Team Section -->
+
+    <!-- ======= More Doctor details info modal ======= -->
+    <div class="modal fade" id="showDoctorModal" tabindex="-1" role="dialog" aria-labelledby="showDoctorModal"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="doctorModalTitle"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <h6><strong>Address</strong></h6>
+                  <hr class="mt-0 mb-4">
+
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>State</h6>
+                      <p class="text-muted" id="doctorModalState"></p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>City</h6>
+                      <p class="text-muted" id="doctorModalSuburb"></p>
+                    </div>
+
+                    <div class="col-6 mb-3">
+                      <h6>Town</h6>
+                      <p class="text-muted" id="doctorModalTown"></p>
+                    </div>
+
+                    <div class="col-6 mb-3">
+                      <h6>Zipcode</h6>
+                      <p class="text-muted" id="doctorModalZipCode"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
