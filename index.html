@@ -430,7 +430,7 @@
                   <button class="btn btn-dark" type="button" onclick="changeResultViewState(false)"
                     id="showDoctorsAsList">
                     <i class="bx bx-grid-alt"></i>
-                    
+
                   </button>
                   <button class="btn btn-primary" type="button" onclick="changeResultViewState(true)"
                     id="showDoctorsAsCards">
@@ -445,44 +445,45 @@
             <div id="searchResults" class="row mt-3 mb-3 d-flex justify-content-center align-items-center"
               data-aos="fade-up">
             </div>
+          </div>
 
-            <div class="d-flex justify-content-center" id="pagination-section">
-              <div class="row justify-content-center">
-                <div class="col-auto">
-                  <ul class="pagination">
-                    <li class="page-item" id="prevPageButton">
-                      <a class="page-link" href="#busqueda" aria-label="Previous">
-                        <strong>
-                          <span aria-hidden="true">&laquo;</span>
-                        </strong>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+          <div class="d-flex justify-content-center" id="pagination-section">
+            <div class="row justify-content-center">
+              <div class="col-auto">
+                <ul class="pagination">
+                  <li class="page-item" id="prevPageButton">
+                    <a class="page-link" href="#busqueda" aria-label="Previous">
+                      <strong>
+                        <span aria-hidden="true">&laquo;</span>
+                      </strong>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-                <div class="col-auto" id="pagination">
-                  <ul class="pagination"></ul>
-                </div>
+              <div class="col-auto" id="pagination">
+                <ul class="pagination"></ul>
+              </div>
 
-                <div class="col-auto">
-                  <ul class="pagination">
-                    <li class="page-item" id="nextPageButton">
-                      <a class="page-link" href="#busqueda" aria-label="Next">
-                        <strong>
-                          <span aria-hidden="true">&raquo;</span>
-                        </strong>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="col-auto">
+                <ul class="pagination">
+                  <li class="page-item" id="nextPageButton">
+                    <a class="page-link" href="#busqueda" aria-label="Next">
+                      <strong>
+                        <span aria-hidden="true">&raquo;</span>
+                      </strong>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
 
 
-        <!--Area servicios
+      <!--Area servicios
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
@@ -601,8 +602,89 @@
       </div>
     </section> End Our Team Section -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="showDoctorModal" tabindex="-1" aria-labelledby="showDoctorModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="doctorModalTitle"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-0 align-items-center">
+              
+              <div class="col border-right">
+                <div class="status p-3">
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>Congress topic</strong></span>
+                            <span class="subheadings" id="doctorModalTopic"></span>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>Congress Time From/To</strong></span>
+                            <span class="subheadings" id="doctorModalCongressFromToTime"></span>
+                          </div>
+                        </td>
+                        <td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>Speciality</strong></span>
+                            <span class="subheadings" id="doctorModalSpeciality"></span>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>Moderator</strong></span>
+                            <span class="subheadings" id="doctorModalModerator"></span>
+                          </div>
+                        </td>
+                        <td>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>State & City</strong></span>
+                            <span class="subheadings" id="doctorModalState"></span>
+                          </div>
+                        </td>
+
+                        <td colspan="2">
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>Specialities</strong></span>
+                            <span class="subheadings" id="doctorModalSpecialities"></span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex flex-column">
+                            <span class="heading d-block"><strong>Direction</strong></span>
+                            <span class="d-block subheadings" id="doctorModalDirection"></span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ======= More Doctor details info modal ======= -->
-    <div class="modal fade" id="showDoctorModal" tabindex="-1" role="dialog" aria-labelledby="showDoctorModal"
+    <div class="modal fade" id="showDoctorModal1" tabindex="-1" role="dialog" aria-labelledby="showDoctorModal1"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
