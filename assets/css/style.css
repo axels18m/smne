@@ -1515,8 +1515,6 @@ li {
   visibility: hidden;
 }
 
-/* Modal see more */
-
 .close:focus {
   outline: 1px dotted #fff !important;
 }
