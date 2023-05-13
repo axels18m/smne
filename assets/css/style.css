@@ -1599,7 +1599,7 @@ li {
   border-radius: 15px 15px 0 0;
   margin: 0 auto;
   padding: 30px 30px 0px 0px;
-  background-color: #3f43fd;
+  background-color: #ebebed;
   overflow: hidden;
 }
 .single_advisor_profile .advisor_thumb::after {
@@ -1659,7 +1659,7 @@ li {
   z-index: 1;
   width: 50px;
   height: 3px;
-  background-color: #3f43fd;
+  background-color: #5b758d;
   content: "";
   top: 12px;
   right: 30px;
