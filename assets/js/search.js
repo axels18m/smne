@@ -97,6 +97,7 @@ const states = [
 var doctors = [
   {
     "id": 1,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Metabolismo Mineral Antonio",
@@ -143,6 +144,7 @@ var doctors = [
   },
   {
     "id": 2,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Metabolismo Mineral",
@@ -183,6 +185,7 @@ var doctors = [
   },
   {
     "id": 3,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Metabolismo Mineral",
@@ -219,6 +222,7 @@ var doctors = [
   },
   {
     "id": 4,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Metabolismo Mineral",
@@ -259,6 +263,7 @@ var doctors = [
   },
   {
     "id": 5,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tiroides",
@@ -297,6 +302,7 @@ var doctors = [
   },
   {
     "id": 6,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tiroides",
@@ -340,6 +346,7 @@ var doctors = [
   },
   {
     "id": 7,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tiroides",
@@ -393,6 +400,7 @@ var doctors = [
   },
   {
     "id": 8,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tiroides",
@@ -442,6 +450,7 @@ var doctors = [
   },
   {
     "id": 9,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Biología de la repoducción",
@@ -490,6 +499,7 @@ var doctors = [
   },
   {
     "id": 10,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Biología de la repoducción",
@@ -534,6 +544,7 @@ var doctors = [
   },
   {
     "id": 11,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Biología de la repoducción",
@@ -572,6 +583,7 @@ var doctors = [
   },
   {
     "id": 12,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Biología de la repoducción",
@@ -610,6 +622,7 @@ var doctors = [
   },
   {
     "id": 13,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Fisiopatología de NAFLD",
@@ -655,6 +668,7 @@ var doctors = [
   },
   {
     "id": 14,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Relación entre NAFLD y enfermedades endócrinas",
@@ -696,6 +710,7 @@ var doctors = [
   },
   {
     "id": 15,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Estratificación de NAFLD",
@@ -745,6 +760,7 @@ var doctors = [
   },
   {
     "id": 16,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tratamiento de NAFLD",
@@ -779,6 +795,7 @@ var doctors = [
   },
   {
     "id": 17,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "NAFLD",
@@ -820,6 +837,7 @@ var doctors = [
   },
   {
     "id": 18,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Síndrome de Ovario Poliquístico",
@@ -875,6 +893,7 @@ var doctors = [
   },
   {
     "id": 19,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Síndrome de Ovario Poliquístico",
@@ -952,6 +971,7 @@ var doctors = [
   },
   {
     "id": 20,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Síndrome de Ovario Poliquístico",
@@ -996,6 +1016,7 @@ var doctors = [
   },
   {
     "id": 21,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Síndrome de Ovario Poliquístico",
@@ -1037,6 +1058,7 @@ var doctors = [
   },
   {
     "id": 22,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Actualización en Diabetes",
@@ -1096,6 +1118,7 @@ var doctors = [
   },
   {
     "id": 23,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Actualización en Diabetes",
@@ -1142,6 +1165,7 @@ var doctors = [
   },
   {
     "id": 24,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Actualización en Diabetes",
@@ -1183,6 +1207,7 @@ var doctors = [
   },
   {
     "id": 25,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Taller de actualización en Obesidad",
@@ -1231,6 +1256,7 @@ var doctors = [
   },
   {
     "id": 26,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Taller de actualización en Obesidad",
@@ -1269,6 +1295,7 @@ var doctors = [
   },
   {
     "id": 27,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Taller de actualización en Obesidad",
@@ -1303,6 +1330,7 @@ var doctors = [
   },
   {
     "id": 28,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Taller de actualización en Obesidad",
@@ -1343,6 +1371,7 @@ var doctors = [
   },
   {
     "id": 29,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Diabetes",
@@ -1379,6 +1408,7 @@ var doctors = [
   },
   {
     "id": 30,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Diabetes",
@@ -1415,6 +1445,7 @@ var doctors = [
   },
   {
     "id": 31,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Diabetes",
@@ -1451,6 +1482,7 @@ var doctors = [
   },
   {
     "id": 32,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Diabetes",
@@ -1487,6 +1519,7 @@ var doctors = [
   },
   {
     "id": 33,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Diabetes",
@@ -1529,6 +1562,7 @@ var doctors = [
   },
   {
     "id": 34,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tópicos diversos en Endocrinología",
@@ -1565,6 +1599,7 @@ var doctors = [
   },
   {
     "id": 35,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Tópicos diversos en Endocrinología",
@@ -1604,6 +1639,7 @@ var doctors = [
   },
   {
     "id": 36,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Obesidad",
@@ -1650,6 +1686,7 @@ var doctors = [
   },
   {
     "id": 37,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Obesidad",
@@ -1686,6 +1723,7 @@ var doctors = [
   },
   {
     "id": 38,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición y Diabetes",
@@ -1722,6 +1760,7 @@ var doctors = [
   },
   {
     "id": 39,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición y Diabetes",
@@ -1758,6 +1797,7 @@ var doctors = [
   },
   {
     "id": 40,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición y Diabetes",
@@ -1794,6 +1834,7 @@ var doctors = [
   },
   {
     "id": 41,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición y Obesidad",
@@ -1830,6 +1871,7 @@ var doctors = [
   },
   {
     "id": 42,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición y Obesidad",
@@ -1871,6 +1913,7 @@ var doctors = [
   },
   {
     "id": 43,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición, Endocrinología y Salud metabólica en condiciones médicas comunes.",
@@ -1922,6 +1965,7 @@ var doctors = [
   },
   {
     "id": 44,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición, Endocrinología y Salud metabólica en condiciones médicas comunes.",
@@ -1958,6 +2002,7 @@ var doctors = [
   },
   {
     "id": 45,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición, Endocrinología y Salud metabólica en condiciones médicas comunes.",
@@ -1994,6 +2039,7 @@ var doctors = [
   },
   {
     "id": 46,
+    "hasDetails": true,
     "mainTopics": [
       {
         "topic": "Nutrición, Endocrinología y Salud metabólica en condiciones médicas comunes.",
@@ -2030,6 +2076,7 @@ var doctors = [
   },
   {
     "id": 47,
+    "hasDetails": false,
     "displayName": "Eloísa Saavedra Castillo ",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2038,6 +2085,7 @@ var doctors = [
   },
   {
     "id": 48,
+    "hasDetails": false,
     "displayName": "Claudia Alejandra Ortega Valdez ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2046,6 +2094,7 @@ var doctors = [
   },
   {
     "id": 49,
+    "hasDetails": false,
     "displayName": "Beatriz Ramírez Resendez ",
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2054,6 +2103,7 @@ var doctors = [
   },
   {
     "id": 50,
+    "hasDetails": false,
     "displayName": "Cristóbal Zambrano Santos ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2062,6 +2112,7 @@ var doctors = [
   },
   {
     "id": 51,
+    "hasDetails": false,
     "displayName": "Ignacio Alejandro Martinez Delgado",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2070,6 +2121,7 @@ var doctors = [
   },
   {
     "id": 52,
+    "hasDetails": false,
     "displayName": "Natalia Eloisa De La Garza Hernández",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2078,6 +2130,7 @@ var doctors = [
   },
   {
     "id": 53,
+    "hasDetails": false,
     "displayName": "Zinia Fernullda Martínez Mendoza ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2086,6 +2139,7 @@ var doctors = [
   },
   {
     "id": 54,
+    "hasDetails": false,
     "displayName": "Juan José Castillo Dávila",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2094,6 +2148,7 @@ var doctors = [
   },
   {
     "id": 55,
+    "hasDetails": false,
     "displayName": "Fernulldo Javier Lavalle González ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2102,6 +2157,7 @@ var doctors = [
   },
   {
     "id": 56,
+    "hasDetails": false,
     "displayName": "Cristóbal Zambrano Santos ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2110,6 +2166,7 @@ var doctors = [
   },
   {
     "id": 57,
+    "hasDetails": false,
     "displayName": "Leticia Maria Hernulldez Arizpr",
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2118,6 +2175,7 @@ var doctors = [
   },
   {
     "id": 58,
+    "hasDetails": false,
     "displayName": "Jazmín Medina Flores ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2126,6 +2184,7 @@ var doctors = [
   },
   {
     "id": 59,
+    "hasDetails": false,
     "displayName": "Jose Gerardo Ayala Villarreal",
     "speciality": "Medicina interna",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2134,6 +2193,7 @@ var doctors = [
   },
   {
     "id": 60,
+    "hasDetails": false,
     "displayName": "Luis Diego Maximiliano Ramos Anthony",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2142,6 +2202,7 @@ var doctors = [
   },
   {
     "id": 61,
+    "hasDetails": false,
     "displayName": "Anally Jamile Soto Garcia",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2150,6 +2211,7 @@ var doctors = [
   },
   {
     "id": 62,
+    "hasDetails": false,
     "displayName": "David Sánchez García ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2158,6 +2220,7 @@ var doctors = [
   },
   {
     "id": 63,
+    "hasDetails": false,
     "displayName": "Delfina Marina Montemayor Ortiz",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2166,6 +2229,7 @@ var doctors = [
   },
   {
     "id": 64,
+    "hasDetails": false,
     "displayName": "Jesús Arturo Ibarra Chávez",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2174,6 +2238,7 @@ var doctors = [
   },
   {
     "id": 65,
+    "hasDetails": false,
     "displayName": "María Elena Fernández González ",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2182,6 +2247,7 @@ var doctors = [
   },
   {
     "id": 66,
+    "hasDetails": false,
     "displayName": "Claudia Analy Velez Viveros",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2190,6 +2256,7 @@ var doctors = [
   },
   {
     "id": 67,
+    "hasDetails": false,
     "displayName": "Samantha Garza Fuentes",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2198,6 +2265,7 @@ var doctors = [
   },
   {
     "id": 68,
+    "hasDetails": false,
     "displayName": "Yessica Montserrat Garcia Salas ",
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2206,6 +2274,7 @@ var doctors = [
   },
   {
     "id": 69,
+    "hasDetails": false,
     "displayName": "Tonatiu Diaz Escalante",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2214,6 +2283,7 @@ var doctors = [
   },
   {
     "id": 70,
+    "hasDetails": false,
     "displayName": "Marco Antonio Roman Montalvo",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2222,14 +2292,16 @@ var doctors = [
   },
   {
     "id": 71,
+    "hasDetails": false,
     "displayName": "Juana B. Romero Villarreal",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "romerovillarreal@gmail.com",
-    "phone": "null"
+    "phone": null
   },
   {
     "id": 72,
+    "hasDetails": false,
     "displayName": "Karla Victoria Rodríguez Velver",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2238,14 +2310,16 @@ var doctors = [
   },
   {
     "id": 73,
+    "hasDetails": false,
     "displayName": "Graciela Gómez Martínez ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "graciela_gomez_mtz@hotmail.com",
-    "phone": "null"
+    "phone": null
   },
   {
     "id": 74,
+    "hasDetails": false,
     "displayName": "Luis Gerardo Dávila Medellin ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2254,6 +2328,7 @@ var doctors = [
   },
   {
     "id": 75,
+    "hasDetails": false,
     "displayName": "Cinthia Catalina Martinez Martinez",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2262,6 +2337,7 @@ var doctors = [
   },
   {
     "id": 76,
+    "hasDetails": false,
     "displayName": "Raul Ibarra Salce",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2270,6 +2346,7 @@ var doctors = [
   },
   {
     "id": 77,
+    "hasDetails": false,
     "displayName": "Mario Alberto Santana Mata ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2278,6 +2355,7 @@ var doctors = [
   },
   {
     "id": 78,
+    "hasDetails": false,
     "displayName": "Yesica Luna Garza",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2286,6 +2364,7 @@ var doctors = [
   },
   {
     "id": 79,
+    "hasDetails": false,
     "displayName": "Ricardo Omar Martínez Camacho",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
@@ -2809,13 +2888,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   loadSpecialists();
   loadPagination(doctors);
 
-  test();
 });
-
-function test() {
-  doctors.forEach((doc, index) => doc.id = index + 1);
-  console.log(JSON.stringify(doctors));
-};
 
 function loadStates() {
   const stateOptions = document.getElementById("searchByEntity");
@@ -3034,7 +3107,7 @@ function showDoctorsAsList(doctorsForPage) {
                                     <h6>${doctor.gender === "Male" ? "Dr. " : "Dra. "} ${doctor.displayName}</h6>
                                     <p class="designation">${doctor.speciality}</p>
                                 </div>
-                                <div class="col text-end">
+                                <div class="col text-end" ${!doctor.hasDetails ? 'hidden' : ''}>
                                     <button type="button" class="btn btn-sm btn-advisor" data-toggle="modal" data-target="#showDoctorModal" onClick="showModalListener(${doctor.id})">
                                         Ver más
                                     </button>
@@ -3062,18 +3135,18 @@ function showDoctorsAsCards(doctorsForPage) {
   var data = "";
   doctorsForPage.forEach((doctor, index) => {
     var topics = [];
-    doctor.mainTopics.forEach(mt => topics.push(mt.topic));
+    if (doctor.mainTopics) doctor.mainTopics.forEach(mt => topics.push(mt.topic));
 
     data += `
             <tr>
                 <th scope="row"><img src="${doctor.profileImg}" class="img-fluid doctor-avatar" style="max-width: 40px;" /></th>
                 <td>${doctor.displayName}</td>
                 <td>${doctor.speciality}</td>
-                <td>${doctor.email === '' || doctor.email === null ? '' : doctor.email}</td>
-                <td>${doctor.phone === '' || doctor.phone === null ? '' : doctor.phone}</td>
+                <td>${doctor.email === '' || doctor.email === null ? '-' : doctor.email}</td>
+                <td>${doctor.phone === '' || doctor.phone === null ? '-' : doctor.phone}</td>
                 <td>${topics.join(", ")}</td>
                 <td>
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" onClick="showModalListener(${doctor.id})">Ver más</button>
+                    <button type="button" ${!doctor.hasDetails ? 'hidden' : ''} class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" onClick="showModalListener(${doctor.id})">Ver más</button>
                 </td>
             </tr>
         `;
