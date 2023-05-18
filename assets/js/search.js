@@ -2408,7 +2408,7 @@ function showModalListener(doctorId) {
     moderator.textContent = moderators.join("\r\n");
 
     state.textContent = modalDoctor.address.state
-      ? modalDoctor.address.state + ", " + modalDoctor.address.town
+      ? modalDoctor.address.state + ", " + modalDoctor.address.town ? modalDoctor.address.town : ''
       : "Not specified";
 
     specialities.textContent =
@@ -2417,7 +2417,7 @@ function showModalListener(doctorId) {
         : "Not specified";
 
     addressDirection.textContent =
-      modalDoctor.address.completeAddress + ", " + modalDoctor.address.zipcode;
+      modalDoctor.address.completeAddress ? modalDoctor.address.completeAddress + ", " + modalDoctor.address.zipcode ? modalDoctor.address.zipcode : '' : '';
   }
 
   bootstrapModal.show();
