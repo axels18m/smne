@@ -545,7 +545,8 @@ section {
 }
 
 .section-bg {
-  background-color: #f5f9fc;
+  background-image: url("/assets/img/logos/Niña\ Configuración\ Congreso.jpg");
+  background-position: center;
 }
 
 .section-title {
@@ -822,13 +823,14 @@ section {
 # Counts
 --------------------------------------------------------------*/
 .counts {
-  padding-bottom: 30px;
+  padding-top: 150px;
 }
 
 .counts .count-box {
   box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  background: #fff;
+  background: rgb(255 255 255 / 33%);
+  color: white;
   margin-bottom: 30px;
 }
 
@@ -842,7 +844,7 @@ section {
   font-size: 42px;
   display: block;
   font-weight: 700;
-  color: #1c5c93;
+  color: #ffffff;
 }
 
 .counts .count-box p {
@@ -1348,16 +1350,17 @@ section {
 }
 
 #footer {
-  background: #587187;
+  background-image: url("/assets/img/logos/Configuración\ Congreso.jpg");
+  background-position: center;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #5c768d;
+  /*background: #5c768d4a;
   border-top: 1px solid #768fa6;
-  border-bottom: 1px solid #67839c;
+  border-bottom: 1px solid #67839c;*/
   padding: 60px 0 30px 0;
 }
 
