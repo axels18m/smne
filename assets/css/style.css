@@ -1,6 +1,5 @@
 /**
 * Template Name: Mamba
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
 * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -138,6 +137,7 @@ h6,
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+
 #header .logo h1 a,
 #header .logo h1 a:hover {
   color: #1c5c93;
@@ -396,7 +396,7 @@ h6,
 
 #hero .carousel-item::before {
   content: "";
-  background-color: rgba(13, 30, 45, 0.421);
+  background-color: rgba(13, 30, 45, 0.6);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -436,7 +436,7 @@ h6,
 
 #hero h2 {
   color: #fff;
-  /*margin-bottom: 30px;
+  /* margin-bottom: 30px;
   font-size: 48px;
   font-weight: 900;*/
 }
@@ -505,7 +505,7 @@ h6,
   color: #fff;
   animation-delay: 0.8s;
   border: 0;
-  background: #5f8ba2;
+  background: #428bca8f;
 }
 
 #hero .btn-get-started:hover {
