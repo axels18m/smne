@@ -1263,8 +1263,8 @@ var doctors = [
         "moderator": "Dr. Edmundo Ávila Hipólito"
       }
     ],
-    "firstName": "Carolina",
-    "lastName": "Medrano de Ávila",
+    "firstName": "Carolina Medrano",
+    "lastName": "de Ávila",
     "displayName": "Carolina Medrano de Ávila",
     "gender": "Female",
     "email": "",
@@ -1452,9 +1452,9 @@ var doctors = [
         "moderator": "Dra. Elizabeth Olavide Aguilar"
       }
     ],
-    "firstName": "Sergio",
-    "lastName": " Zúñiga Guajardo",
-    "displayName": "Sergio  Zúñiga Guajardo",
+    "firstName": "Sergio ",
+    "lastName": "Zúñiga Guajardo",
+    "displayName": "Sergio Zúñiga Guajardo",
     "gender": "Male",
     "email": "sergiozungua@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
@@ -1545,7 +1545,7 @@ var doctors = [
     "address": {
       "completeAddress": "San Jerónimo, Pte. 300, Miravalle, 64660 Monterrey, N.L",
       "suburb": "San Jerónimo Pte. 300, Miravalle",
-      "state": "Nuevo Leon",
+      "state": "Nuevo León",
       "town": "Monterrey",
       "zipcode": "64660 "
     },
@@ -2046,8 +2046,8 @@ var doctors = [
         "moderator": "Dra. Elizabeth Solís Pérez NC y  ENC Ma. Alejandra Sánchez Peña NC."
       }
     ],
-    "firstName": "María de la Luz",
-    "lastName": "Pérez Ávila",
+    "firstName": "María de",
+    "lastName": "la Luz",
     "displayName": "María de la Luz Pérez Ávila",
     "gender": "Female",
     "email": "",
@@ -2077,299 +2077,497 @@ var doctors = [
   {
     "id": 47,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Eloísa Saavedra Castillo ",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "elosaavedra@hotmail.com",
-    "phone": "81-1365-9296"
+    "phone": "81-1365-9296",
+    "firstName": "Eloísa",
+    "lastName": "Saavedra Castillo "
   },
   {
     "id": 48,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Claudia Alejandra Ortega Valdez ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "claortega@hotmail.com",
-    "phone": "81-1968-9774"
+    "phone": "81-1968-9774",
+    "firstName": "Claudia Alejandra",
+    "lastName": "Ortega Valdez"
   },
   {
     "id": 49,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Beatriz Ramírez Resendez ",
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "enc.beatrizramirez@gmail.com",
-    "phone": "81-8368-7842"
+    "phone": "81-8368-7842",
+    "firstName": "Beatriz Ramírez",
+    "lastName": "Resendez "
   },
   {
     "id": 50,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Cristóbal Zambrano Santos ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "cristozam_27@hotmail.com",
-    "phone": "84-4538-3478"
+    "phone": "84-4538-3478",
+    "firstName": "Cristóbal Zambrano",
+    "lastName": "Santos "
   },
   {
     "id": 51,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Ignacio Alejandro Martinez Delgado",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "imartinez_delgado@hotmail.com",
-    "phone": "81-8362-3819"
+    "phone": "81-8362-3819",
+    "firstName": "Ignacio Alejandro",
+    "lastName": "Martinez Delgado"
   },
   {
     "id": 52,
     "hasDetails": false,
+    "address": {
+      "town": "San Pedro Garza García",
+      "state": "Nuevo León"
+    },
     "displayName": "Natalia Eloisa De La Garza Hernández",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "natalia_eloisa@hotmail.com",
-    "phone": " 81-8458-1786"
+    "phone": " 81-8458-1786",
+    "firstName": "Natalia Eloisa",
+    "lastName": "De La"
   },
   {
     "id": 53,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Zinia Fernullda Martínez Mendoza ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "zifer_24@hotmail.com",
-    "phone": "81-1049-9794 "
+    "phone": "81-1049-9794 ",
+    "firstName": "Zinia Fernullda",
+    "lastName": "Martínez Mendoza"
   },
   {
     "id": 54,
     "hasDetails": false,
+    "address": {
+      "town": "Reynosa",
+      "state": "Tamaulipas"
+    },
     "displayName": "Juan José Castillo Dávila",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "conde_link@hotmail.com",
-    "phone": "89-9502-4925"
+    "phone": "89-9502-4925",
+    "firstName": "Juan José",
+    "lastName": "Castillo Dávila"
   },
   {
     "id": 55,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Fernulldo Javier Lavalle González ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "drfernulldolavalle@hotmail.com",
-    "phone": "81-8347-5528"
+    "phone": "81-8347-5528",
+    "firstName": "Fernulldo Javier",
+    "lastName": "Lavalle González"
   },
   {
     "id": 56,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Cristóbal Zambrano Santos ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "cristozam_27@hotmail.com",
-    "phone": "84-4538-3478"
+    "phone": "84-4538-3478",
+    "firstName": "Cristóbal Zambrano",
+    "lastName": "Santos "
   },
   {
     "id": 57,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Leticia Maria Hernulldez Arizpr",
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "letyhdezarizpe@yahoo.com",
-    "phone": "81-8366-4788"
+    "phone": "81-8366-4788",
+    "firstName": "Leticia Maria",
+    "lastName": "Hernulldez Arizpr"
   },
   {
     "id": 58,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Jazmín Medina Flores ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "jazminmf1455@gmail.com",
-    "phone": "82-6123-6530"
+    "phone": "82-6123-6530",
+    "firstName": "Jazmín Medina",
+    "lastName": "Flores "
   },
   {
     "id": 59,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Jose Gerardo Ayala Villarreal",
     "speciality": "Medicina interna",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "drgayala.@gmail.com",
-    "phone": "81-8333-1270"
+    "phone": "81-8333-1270",
+    "firstName": "Jose Gerardo",
+    "lastName": "Ayala Villarreal"
   },
   {
     "id": 60,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Luis Diego Maximiliano Ramos Anthony",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "diego.ramos.ant@gmail.com",
-    "phone": "81-3275-4998"
+    "phone": "81-3275-4998",
+    "firstName": "Luis Diego",
+    "lastName": "Maximiliano Ramos"
   },
   {
     "id": 61,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Anally Jamile Soto Garcia",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "jamilesoga@hotmail.com",
-    "phone": "81-2452-0031"
+    "phone": "81-2452-0031",
+    "firstName": "Anally Jamile",
+    "lastName": "Soto Garcia"
   },
   {
     "id": 62,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "David Sánchez García ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "davidsanchez70@hotmail.com",
-    "phone": "81-8368-7843"
+    "phone": "81-8368-7843",
+    "firstName": "David Sánchez",
+    "lastName": "García "
   },
   {
     "id": 63,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Delfina Marina Montemayor Ortiz",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "delfinamontemayor@yahoo.com",
-    "phone": "81-8348-0048"
+    "phone": "81-8348-0048",
+    "firstName": "Delfina Marina",
+    "lastName": "Montemayor Ortiz"
   },
   {
     "id": 64,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Jesús Arturo Ibarra Chávez",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "ibarra.endocrino@gmail.com",
-    "phone": "81-1991-1648"
+    "phone": "81-1991-1648",
+    "firstName": "Jesús Arturo",
+    "lastName": "Ibarra Chávez"
   },
   {
     "id": 65,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "María Elena Fernández González ",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "marelfg@gmail.com",
-    "phone": "81-3131-3346"
+    "phone": "81-3131-3346",
+    "firstName": "María Elena",
+    "lastName": "Fernández González"
   },
   {
     "id": 66,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Claudia Analy Velez Viveros",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dra_analyvelez@hotmail.com",
-    "phone": "86-7223-8805"
+    "phone": "86-7223-8805",
+    "firstName": "Claudia Analy",
+    "lastName": "Velez Viveros"
   },
   {
     "id": 67,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Samantha Garza Fuentes",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "samgafu@gmail.com",
-    "phone": "813-450306"
+    "phone": "813-450306",
+    "firstName": "Samantha",
+    "lastName": "Garza Fuentes"
   },
   {
     "id": 68,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Yessica Montserrat Garcia Salas ",
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "monserrat3016@gmail.com",
-    "phone": "81-3264-1625"
+    "phone": "81-3264-1625",
+    "firstName": "Yessica Montserrat",
+    "lastName": "Garcia Salas"
   },
   {
     "id": 69,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Tonatiu Diaz Escalante",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dr_tonatiu@hotmail.com",
-    "phone": "81-2452-0006"
+    "phone": "81-2452-0006",
+    "firstName": "Tonatiu",
+    "lastName": "Diaz Escalante"
   },
   {
     "id": 70,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Marco Antonio Roman Montalvo",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dr.roman.endocrino@gmail.com",
-    "phone": "81-2350-2794"
+    "phone": "81-2350-2794",
+    "firstName": "Marco Antonio",
+    "lastName": "Roman Montalvo"
   },
   {
     "id": 71,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Juana B. Romero Villarreal",
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "romerovillarreal@gmail.com",
-    "phone": null
+    "phone": null,
+    "firstName": "Juana B.",
+    "lastName": "Romero Villarreal"
   },
   {
     "id": 72,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Karla Victoria Rodríguez Velver",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "drakarlavelver@gmail.com",
-    "phone": "81-1974-2294"
+    "phone": "81-1974-2294",
+    "firstName": "Karla Victoria",
+    "lastName": "Rodríguez Velver"
   },
   {
     "id": 73,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Graciela Gómez Martínez ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "graciela_gomez_mtz@hotmail.com",
-    "phone": null
+    "phone": null,
+    "firstName": "Graciela Gómez",
+    "lastName": "Martínez "
   },
   {
     "id": 74,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Luis Gerardo Dávila Medellin ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "luis.davila92.md@gmail.com",
-    "phone": "81-1652-3568"
+    "phone": "81-1652-3568",
+    "firstName": "Luis Gerardo",
+    "lastName": "Dávila Medellin"
   },
   {
     "id": 75,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Cinthia Catalina Martinez Martinez",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dra.cinthiacmartinez@gmail.com",
-    "phone": "81-2877-6128"
+    "phone": "81-2877-6128",
+    "firstName": "Cinthia Catalina",
+    "lastName": "Martinez Martinez"
   },
   {
     "id": 76,
     "hasDetails": false,
+    "address": {
+      "town": "Saltillo",
+      "state": "Ciudad de México"
+    },
     "displayName": "Raul Ibarra Salce",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "raul_ibs@hotmail.com",
-    "phone": "84-4688-1546"
+    "phone": "84-4688-1546",
+    "firstName": "Raul",
+    "lastName": "Ibarra Salce"
   },
   {
     "id": 77,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Mario Alberto Santana Mata ",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "mariodk17@gmail.com",
-    "phone": "84-4280-2775"
+    "phone": "84-4280-2775",
+    "firstName": "Mario Alberto",
+    "lastName": "Santana Mata"
   },
   {
     "id": 78,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Yesica Luna Garza",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "yesicaluna93@gmail.com",
-    "phone": "81-1227-6332"
+    "phone": "81-1227-6332",
+    "firstName": "Yesica",
+    "lastName": "Luna Garza"
   },
   {
     "id": 79,
     "hasDetails": false,
+    "address": {
+      "town": "Monterrey",
+      "state": "Nuevo León"
+    },
     "displayName": "Ricardo Omar Martínez Camacho",
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "ricardomartinez2409@gmail.com",
-    "phone": "81-1038-6075"
+    "phone": "81-1038-6075",
+    "firstName": "Ricardo Omar",
+    "lastName": "Martínez Camacho"
   }
 ];
 
@@ -2887,7 +3085,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   loadStates();
   loadSpecialists();
   loadPagination(doctors);
-
 });
 
 function loadStates() {
@@ -2937,13 +3134,13 @@ function searchSpecialist() {
 
   const filteredDoctors = doctors.filter((doctor) => {
     const doctorLastName = doctor.lastName.toLowerCase();
-    const doctorCity = doctor.address.town.toLowerCase();
+    const doctorCity = doctor.address.town != undefined ? doctor.address.town.toLowerCase() : null;
     const doctorSpeciality = doctor.speciality.toLowerCase();
     const doctorEntity = doctor.address.state.toLowerCase();
 
     if (
-      (lastName && !doctorLastName.includes(lastName)) ||
-      (city && !doctorCity.includes(city)) ||
+      (lastName && doctorLastName && !doctorLastName.includes(lastName)) ||
+      (city && doctorCity && !doctorCity.includes(city)) ||
       (specialityValue !== "0" && doctorSpeciality !== speciality) ||
       (entityValue !== "0" && doctorEntity !== entity)
     ) {

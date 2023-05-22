@@ -545,7 +545,7 @@ section {
 }
 
 .section-bg {
-  background-image: url("/assets/img/logos/NiñaConfiguraciónCongreso.jpg");
+  background-image: url("../img/logos/GirlCongressConfig.jpg");
   background-position: center;
 }
 
@@ -1347,7 +1347,7 @@ section {
 }
 
 #footer {
-  background-image: url("/assets/img/logos/ConfiguraciónCongreso.jpg");
+  background-image: url("../img/logos/CongresoConfig.jpg");
   background-position: center;
   padding: 0 0 30px 0;
   color: #fff;
