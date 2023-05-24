@@ -100,7 +100,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Metabolismo Mineral Antonio",
+        "topic": "Metabolismo Mineral",
         "moderator": "Marco António Román Montalvo"
       }
     ],
@@ -110,7 +110,7 @@ var doctors = [
     "gender": "Female",
     "email": "dra.quintanilla.endo@gmail.com",
     "profileImg": "assets/img/doctors/7.png",
-    "phone": "81-3264-1625",
+    "phone": "8132641625",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -157,7 +157,7 @@ var doctors = [
     "gender": "Male",
     "email": "drgzzcantu@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-3156-0079",
+    "phone": "8131560079",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -235,7 +235,7 @@ var doctors = [
     "gender": "Female",
     "email": "lauraggomezh@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "844 439-1287, 844 3617-1352",
+    "phone": "844 4391287, 844 36171352",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -276,7 +276,7 @@ var doctors = [
     "gender": "Male",
     "email": "edmundo.avila2@hotmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "86-6157-3514",
+    "phone": "8661573514",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -315,7 +315,7 @@ var doctors = [
     "gender": "Male",
     "email": "drjuanmeja@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-1631-7359",
+    "phone": "8116317359",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -353,7 +353,7 @@ var doctors = [
         "moderator": "Karla Rodríguez Velver"
       },
       {
-        "topic": "Actualización en Diabetes",
+        "topic": "Taller de actualización en Diabetes",
         "moderator": "Dra. Leonor Mireles Zavala"
       }
     ],
@@ -363,7 +363,7 @@ var doctors = [
     "gender": "Female",
     "email": null,
     "profileImg": "assets/img/doctors/2.png",
-    "phone": "81-1477-0428",
+    "phone": "8114770428",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -413,7 +413,7 @@ var doctors = [
     "gender": "Male",
     "email": null,
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-8368-7842",
+    "phone": "8183687842",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -463,7 +463,7 @@ var doctors = [
     "gender": "Male",
     "email": null,
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-2350-2794",
+    "phone": "8123502794",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -516,7 +516,7 @@ var doctors = [
     "gender": "Female",
     "email": "gmoralesgo@gmail.com",
     "profileImg": "assets/img/doctors/9.png",
-    "phone": "81-8888-0643",
+    "phone": "8188880643",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -625,7 +625,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Fisiopatología de NAFLD",
+        "topic": "Taller de actualización sobre hígado graso",
         "moderator": null
       }
     ],
@@ -639,7 +639,7 @@ var doctors = [
     "speciality": "Gastroenterólogo",
     "congress": [
       {
-        "topic": "Mecanismos moleculares, patogénesis e historia natural de NAFLD",
+        "topic": "Fisiopatología de NAFLD: Mecanismos moleculares, patogénesis e historia natural de NAFLD",
         "from": "16:00",
         "to": "16:30",
         "duration": "30 min"
@@ -671,8 +671,8 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Relación entre NAFLD y enfermedades endócrinas",
-        "moderator": null
+        "topic": "Taller de actualización sobre hígado graso",
+        "moderator": "Dra. Dania Quintanilla Flores"
       }
     ],
     "firstName": "María Cristina",
@@ -685,7 +685,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "congress": [
       {
-        "topic": "Diabetes mellitus, dislipidemia, enfermedad tiroidea, síndrome de ovario poliquístico y obesidad",
+        "topic": "Relación entre NAFLD y enfermedades endócrinas: Diabetes mellitus, dislipidemia, enfermedad tiroidea, síndrome de ovario poliquístico y obesidad",
         "from": "16:30",
         "to": "17:00",
         "duration": "30 min"
@@ -713,8 +713,8 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Estratificación de NAFLD",
-        "moderator": null
+        "topic": "Taller de actualización sobre hígado graso",
+        "moderator": "Dra. Dania Quintanilla Flores"
       }
     ],
     "firstName": "Omar David",
@@ -763,8 +763,8 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Tratamiento de NAFLD",
-        "moderator": null
+        "topic": "Taller de actualización sobre hígado graso",
+        "moderator": "Dra. Dania Quintanilla Flores"
       }
     ],
     "firstName": "Francisco Javier",
@@ -777,7 +777,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "congress": [
       {
-        "topic": "Impacto de cambios en estilo de vida y revisión de la evidencia e indicaciones de vitamina E, TZD, iSGLT2, GLP1a y metformina",
+        "topic": "Tratamiento de NAFLD: Impacto de cambios en estilo de vida y revisión de la evidencia e indicaciones de vitamina E, TZD, iSGLT2, GLP1a y metformina",
         "from": "17:45",
         "to": "18:15",
         "duration": "30 min"
@@ -798,8 +798,8 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "NAFLD",
-        "moderator": null
+        "topic": "Taller de actualización sobre hígado graso",
+        "moderator": "Dra Dania Quintanilla Flores"
       }
     ],
     "firstName": "Carolina",
@@ -808,7 +808,7 @@ var doctors = [
     "gender": "Female",
     "email": "carocastilloo@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-8888-0652",
+    "phone": "8188880652",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -840,7 +840,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Síndrome de Ovario Poliquístico",
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
         "moderator": "Dr. Marco António Guerra Torres"
       },
       {
@@ -854,7 +854,7 @@ var doctors = [
     "gender": "Male",
     "email": "armandoqsiller@hotmail.com",
     "profileImg": "assets/img/doctors/10.png",
-    "phone": "81-3443-9300",
+    "phone": "8134439300",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -896,7 +896,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Síndrome de Ovario Poliquístico",
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
         "moderator": "Dr. Marco António Guerra Torres"
       },
       {
@@ -914,7 +914,7 @@ var doctors = [
     "gender": "Male",
     "email": "marcogueto@outlook.com",
     "profileImg": "assets/img/doctors/4.png",
-    "phone": "81-3403-2096",
+    "phone": "8134032096",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -974,7 +974,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Síndrome de Ovario Poliquístico",
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
         "moderator": "Dr. Marco António Guerra Torres"
       }
     ],
@@ -984,7 +984,7 @@ var doctors = [
     "gender": "Female",
     "email": null,
     "profileImg": "assets/img/doctors/1.png",
-    "phone": "81-1126-8535",
+    "phone": "8111268535",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1019,7 +1019,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Síndrome de Ovario Poliquístico",
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
         "moderator": "Dr. Marco António Guerra Torres"
       }
     ],
@@ -1029,7 +1029,7 @@ var doctors = [
     "gender": "Female",
     "email": "fany.esparza91@gmail.com",
     "profileImg": "assets/img/doctors/5.png",
-    "phone": "81-3443-9300",
+    "phone": "8134439300",
     "speciality": "Nutrióloga",
     "congress": [
       {
@@ -1061,7 +1061,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Actualización en Diabetes",
+        "topic": "Taller de actualización en Diabetes",
         "moderator": "Dra. Leonor Mireles Zavala"
       },
       {
@@ -1075,7 +1075,7 @@ var doctors = [
     "gender": "Female",
     "email": "dra.olavide@gmail.com",
     "profileImg": "assets/img/doctors/3.png",
-    "phone": "82-6123-6530",
+    "phone": "8261236530",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1121,7 +1121,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Actualización en Diabetes",
+        "topic": "Taller de actualización en Diabetes",
         "moderator": "Dra. Leonor Mireles Zavala"
       },
       {
@@ -1168,7 +1168,7 @@ var doctors = [
     "hasDetails": true,
     "mainTopics": [
       {
-        "topic": "Actualización en Diabetes",
+        "topic": "Taller de actualización en Diabetes",
         "moderator": "Dra. Leonor Mireles Zavala"
       }
     ],
@@ -1224,7 +1224,7 @@ var doctors = [
     "gender": "Female",
     "email": "dra_analyvelez@hotmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "86-7223-8805",
+    "phone": "8672238805",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1308,7 +1308,7 @@ var doctors = [
     "gender": "Male",
     "email": "dr.raymundosanchez@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-1285-2177",
+    "phone": "8112852177",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1343,7 +1343,7 @@ var doctors = [
     "gender": "Female",
     "email": "",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "44-2670-0779",
+    "phone": "4426700779",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1384,7 +1384,7 @@ var doctors = [
     "gender": "Male",
     "email": "drfernandolavalle@hotmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-8347-5528",
+    "phone": "8183475528",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1421,7 +1421,7 @@ var doctors = [
     "gender": "Male",
     "email": "",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-8347-5528",
+    "phone": "8183475528",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1458,7 +1458,7 @@ var doctors = [
     "gender": "Male",
     "email": "sergiozungua@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-1365-8738, 81-1365-8739",
+    "phone": "8113658738, 8113658739",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1495,7 +1495,7 @@ var doctors = [
     "gender": "Male",
     "email": "luisperezendocrino@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-8029-4744",
+    "phone": "8180294744",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1532,7 +1532,7 @@ var doctors = [
     "gender": "Female",
     "email": "marelfg@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-3131-3346",
+    "phone": "8131313346",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1575,7 +1575,7 @@ var doctors = [
     "gender": "Male",
     "email": "endocrino1@icloud.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-2138-9930",
+    "phone": "8121389930",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1612,7 +1612,7 @@ var doctors = [
     "gender": "Male",
     "email": "neuroendo_hinojosa@dr.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-3474-1008",
+    "phone": "8134741008",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -1699,7 +1699,7 @@ var doctors = [
     "gender": "Male",
     "email": "dr.jviolante@gmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": "81-1255-6438",
+    "phone": "8112556438",
     "speciality": "Endocrinología",
     "congress": [
       {
@@ -2085,7 +2085,7 @@ var doctors = [
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "elosaavedra@hotmail.com",
-    "phone": "81-1365-9296",
+    "phone": "8113659296",
     "firstName": "Eloísa",
     "lastName": "Saavedra Castillo "
   },
@@ -2100,7 +2100,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "claortega@hotmail.com",
-    "phone": "81-1968-9774",
+    "phone": "8119689774",
     "firstName": "Claudia Alejandra",
     "lastName": "Ortega Valdez"
   },
@@ -2115,7 +2115,7 @@ var doctors = [
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "enc.beatrizramirez@gmail.com",
-    "phone": "81-8368-7842",
+    "phone": "8183687842",
     "firstName": "Beatriz Ramírez",
     "lastName": "Resendez "
   },
@@ -2130,7 +2130,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "cristozam_27@hotmail.com",
-    "phone": "84-4538-3478",
+    "phone": "8445383478",
     "firstName": "Cristóbal Zambrano",
     "lastName": "Santos "
   },
@@ -2145,7 +2145,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "imartinez_delgado@hotmail.com",
-    "phone": "81-8362-3819",
+    "phone": "8183623819",
     "firstName": "Ignacio Alejandro",
     "lastName": "Martinez Delgado"
   },
@@ -2160,7 +2160,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "natalia_eloisa@hotmail.com",
-    "phone": " 81-8458-1786",
+    "phone": " 8184581786",
     "firstName": "Natalia Eloisa",
     "lastName": "De La"
   },
@@ -2175,7 +2175,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "zifer_24@hotmail.com",
-    "phone": "81-1049-9794 ",
+    "phone": "8110499794 ",
     "firstName": "Zinia Fernullda",
     "lastName": "Martínez Mendoza"
   },
@@ -2190,7 +2190,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "conde_link@hotmail.com",
-    "phone": "89-9502-4925",
+    "phone": "8995024925",
     "firstName": "Juan José",
     "lastName": "Castillo Dávila"
   },
@@ -2205,7 +2205,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "drfernulldolavalle@hotmail.com",
-    "phone": "81-8347-5528",
+    "phone": "8183475528",
     "firstName": "Fernulldo Javier",
     "lastName": "Lavalle González"
   },
@@ -2220,7 +2220,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "cristozam_27@hotmail.com",
-    "phone": "84-4538-3478",
+    "phone": "8445383478",
     "firstName": "Cristóbal Zambrano",
     "lastName": "Santos "
   },
@@ -2235,7 +2235,7 @@ var doctors = [
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "letyhdezarizpe@yahoo.com",
-    "phone": "81-8366-4788",
+    "phone": "8183664788",
     "firstName": "Leticia Maria",
     "lastName": "Hernulldez Arizpr"
   },
@@ -2250,7 +2250,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "jazminmf1455@gmail.com",
-    "phone": "82-6123-6530",
+    "phone": "8261236530",
     "firstName": "Jazmín Medina",
     "lastName": "Flores "
   },
@@ -2265,7 +2265,7 @@ var doctors = [
     "speciality": "Medicina interna",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "drgayala.@gmail.com",
-    "phone": "81-8333-1270",
+    "phone": "8183331270",
     "firstName": "Jose Gerardo",
     "lastName": "Ayala Villarreal"
   },
@@ -2280,7 +2280,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "diego.ramos.ant@gmail.com",
-    "phone": "81-3275-4998",
+    "phone": "8132754998",
     "firstName": "Luis Diego",
     "lastName": "Maximiliano Ramos"
   },
@@ -2295,7 +2295,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "jamilesoga@hotmail.com",
-    "phone": "81-2452-0031",
+    "phone": "8124520031",
     "firstName": "Anally Jamile",
     "lastName": "Soto Garcia"
   },
@@ -2310,7 +2310,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "davidsanchez70@hotmail.com",
-    "phone": "81-8368-7843",
+    "phone": "8183687843",
     "firstName": "David Sánchez",
     "lastName": "García "
   },
@@ -2325,7 +2325,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "delfinamontemayor@yahoo.com",
-    "phone": "81-8348-0048",
+    "phone": "8183480048",
     "firstName": "Delfina Marina",
     "lastName": "Montemayor Ortiz"
   },
@@ -2340,7 +2340,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "ibarra.endocrino@gmail.com",
-    "phone": "81-1991-1648",
+    "phone": "8119911648",
     "firstName": "Jesús Arturo",
     "lastName": "Ibarra Chávez"
   },
@@ -2355,7 +2355,7 @@ var doctors = [
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "marelfg@gmail.com",
-    "phone": "81-3131-3346",
+    "phone": "8131313346",
     "firstName": "María Elena",
     "lastName": "Fernández González"
   },
@@ -2370,7 +2370,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dra_analyvelez@hotmail.com",
-    "phone": "86-7223-8805",
+    "phone": "8672238805",
     "firstName": "Claudia Analy",
     "lastName": "Velez Viveros"
   },
@@ -2385,7 +2385,7 @@ var doctors = [
     "speciality": "Endocrinologia Pediatrica",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "samgafu@gmail.com",
-    "phone": "813-450306",
+    "phone": "813450306",
     "firstName": "Samantha",
     "lastName": "Garza Fuentes"
   },
@@ -2400,7 +2400,7 @@ var doctors = [
     "speciality": "Nutrición",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "monserrat3016@gmail.com",
-    "phone": "81-3264-1625",
+    "phone": "8132641625",
     "firstName": "Yessica Montserrat",
     "lastName": "Garcia Salas"
   },
@@ -2415,7 +2415,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dr_tonatiu@hotmail.com",
-    "phone": "81-2452-0006",
+    "phone": "8124520006",
     "firstName": "Tonatiu",
     "lastName": "Diaz Escalante"
   },
@@ -2430,7 +2430,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dr.roman.endocrino@gmail.com",
-    "phone": "81-2350-2794",
+    "phone": "8123502794",
     "firstName": "Marco Antonio",
     "lastName": "Roman Montalvo"
   },
@@ -2460,7 +2460,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "drakarlavelver@gmail.com",
-    "phone": "81-1974-2294",
+    "phone": "8119742294",
     "firstName": "Karla Victoria",
     "lastName": "Rodríguez Velver"
   },
@@ -2490,7 +2490,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "luis.davila92.md@gmail.com",
-    "phone": "81-1652-3568",
+    "phone": "8116523568",
     "firstName": "Luis Gerardo",
     "lastName": "Dávila Medellin"
   },
@@ -2505,7 +2505,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "dra.cinthiacmartinez@gmail.com",
-    "phone": "81-2877-6128",
+    "phone": "8128776128",
     "firstName": "Cinthia Catalina",
     "lastName": "Martinez Martinez"
   },
@@ -2520,7 +2520,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "raul_ibs@hotmail.com",
-    "phone": "84-4688-1546",
+    "phone": "8446881546",
     "firstName": "Raul",
     "lastName": "Ibarra Salce"
   },
@@ -2535,7 +2535,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "mariodk17@gmail.com",
-    "phone": "84-4280-2775",
+    "phone": "8442802775",
     "firstName": "Mario Alberto",
     "lastName": "Santana Mata"
   },
@@ -2550,7 +2550,7 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "yesicaluna93@gmail.com",
-    "phone": "81-1227-6332",
+    "phone": "8112276332",
     "firstName": "Yesica",
     "lastName": "Luna Garza"
   },
@@ -2565,452 +2565,9 @@ var doctors = [
     "speciality": "Endocrinología",
     "profileImg": "assets/img/logos/logo.svg",
     "email": "ricardomartinez2409@gmail.com",
-    "phone": "81-1038-6075",
+    "phone": "8110386075",
     "firstName": "Ricardo Omar",
     "lastName": "Martínez Camacho"
-  }
-];
-
-const contactInfo = [
-  {
-    "eloísa saavedra castillo ": {
-      "displayName": "Eloísa Saavedra Castillo ",
-      "speciality": "Endocrinologia Pediatrica",
-      "email": "elosaavedra@hotmail.com",
-      "phone": "8113659296"
-    }
-  },
-  {
-    "paola portillo sanchez ": {
-      "displayName": "Paola Portillo Sanchez ",
-      "speciality": "Endocrinología",
-      "email": "drapaolaportillo@gmail.com",
-      "phone": "8188880651"
-    }
-  },
-  {
-    "juan josé medina jasso": {
-      "displayName": "Juan José Medina Jasso",
-      "speciality": "Endocrinología",
-      "email": "drjuanmeja@gmail.com",
-      "phone": "8116317359"
-    }
-  },
-  {
-    "josé armando quintanilla siller": {
-      "displayName": "José Armando Quintanilla Siller",
-      "speciality": "Endocrinología",
-      "email": "armandoqsiller@hotmail.com",
-      "phone": "8134439300"
-    }
-  },
-  {
-    "sergio zúñiga guajardo": {
-      "displayName": "Sergio Zúñiga Guajardo",
-      "speciality": "Endocrinología",
-      "email": "sergiozungua@gmail.com",
-      "phone": "8113658738"
-    }
-  },
-  {
-    "claudia alejandra ortega valdez ": {
-      "displayName": "CLAUDIA ALEJANDRA ORTEGA VALDEZ ",
-      "speciality": "Endocrinología",
-      "email": "claortega@hotmail.com",
-      "phone": "8119689774"
-    }
-  },
-  {
-    "beatriz ramírez resendez ": {
-      "displayName": "Beatriz Ramírez Resendez ",
-      "speciality": "Nutrición",
-      "email": "enc.beatrizramirez@gmail.com",
-      "phone": "8183687842"
-    }
-  },
-  {
-    "leonor guadalupe hinojosa amaya": {
-      "displayName": "Leonor Guadalupe Hinojosa Amaya",
-      "speciality": "Endocrinologia Pediatrica",
-      "email": "draleonorhinojosa@gmail.com",
-      "phone": "8110669333"
-    }
-  },
-  {
-    "cristóbal zambrano santos ": {
-      "displayName": "Cristóbal Zambrano Santos ",
-      "speciality": "Endocrinología",
-      "email": "cristozam_27@hotmail.com",
-      "phone": "8445383478"
-    }
-  },
-  {
-    "ignacio alejandro martinez delgado": {
-      "displayName": "Ignacio Alejandro Martinez Delgado",
-      "speciality": "Endocrinología",
-      "email": "imartinez_delgado@hotmail.com",
-      "phone": "8183623819"
-    }
-  },
-  {
-    "carolina castillo castro": {
-      "displayName": "Carolina Castillo Castro",
-      "speciality": "Endocrinología",
-      "email": "carocastilloo@gmail.com",
-      "phone": "8188880652"
-    }
-  },
-  {
-    "dania lizet quintanilla flores": {
-      "displayName": "Dania Lizet Quintanilla Flores",
-      "speciality": "Endocrinología",
-      "email": "dra.quintanilla.endo@gmail.com",
-      "phone": "8132641625"
-    }
-  },
-  {
-    "elizabeth olavide aguilar ": {
-      "displayName": "ELIZABETH OLAVIDE AGUILAR ",
-      "speciality": "Endocrinología",
-      "email": "dra.olavide@gmail.com",
-      "phone": "8261236530"
-    }
-  },
-  {
-    "raymundo abram sánchez gómez": {
-      "displayName": "Raymundo Abram Sánchez Gómez",
-      "speciality": "Endocrinología",
-      "email": "dr.raymundosanchez@gmail.com",
-      "phone": "8112852177"
-    }
-  },
-  {
-    "edmundo daniel ávila hipólito ": {
-      "displayName": "Edmundo Daniel Ávila Hipólito ",
-      "speciality": "Endocrinología",
-      "email": "Edmundo.avila2@hotmail.com",
-      "phone": "8661573514"
-    }
-  },
-  {
-    "natalia eloisa de la garza hernández": {
-      "displayName": "Natalia Eloisa De La Garza Hernández",
-      "speciality": "Endocrinología",
-      "email": "natalia_eloisa@hotmail.com",
-      "phone": " 8184581786"
-    }
-  },
-  {
-    "zinia fernullda martínez mendoza ": {
-      "displayName": "Zinia Fernullda Martínez Mendoza ",
-      "speciality": "Endocrinología",
-      "email": "zifer_24@hotmail.com",
-      "phone": "8110499794 "
-    }
-  },
-  {
-    "arnulfo gonzalez cantu": {
-      "displayName": "Arnulfo Gonzalez Cantu",
-      "speciality": "Endocrinología",
-      "email": "drgzzcantu@gmail.com",
-      "phone": "8131560079"
-    }
-  },
-  {
-    "juan josé castillo dávila": {
-      "displayName": "Juan José Castillo Dávila",
-      "speciality": "Endocrinología",
-      "email": "conde_link@hotmail.com",
-      "phone": "8995024925"
-    }
-  },
-  {
-    "fernulldo javier lavalle gonzález ": {
-      "displayName": "Fernulldo Javier Lavalle González ",
-      "speciality": "Endocrinología",
-      "email": "drfernulldolavalle@hotmail.com",
-      "phone": "8183475528"
-    }
-  },
-  {
-    "ana eugenia teniente sánchez ": {
-      "displayName": "Ana Eugenia Teniente Sánchez ",
-      "speciality": "Endocrinología",
-      "email": "draanateniente@gmail.com",
-      "phone": "8111268535"
-    }
-  },
-  {
-    "cristóbal zambrano santos ": {
-      "displayName": "Cristóbal Zambrano Santos ",
-      "speciality": "Endocrinología",
-      "email": "cristozam_27@hotmail.com",
-      "phone": "8445383478"
-    }
-  },
-  {
-    "leticia maria hernulldez arizpr": {
-      "displayName": "Leticia Maria Hernulldez Arizpr",
-      "speciality": "Nutrición",
-      "email": "letyhdezarizpe@yahoo.com",
-      "phone": "8183664788"
-    }
-  },
-  {
-    "jazmín medina flores ": {
-      "displayName": "Jazmín Medina Flores ",
-      "speciality": "Endocrinología",
-      "email": "jazminmf1455@gmail.com",
-      "phone": "8261236530"
-    }
-  },
-  {
-    "gabriela morales gonzález ": {
-      "displayName": "Gabriela Morales González ",
-      "speciality": "Endocrinología",
-      "email": "gmoralesgo@gmail.com",
-      "phone": "8188880643"
-    }
-  },
-  {
-    "estefanía esparza corona": {
-      "displayName": "Estefanía Esparza Corona",
-      "speciality": "Nutrición",
-      "email": "fany.esparza91@gmail.com",
-      "phone": "8134439300"
-    }
-  },
-  {
-    "jose gerardo ayala villarreal": {
-      "displayName": "JOSE GERARDO AYALA VILLARREAL",
-      "speciality": "Medicina interna",
-      "email": "drgayala.@gmail.com",
-      "phone": "8183331270"
-    }
-  },
-  {
-    "luis diego maximiliano ramos anthony": {
-      "displayName": "Luis Diego Maximiliano Ramos Anthony",
-      "speciality": "Endocrinología",
-      "email": "diego.ramos.ant@gmail.com",
-      "phone": "8132754998"
-    }
-  },
-  {
-    "anally jamile soto garcia": {
-      "displayName": "ANALLY JAMILE SOTO GARCIA",
-      "speciality": "Endocrinología",
-      "email": "JAMILESOGA@HOTMAIL.COM",
-      "phone": "8124520031"
-    }
-  },
-  {
-    "maría cristina quintanilla garcía ": {
-      "displayName": "María Cristina Quintanilla García ",
-      "speciality": "Endocrinología",
-      "email": "cristy_quin@yahoo.com",
-      "phone": "8188880654"
-    }
-  },
-  {
-    "marco antonio guerra torres": {
-      "displayName": "Marco Antonio Guerra Torres",
-      "speciality": "Endocrinología",
-      "email": "marcogueto@outlook.com",
-      "phone": "81-3403-2096"
-    }
-  },
-  {
-    "josé miguel hinojosa amaya": {
-      "displayName": "José Miguel Hinojosa Amaya",
-      "speciality": "Endocrinología",
-      "email": "neuroendo_hinojosa@dr.com",
-      "phone": "8134741008"
-    }
-  },
-  {
-    "david sánchez garcía ": {
-      "displayName": "David Sánchez García ",
-      "speciality": "Endocrinología",
-      "email": "davidsanchez70@hotmail.com",
-      "phone": "8183687843"
-    }
-  },
-  {
-    "delfina marina montemayor ortiz": {
-      "displayName": "Delfina Marina Montemayor Ortiz",
-      "speciality": "Endocrinología",
-      "email": "delfinamontemayor@yahoo.com",
-      "phone": "8183480048"
-    }
-  },
-  {
-    "jesús arturo ibarra chávez": {
-      "displayName": "Jesús Arturo Ibarra Chávez",
-      "speciality": "Endocrinología",
-      "email": "ibarra.endocrino@gmail.com",
-      "phone": "8119911648"
-    }
-  },
-  {
-    "maría elena fernández gonzález ": {
-      "displayName": "María Elena Fernández González ",
-      "speciality": "Endocrinologia Pediatrica",
-      "email": "marelfg@gmail.com",
-      "phone": "8131313346"
-    }
-  },
-  {
-    "claudia analy velez viveros": {
-      "displayName": "Claudia AnalY Velez Viveros",
-      "speciality": "Endocrinología",
-      "email": "dra_analyvelez@hotmail.com",
-      "phone": "8672238805"
-    }
-  },
-  {
-    "alfonso javier zapata garrido": {
-      "displayName": "Alfonso Javier Zapata Garrido",
-      "speciality": "Endocrinología",
-      "email": "endocrino1@icloud.com",
-      "phone": "8121389930"
-    }
-  },
-  {
-    "samantha garza fuentes": {
-      "displayName": "Samantha Garza Fuentes",
-      "speciality": "Endocrinologia Pediatrica",
-      "email": "samgafu@gmail.com",
-      "phone": "813-450306"
-    }
-  },
-  {
-    "yessica montserrat garcia salas ": {
-      "displayName": "Yessica Montserrat Garcia Salas ",
-      "speciality": "Nutrición",
-      "email": "monserrat3016@gmail.com",
-      "phone": "8132641625"
-    }
-  },
-  {
-    "anabel rodríguez romo": {
-      "displayName": "ANABEL RODRÍGUEZ ROMO",
-      "speciality": "Endocrinología",
-      "email": "anabelmty@yahoo.com",
-      "phone": null
-    }
-  },
-  {
-    "jorge rafael violante cumpa": {
-      "displayName": "JORGE RAFAEL VIOLANTE CUMPA",
-      "speciality": "Endocrinología",
-      "email": "dr.jviolante@gmail.com",
-      "phone": "8112556438"
-    }
-  },
-  {
-    "tonatiu diaz escalante": {
-      "displayName": "TONATIU DIAZ ESCALANTE",
-      "speciality": "Endocrinología",
-      "email": "dr_tonatiu@hotmail.com",
-      "phone": "8124520006"
-    }
-  },
-  {
-    "marco antonio roman montalvo": {
-      "displayName": "Marco Antonio Roman Montalvo",
-      "speciality": "Endocrinología",
-      "email": "dr.roman.endocrino@gmail.com",
-      "phone": "8123502794"
-    }
-  },
-  {
-    "juana b. romero villarreal": {
-      "displayName": "Juana B. Romero Villarreal",
-      "speciality": "Endocrinologia Pediatrica",
-      "email": "romerovillarreal@gmail.com",
-      "phone": null
-    }
-  },
-  {
-    "karla victoria rodríguez velver": {
-      "displayName": "Karla Victoria Rodríguez Velver",
-      "speciality": "Endocrinología",
-      "email": "drakarlavelver@gmail.com",
-      "phone": "8119742294"
-    }
-  },
-  {
-    "graciela gómez martínez ": {
-      "displayName": "Graciela Gómez Martínez ",
-      "speciality": "Endocrinología",
-      "email": "graciela_gomez_mtz@hotmail.com",
-      "phone": null
-    }
-  },
-  {
-    "luis gerardo dávila medellin ": {
-      "displayName": "Luis Gerardo Dávila Medellin ",
-      "speciality": "Endocrinología",
-      "email": "luis.davila92.md@gmail.com",
-      "phone": "8116523568"
-    }
-  },
-  {
-    "laura gabriela gómez herrera ": {
-      "displayName": "Laura Gabriela Gómez Herrera ",
-      "speciality": "Endocrinología",
-      "email": "lauraggomezh@gmail.coml",
-      "phone": "8444391287"
-    }
-  },
-  {
-    "luis alberto pérez arredondo": {
-      "displayName": "Luis Alberto Pérez Arredondo",
-      "speciality": "Endocrinología",
-      "email": "luisperezendocrino@gmail.com",
-      "phone": "8180294744"
-    }
-  },
-  {
-    "cinthia catalina martinez martinez": {
-      "displayName": "Cinthia Catalina Martinez Martinez",
-      "speciality": "Endocrinología",
-      "email": "dra.cinthiacmartinez@gmail.com",
-      "phone": "8128776128"
-    }
-  },
-  {
-    "raul ibarra salce": {
-      "displayName": "Raul Ibarra Salce",
-      "speciality": "Endocrinología",
-      "email": "raul_ibs@hotmail.com",
-      "phone": "8446881546"
-    }
-  },
-  {
-    "mario alberto santana mata ": {
-      "displayName": "Mario Alberto Santana Mata ",
-      "speciality": "Endocrinología",
-      "email": "mariodk17@gmail.com",
-      "phone": "8442802775"
-    }
-  },
-  {
-    "yesica luna garza": {
-      "displayName": "Yesica Luna Garza",
-      "speciality": "Endocrinología",
-      "email": "yesicaluna93@gmail.com",
-      "phone": "8112276332"
-    }
-  },
-  {
-    "ricardo omar martínez camacho": {
-      "displayName": "Ricardo Omar Martínez Camacho",
-      "speciality": "Endocrinología",
-      "email": "ricardomartinez2409@gmail.com",
-      "phone": "8110386075"
-    }
   }
 ];
 
@@ -3085,7 +2642,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   loadStates();
   loadSpecialists();
   loadPagination(doctors);
+
 });
+
 
 function loadStates() {
   const stateOptions = document.getElementById("searchByEntity");
@@ -3288,7 +2847,7 @@ function showDoctorsAsList(doctorsForPage) {
                     <div class="advisor_thumb"><img src="${doctor.profileImg}" alt="">
                         <!-- Social Info-->
                         <div class="social-info">
-                            <a title="${doctor.phone ? doctor.phone : "##-####-####"}" target="_blank">
+                            <a title="${doctor.phone ? doctor.phone : "##-####-####"}" target="_blank" onclick="copyPhoneNumber(${doctor.phone ? doctor.phone : null})">
                                 <i class="bi bi-telephone-fill"></i>
                             </a>
                             <a href="${doctoralia != null ? doctoralia : "#busqueda"}" title="${doctoralia != null ? doctoralia : "#busqueda"}" target="_blank">
@@ -3305,7 +2864,7 @@ function showDoctorsAsList(doctorsForPage) {
                                     <p class="designation">${doctor.speciality}</p>
                                 </div>
                                 <div class="col text-end" ${!doctor.hasDetails ? 'hidden' : ''}>
-                                    <button type="button" class="btn btn-sm btn-advisor" data-toggle="modal" data-target="#showDoctorModal" onClick="showModalListener(${doctor.id})">
+                                    <button type="button" class="btn btn-sm btn-advisor" data-toggle="modal" data-target="#showDoctorModal" onclick="showDoctorModal(${doctor.id})">
                                         Ver más
                                     </button>
                                 </div>
@@ -3318,6 +2877,37 @@ function showDoctorsAsList(doctorsForPage) {
   });
 
   return result;
+}
+
+function copyPhoneNumber(phone) {
+  if (phone != null) {
+    // Create a temporary input element
+    const tempInput = document.createElement('input');
+    tempInput.value = phone;
+    document.body.appendChild(tempInput);
+
+    // Select the text in the input element
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the selected text to the clipboard
+    document.execCommand('copy');
+
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
+
+    // Provide feedback to the user
+    const alertContainer = document.getElementById('alertContainer');
+    const alertDiv = document.createElement('div');
+    alertDiv.classList.add('alert', 'alert-success');
+    alertDiv.textContent = 'Phone number copied!';
+    alertContainer.appendChild(alertDiv);
+
+    // Automatically dismiss the alert after a certain time (optional)
+    setTimeout(() => {
+      alertDiv.remove();
+    }, 2000); // Remove after 3 seconds (adjust as needed)
+  }
 }
 
 function showDoctorsAsCards(doctorsForPage) {
@@ -3343,7 +2933,7 @@ function showDoctorsAsCards(doctorsForPage) {
                 <td>${doctor.phone === '' || doctor.phone === null ? '-' : doctor.phone}</td>
                 <td>${topics.join(", ")}</td>
                 <td>
-                    <button type="button" ${!doctor.hasDetails ? 'hidden' : ''} class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" onClick="showModalListener(${doctor.id})">Ver más</button>
+                    <button type="button" ${!doctor.hasDetails ? 'hidden' : ''} class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" id="showModalListener" onClick="showModalListener(${doctor.id})">Ver más</button>
                 </td>
             </tr>
         `;
@@ -3401,7 +2991,5 @@ function showModalListener(doctorId) {
     addressDirection.textContent =
       modalDoctor.address.completeAddress ? modalDoctor.address.completeAddress + ", " + modalDoctor.address.zipcode ? modalDoctor.address.zipcode : '' : '';
   }
-
   bootstrapModal.show();
 }
-
