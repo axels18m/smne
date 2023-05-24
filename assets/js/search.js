@@ -2729,7 +2729,7 @@ const displayResults = (doctorResults) => {
   if (doctorResults.length === 0) {
     results.innerHTML = `
           <div class="alert alert-warning mt-3" role="alert">
-            No results found.
+            No se encontraron resultados.
           </div>
         `;
 
@@ -2900,7 +2900,7 @@ function copyPhoneNumber(phone) {
     const alertContainer = document.getElementById('alertContainer');
     const alertDiv = document.createElement('div');
     alertDiv.classList.add('alert', 'alert-success');
-    alertDiv.textContent = 'Phone number copied!';
+    alertDiv.textContent = 'Número celular copiado!';
     alertContainer.appendChild(alertDiv);
 
     // Automatically dismiss the alert after a certain time (optional)
@@ -2981,12 +2981,12 @@ function showModalListener(doctorId) {
 
     state.textContent = modalDoctor.address.state
       ? modalDoctor.address.state + ", " + modalDoctor.address.town ? modalDoctor.address.town : ''
-      : "Not specified";
+      : "No especificado";
 
     specialities.textContent =
       modalDoctor.specialities.length > 0
         ? modalDoctor.specialities.join("\r\n")
-        : "Not specified";
+        : "No especificado";
 
     addressDirection.textContent =
       modalDoctor.address.completeAddress ? modalDoctor.address.completeAddress + ", " + modalDoctor.address.zipcode ? modalDoctor.address.zipcode : '' : '';

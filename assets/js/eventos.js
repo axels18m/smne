@@ -170,7 +170,7 @@ function noResultsAlert() {
   const alertContainer = document.getElementById('alertContainer');
   const alertDiv = document.createElement('div');
   alertDiv.classList.add('alert', 'alert-danger');
-  alertDiv.textContent = 'Not data found!';
+  alertDiv.textContent = 'No se encontraron resultados.';
   alertContainer.appendChild(alertDiv);
 
   // Automatically dismiss the alert after a certain time (optional)
