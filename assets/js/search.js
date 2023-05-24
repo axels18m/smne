@@ -594,9 +594,9 @@ var doctors = [
     "lastName": "Soto García",
     "displayName": "Anally Soto García",
     "gender": "Female",
-    "email": null,
+    "email": "jamilesoga@hotmail.com",
     "profileImg": "assets/img/logos/logo.svg",
-    "phone": null,
+    "phone": "8124520031",
     "speciality": "Endocrinología",
     "congress": [
       {
