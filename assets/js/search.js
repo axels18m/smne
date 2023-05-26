@@ -141,6 +141,51 @@ var doctors = [
     "socialMedia": {}
   },
   {
+    "id": 20,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
+        "moderator": "Dr. Marco António Guerra Torres"
+      }
+    ],
+    "firstName": "Ana Eugenia",
+    "lastName": "Teniente Sánchez",
+    "displayName": "Ana Eugenia Teniente Sánchez",
+    "gender": "Female",
+    "email": null,
+    "profileImg": "assets/img/doctors/1.png",
+    "phone": "8111268535",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Manejo del hiperandrogenismo en el Síndrome de Ovario Poliquístico",
+        "from": "17:30",
+        "to": "18:10",
+        "duration": "40 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "Aspen Medical Center, Corpus 2320 1er piso",
+      "suburb": "Lomas de San Francisco",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": "64718"
+    },
+    "specialities": [
+      "Diabetología",
+      "Patologías de la Tiroides",
+      "Obesidad",
+      "Riesgo Vascular",
+      "Metabolismo Mineral",
+      "Diabetes",
+      "Hipertensión"
+    ],
+    "socialMedia": {
+      "doctoralia": "https://www.doctoralia.com.mx/ana-eugenia-teniente-sanchez/endocrinologo-internista/nuevo-leon"
+    }
+  },
+  {
     "id": 18,
     "hasDetails": true,
     "mainTopics": [
@@ -274,51 +319,7 @@ var doctors = [
       "doctoralia": "https://www.doctoralia.com.mx/marco-antonio-guerra-torres-2/endocrinologo-internista/ciudad-acuna"
     }
   },
-  {
-    "id": 20,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
-        "moderator": "Dr. Marco António Guerra Torres"
-      }
-    ],
-    "firstName": "Ana Eugenia",
-    "lastName": "Teniente Sánchez",
-    "displayName": "Ana Eugenia Teniente Sánchez",
-    "gender": "Female",
-    "email": null,
-    "profileImg": "assets/img/doctors/1.png",
-    "phone": "8111268535",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Manejo del hiperandrogenismo en el Síndrome de Ovario Poliquístico",
-        "from": "17:30",
-        "to": "18:10",
-        "duration": "40 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "Aspen Medical Center, Corpus 2320 1er piso",
-      "suburb": "Lomas de San Francisco",
-      "state": "Nuevo León",
-      "town": "Monterrey",
-      "zipcode": "64718"
-    },
-    "specialities": [
-      "Diabetología",
-      "Patologías de la Tiroides",
-      "Obesidad",
-      "Riesgo Vascular",
-      "Metabolismo Mineral",
-      "Diabetes",
-      "Hipertensión"
-    ],
-    "socialMedia": {
-      "doctoralia": "https://www.doctoralia.com.mx/ana-eugenia-teniente-sanchez/endocrinologo-internista/nuevo-leon"
-    }
-  },
+
   {
     "id": 21,
     "hasDetails": true,
