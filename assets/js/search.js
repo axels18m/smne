@@ -96,6 +96,332 @@ const states = [
 
 var doctors = [
   {
+    "id": 10,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Biología de la repoducción",
+        "moderator": "Ana Eugenia Teniente Sánchez"
+      },
+      {
+        "topic": "Taller de actualización en Obesidad",
+        "moderator": "Dr. Edmundo Ávila Hipólito"
+      }
+    ],
+    "firstName": "Gabriela",
+    "lastName": "Morales González",
+    "displayName": "Gabriela Morales González",
+    "gender": "Female",
+    "email": "gmoralesgo@gmail.com",
+    "profileImg": "assets/img/doctors/9.png",
+    "phone": "8188880643",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Análogos de GLP1 en SOP",
+        "from": "13:00",
+        "to": "13:20",
+        "duration": "20 min"
+      },
+      {
+        "topic": "Abordaje etiológico de la obesidad, claves para definir el tratamiento ideal  para mi paciente.",
+        "from": "",
+        "to": "",
+        "duration": ""
+      }
+    ],
+    "address": {
+      "completeAddress": "Hospital Zambrano Helion, Batallon de San Patricio #112",
+      "suburb": "Real de San Agustín",
+      "state": "Nuevo León",
+      "town": "San Pedro Garza García",
+      "zipcode": "66278"
+    },
+    "specialities": [],
+    "socialMedia": {}
+  },
+  {
+    "id": 18,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
+        "moderator": "Dr. Marco António Guerra Torres"
+      },
+      {
+        "topic": "Obesidad",
+        "moderator": "Dra. Gabriela Morales González."
+      }
+    ],
+    "firstName": "José Armando",
+    "lastName": "Quintanilla Siller",
+    "displayName": "José Armando Quintanilla Siller",
+    "gender": "Male",
+    "email": "armandoqsiller@hotmail.com",
+    "profileImg": "assets/img/doctors/10.png",
+    "phone": "8134439300",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Aspectos para el diagnóstico de Síndrome de Ovario Poliquístico",
+        "from": "16:00",
+        "to": "16:40",
+        "duration": "40 min"
+      },
+      {
+        "topic": "Microbiota y Obesidad.",
+        "from": "14:05",
+        "to": "14:25",
+        "duration": "20 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "De La Clinica #2520",
+      "suburb": "Sertoma",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": "64710"
+    },
+    "specialities": [
+      "Obesidad",
+      "Diabetología",
+      "Patologías de la Tiroides",
+      "Obesidad",
+      "Osteoporosis",
+      "Metabolismo Mineral",
+      "Paratiroides",
+      "Nutrición"
+    ],
+    "socialMedia": {
+      "doctoralia": "https://www.doctoralia.com.mx/jose-armando-quintanilla-siller/endocrinologo-internista/nuevo-leon"
+    }
+  },
+  {
+    "id": 19,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
+        "moderator": "Dr. Marco António Guerra Torres"
+      },
+      {
+        "topic": "Tópicos diversos en Endocrinología",
+        "moderator": "Dra. María Cristina Quintanilla García."
+      },
+      {
+        "topic": "Tópicos diversos en Endocrinología",
+        "moderator": "Dra. María Cristina Quintanilla García."
+      }
+    ],
+    "firstName": "Marco Antonio",
+    "lastName": "Guerra Torres",
+    "displayName": "Marco Antonio Guerra Torres",
+    "gender": "Male",
+    "email": "marcogueto@outlook.com",
+    "profileImg": "assets/img/doctors/4.png",
+    "phone": "8134032096",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Resistencia a la insulina, marcadores sensibles en el Síndrome de Ovario poliquístico",
+        "from": "16:40",
+        "to": "17:20",
+        "duration": "40 min"
+      },
+      {
+        "topic": "Ritmo Circadiano y Endocrinopatías.",
+        "from": "12:00",
+        "to": "12:20",
+        "duration": "20 min"
+      },
+      {
+        "topic": "Atención primaria del paciente transgénero.",
+        "from": "12:20",
+        "to": "12:40",
+        "duration": "20 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "Aspen Medical Center, Corpus 2320 1er piso",
+      "suburb": "Lomas de San Francisco",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": "64718"
+    },
+    "specialities": [
+      "Diabetes",
+      "Obesidad",
+      "Diabetes tipo 1",
+      "Enfermedades de la tiroides",
+      "Dislipidemia",
+      "Hipertiroidismo",
+      "Síndrome metabólico",
+      "Hipotiroidismo en adultos",
+      "Transtornos de las suprarrenales",
+      "Tumor hipofisario",
+      "Hipercortisolismo",
+      "Osteoporosis",
+      "Hipogonadismo primario en hombres",
+      "Adenoma hipofisario secretor de prolactina",
+      "Prolactinoma",
+      "Diabetes tipo 2",
+      "Diabetes gestacional",
+      "Trastornos metabólicos y hormonales",
+      "Sobrepeso",
+      "Terapia hormonal a personas transgenero"
+    ],
+    "socialMedia": {
+      "doctoralia": "https://www.doctoralia.com.mx/marco-antonio-guerra-torres-2/endocrinologo-internista/ciudad-acuna"
+    }
+  },
+  {
+    "id": 20,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
+        "moderator": "Dr. Marco António Guerra Torres"
+      }
+    ],
+    "firstName": "Ana Eugenia",
+    "lastName": "Teniente Sánchez",
+    "displayName": "Ana Eugenia Teniente Sánchez",
+    "gender": "Female",
+    "email": null,
+    "profileImg": "assets/img/doctors/1.png",
+    "phone": "8111268535",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Manejo del hiperandrogenismo en el Síndrome de Ovario Poliquístico",
+        "from": "17:30",
+        "to": "18:10",
+        "duration": "40 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "Aspen Medical Center, Corpus 2320 1er piso",
+      "suburb": "Lomas de San Francisco",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": "64718"
+    },
+    "specialities": [
+      "Diabetología",
+      "Patologías de la Tiroides",
+      "Obesidad",
+      "Riesgo Vascular",
+      "Metabolismo Mineral",
+      "Diabetes",
+      "Hipertensión"
+    ],
+    "socialMedia": {
+      "doctoralia": "https://www.doctoralia.com.mx/ana-eugenia-teniente-sanchez/endocrinologo-internista/nuevo-leon"
+    }
+  },
+  {
+    "id": 21,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
+        "moderator": "Dr. Marco António Guerra Torres"
+      }
+    ],
+    "firstName": "Estefanía",
+    "lastName": "Esparza Corona",
+    "displayName": "Estefanía Esparza Corona",
+    "gender": "Female",
+    "email": "fany.esparza91@gmail.com",
+    "profileImg": "assets/img/doctors/5.png",
+    "phone": "8134439300",
+    "speciality": "Nutrióloga",
+    "congress": [
+      {
+        "topic": "Nutrición y suplementación en el Síndrome de Ovario Poliquístico",
+        "from": "18:10",
+        "to": "18:50",
+        "duration": "40 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "Patzcuaro 134-100",
+      "suburb": "Las Encinas",
+      "state": "Nuevo León",
+      "town": "General Escobedo",
+      "zipcode": "66050"
+    },
+    "specialities": [
+      "Educación en Diabetes",
+      "Nutrición en Enfermedad Renal",
+      "Obesidad",
+      "Enfermedades Gastrointestinales"
+    ],
+    "socialMedia": {
+      "doctoralia": "https://www.doctoralia.com.mx/estefania-de-fatima-esparza-corona/nutriologo-clinico/nuevo-leon"
+    }
+  },
+  {
+    "id": 22,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Taller de actualización en Diabetes",
+        "moderator": "Dra. Leonor Mireles Zavala"
+      },
+      {
+        "topic": "Obesidad",
+        "moderator": "Dra. Gabriela Morales González."
+      }
+    ],
+    "firstName": "Elizabeth",
+    "lastName": "Olavide Aguilar",
+    "displayName": "Elizabeth Olavide Aguilar",
+    "gender": "Female",
+    "email": "dra.olavide@gmail.com",
+    "profileImg": "assets/img/doctors/3.png",
+    "phone": "8261236530",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Calculando y decidiendo tratamiento conforme el Riesgo Cardiovascular en mi pacientes con Diabetes tipo 2:Casos clínicos",
+        "from": "16:00",
+        "to": "16:30",
+        "duration": "30 min"
+      },
+      {
+        "topic": "Microbiota y Obesidad.",
+        "from": "14:25",
+        "to": "14:45",
+        "duration": "20 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "Miguel Hidalgo y Costilla 2425",
+      "suburb": "Obispado",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": "64040"
+    },
+    "specialities": [
+      "Diabetes",
+      "Cáncer de tiroides",
+      "Osteoporosis",
+      "Nódulo tiroideo",
+      "Enfermedades de la tiroides",
+      "Obesidad",
+      "Prolactinoma",
+      "Enfermedad de Cushing",
+      "Hipertiroidismo",
+      "Hipercalciemia relacionada con las paratiroides",
+      "Enfermedad de Addison",
+      "Hipotiroidismo en adultos"
+    ],
+    "socialMedia": {
+      "doctoralia": "https://www.doctoralia.com.mx/elizabeth-olavide-aguilar/endocrinologo-internista/monterrey"
+    }
+  },
+  {
     "id": 1,
     "hasDetails": true,
     "mainTopics": [
@@ -497,51 +823,7 @@ var doctors = [
       "doctoralia": "https://www.doctoralia.com.mx/marco-antonio-roman-montalvo/endocrinologo-internista/nuevo-leon"
     }
   },
-  {
-    "id": 10,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Biología de la repoducción",
-        "moderator": "Ana Eugenia Teniente Sánchez"
-      },
-      {
-        "topic": "Taller de actualización en Obesidad",
-        "moderator": "Dr. Edmundo Ávila Hipólito"
-      }
-    ],
-    "firstName": "Gabriela",
-    "lastName": "Morales González",
-    "displayName": "Gabriela Morales González",
-    "gender": "Female",
-    "email": "gmoralesgo@gmail.com",
-    "profileImg": "assets/img/doctors/9.png",
-    "phone": "8188880643",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Análogos de GLP1 en SOP",
-        "from": "13:00",
-        "to": "13:20",
-        "duration": "20 min"
-      },
-      {
-        "topic": "Abordaje etiológico de la obesidad, claves para definir el tratamiento ideal  para mi paciente.",
-        "from": "",
-        "to": "",
-        "duration": ""
-      }
-    ],
-    "address": {
-      "completeAddress": "Hospital Zambrano Helion, Batallon de San Patricio #112",
-      "suburb": "Real de San Agustín",
-      "state": "Nuevo León",
-      "town": "San Pedro Garza García",
-      "zipcode": "66278"
-    },
-    "specialities": [],
-    "socialMedia": {}
-  },
+
   {
     "id": 11,
     "hasDetails": true,
@@ -833,287 +1115,6 @@ var doctors = [
     ],
     "socialMedia": {
       "doctoralia": "https://www.doctoralia.com.mx/carolina-castillo-castro/endocrinologo-internista/nuevo-leon"
-    }
-  },
-  {
-    "id": 18,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
-        "moderator": "Dr. Marco António Guerra Torres"
-      },
-      {
-        "topic": "Obesidad",
-        "moderator": "Dra. Gabriela Morales González."
-      }
-    ],
-    "firstName": "José Armando",
-    "lastName": "Quintanilla Siller",
-    "displayName": "José Armando Quintanilla Siller",
-    "gender": "Male",
-    "email": "armandoqsiller@hotmail.com",
-    "profileImg": "assets/img/doctors/10.png",
-    "phone": "8134439300",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Aspectos para el diagnóstico de Síndrome de Ovario Poliquístico",
-        "from": "16:00",
-        "to": "16:40",
-        "duration": "40 min"
-      },
-      {
-        "topic": "Microbiota y Obesidad.",
-        "from": "14:05",
-        "to": "14:25",
-        "duration": "20 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "De La Clinica #2520",
-      "suburb": "Sertoma",
-      "state": "Nuevo León",
-      "town": "Monterrey",
-      "zipcode": "64710"
-    },
-    "specialities": [
-      "Obesidad",
-      "Diabetología",
-      "Patologías de la Tiroides",
-      "Obesidad",
-      "Osteoporosis",
-      "Metabolismo Mineral",
-      "Paratiroides",
-      "Nutrición"
-    ],
-    "socialMedia": {
-      "doctoralia": "https://www.doctoralia.com.mx/jose-armando-quintanilla-siller/endocrinologo-internista/nuevo-leon"
-    }
-  },
-  {
-    "id": 19,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
-        "moderator": "Dr. Marco António Guerra Torres"
-      },
-      {
-        "topic": "Tópicos diversos en Endocrinología",
-        "moderator": "Dra. María Cristina Quintanilla García."
-      },
-      {
-        "topic": "Tópicos diversos en Endocrinología",
-        "moderator": "Dra. María Cristina Quintanilla García."
-      }
-    ],
-    "firstName": "Marco Antonio",
-    "lastName": "Guerra Torres",
-    "displayName": "Marco Antonio Guerra Torres",
-    "gender": "Male",
-    "email": "marcogueto@outlook.com",
-    "profileImg": "assets/img/doctors/4.png",
-    "phone": "8134032096",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Resistencia a la insulina, marcadores sensibles en el Síndrome de Ovario poliquístico",
-        "from": "16:40",
-        "to": "17:20",
-        "duration": "40 min"
-      },
-      {
-        "topic": "Ritmo Circadiano y Endocrinopatías.",
-        "from": "12:00",
-        "to": "12:20",
-        "duration": "20 min"
-      },
-      {
-        "topic": "Atención primaria del paciente transgénero.",
-        "from": "12:20",
-        "to": "12:40",
-        "duration": "20 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "Aspen Medical Center, Corpus 2320 1er piso",
-      "suburb": "Lomas de San Francisco",
-      "state": "Nuevo León",
-      "town": "Monterrey",
-      "zipcode": "64718"
-    },
-    "specialities": [
-      "Diabetes",
-      "Obesidad",
-      "Diabetes tipo 1",
-      "Enfermedades de la tiroides",
-      "Dislipidemia",
-      "Hipertiroidismo",
-      "Síndrome metabólico",
-      "Hipotiroidismo en adultos",
-      "Transtornos de las suprarrenales",
-      "Tumor hipofisario",
-      "Hipercortisolismo",
-      "Osteoporosis",
-      "Hipogonadismo primario en hombres",
-      "Adenoma hipofisario secretor de prolactina",
-      "Prolactinoma",
-      "Diabetes tipo 2",
-      "Diabetes gestacional",
-      "Trastornos metabólicos y hormonales",
-      "Sobrepeso",
-      "Terapia hormonal a personas transgenero"
-    ],
-    "socialMedia": {
-      "doctoralia": "https://www.doctoralia.com.mx/marco-antonio-guerra-torres-2/endocrinologo-internista/ciudad-acuna"
-    }
-  },
-  {
-    "id": 20,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
-        "moderator": "Dr. Marco António Guerra Torres"
-      }
-    ],
-    "firstName": "Ana Eugenia",
-    "lastName": "Teniente Sánchez",
-    "displayName": "Ana Eugenia Teniente Sánchez",
-    "gender": "Female",
-    "email": null,
-    "profileImg": "assets/img/doctors/1.png",
-    "phone": "8111268535",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Manejo del hiperandrogenismo en el Síndrome de Ovario Poliquístico",
-        "from": "17:30",
-        "to": "18:10",
-        "duration": "40 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "Aspen Medical Center, Corpus 2320 1er piso",
-      "suburb": "Lomas de San Francisco",
-      "state": "Nuevo León",
-      "town": "Monterrey",
-      "zipcode": "64718"
-    },
-    "specialities": [
-      "Diabetología",
-      "Patologías de la Tiroides",
-      "Obesidad",
-      "Riesgo Vascular",
-      "Metabolismo Mineral",
-      "Diabetes",
-      "Hipertensión"
-    ],
-    "socialMedia": {
-      "doctoralia": "https://www.doctoralia.com.mx/ana-eugenia-teniente-sanchez/endocrinologo-internista/nuevo-leon"
-    }
-  },
-  {
-    "id": 21,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Taller de actualización: Síndrome de Ovario Poliquístico",
-        "moderator": "Dr. Marco António Guerra Torres"
-      }
-    ],
-    "firstName": "Estefanía",
-    "lastName": "Esparza Corona",
-    "displayName": "Estefanía Esparza Corona",
-    "gender": "Female",
-    "email": "fany.esparza91@gmail.com",
-    "profileImg": "assets/img/doctors/5.png",
-    "phone": "8134439300",
-    "speciality": "Nutrióloga",
-    "congress": [
-      {
-        "topic": "Nutrición y suplementación en el Síndrome de Ovario Poliquístico",
-        "from": "18:10",
-        "to": "18:50",
-        "duration": "40 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "Patzcuaro 134-100",
-      "suburb": "Las Encinas",
-      "state": "Nuevo León",
-      "town": "General Escobedo",
-      "zipcode": "66050"
-    },
-    "specialities": [
-      "Educación en Diabetes",
-      "Nutrición en Enfermedad Renal",
-      "Obesidad",
-      "Enfermedades Gastrointestinales"
-    ],
-    "socialMedia": {
-      "doctoralia": "https://www.doctoralia.com.mx/estefania-de-fatima-esparza-corona/nutriologo-clinico/nuevo-leon"
-    }
-  },
-  {
-    "id": 22,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Taller de actualización en Diabetes",
-        "moderator": "Dra. Leonor Mireles Zavala"
-      },
-      {
-        "topic": "Obesidad",
-        "moderator": "Dra. Gabriela Morales González."
-      }
-    ],
-    "firstName": "Elizabeth",
-    "lastName": "Olavide Aguilar",
-    "displayName": "Elizabeth Olavide Aguilar",
-    "gender": "Female",
-    "email": "dra.olavide@gmail.com",
-    "profileImg": "assets/img/doctors/3.png",
-    "phone": "8261236530",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Calculando y decidiendo tratamiento conforme el Riesgo Cardiovascular en mi pacientes con Diabetes tipo 2:Casos clínicos",
-        "from": "16:00",
-        "to": "16:30",
-        "duration": "30 min"
-      },
-      {
-        "topic": "Microbiota y Obesidad.",
-        "from": "14:25",
-        "to": "14:45",
-        "duration": "20 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "Miguel Hidalgo y Costilla 2425",
-      "suburb": "Obispado",
-      "state": "Nuevo León",
-      "town": "Monterrey",
-      "zipcode": "64040"
-    },
-    "specialities": [
-      "Diabetes",
-      "Cáncer de tiroides",
-      "Osteoporosis",
-      "Nódulo tiroideo",
-      "Enfermedades de la tiroides",
-      "Obesidad",
-      "Prolactinoma",
-      "Enfermedad de Cushing",
-      "Hipertiroidismo",
-      "Hipercalciemia relacionada con las paratiroides",
-      "Enfermedad de Addison",
-      "Hipotiroidismo en adultos"
-    ],
-    "socialMedia": {
-      "doctoralia": "https://www.doctoralia.com.mx/elizabeth-olavide-aguilar/endocrinologo-internista/monterrey"
     }
   },
   {
