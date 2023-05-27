@@ -319,7 +319,62 @@ var doctors = [
       "doctoralia": "https://www.doctoralia.com.mx/marco-antonio-guerra-torres-2/endocrinologo-internista/ciudad-acuna"
     }
   },
-
+  {
+    "id": 80,
+    "hasDetails": true,
+    "mainTopics": [
+    ],
+    "firstName": "Leticia María",
+    "lastName": "Hernandez Arizpe",
+    "displayName": "Leticia María Hernandez Arizpe",
+    "gender": "Female",
+    "email": "letyhdezarizpe@yahoo.com",
+    "profileImg": "assets/img/doctors/6.png",
+    "phone": "8183664788",
+    "speciality": "Nutriologa",
+    "congress": [
+    ],
+    "address": {
+      "completeAddress": "",
+      "suburb": "",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": ""
+    },
+    "specialities": [
+    ],
+    "socialMedia": {
+      "doctoralia": null
+    }
+  },
+  {
+    "id": 81,
+    "hasDetails": true,
+    "mainTopics": [
+    ],
+    "firstName": "Elizabeth",
+    "lastName": "Solís Pérez",
+    "displayName": "Elizabeth Solís Pérez",
+    "gender": "Female",
+    "email": null,
+    "profileImg": "assets/img/doctors/8.png",
+    "phone": null,
+    "speciality": "Nutriologa",
+    "congress": [
+    ],
+    "address": {
+      "completeAddress": "",
+      "suburb": "",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": ""
+    },
+    "specialities": [
+    ],
+    "socialMedia": {
+      "doctoralia": null
+    }
+  },
   {
     "id": 21,
     "hasDetails": true,
@@ -628,50 +683,6 @@ var doctors = [
     "socialMedia": {}
   },
   {
-    "id": 6,
-    "hasDetails": true,
-    "mainTopics": [
-      {
-        "topic": "Tiroides",
-        "moderator": "Karla Rodríguez Velver"
-      }
-    ],
-    "firstName": "Juan José",
-    "lastName": "Medina Jasso",
-    "displayName": "Juan José Medina Jasso",
-    "gender": "Male",
-    "email": "drjuanmeja@gmail.com",
-    "profileImg": "assets/img/logos/logo.svg",
-    "phone": "8116317359",
-    "speciality": "Endocrinología",
-    "congress": [
-      {
-        "topic": "Abordaje del nódulo tiroideo",
-        "from": "11:05 am",
-        "to": "11:30 am",
-        "duration": "20 min"
-      }
-    ],
-    "address": {
-      "completeAddress": "Dr. Cantu #300",
-      "suburb": "Los Doctores",
-      "state": "Nuevo León",
-      "town": "Monterrey",
-      "zipcode": "64710"
-    },
-    "specialities": [
-      "Diabetología",
-      "Patologías de la Tiroides",
-      "Gónadas y Reproducción",
-      "Bariatría",
-      "Enfermedades Metabólicas",
-      "Paratiroides"
-    ],
-    "socialMedia": {
-      "linkedin": "https://www.linkedin.com/in/juan-jos%C3%A9-medina-jasso-315426112/?originalSubdomain=mx"
-    }
-  },
-  {
     "id": 7,
     "hasDetails": true,
     "mainTopics": [
@@ -723,6 +734,50 @@ var doctors = [
     ],
     "socialMedia": {
       "doctoralia": "https://www.doctoralia.com.mx/leonor-g-mireles-zavala/endocrinologo-internista/monterrey"
+    }
+  },
+  {
+    "id": 6,
+    "hasDetails": true,
+    "mainTopics": [
+      {
+        "topic": "Tiroides",
+        "moderator": "Karla Rodríguez Velver"
+      }
+    ],
+    "firstName": "Juan José",
+    "lastName": "Medina Jasso",
+    "displayName": "Juan José Medina Jasso",
+    "gender": "Male",
+    "email": "drjuanmeja@gmail.com",
+    "profileImg": "assets/img/logos/logo.svg",
+    "phone": "8116317359",
+    "speciality": "Endocrinología",
+    "congress": [
+      {
+        "topic": "Abordaje del nódulo tiroideo",
+        "from": "11:05 am",
+        "to": "11:30 am",
+        "duration": "20 min"
+      }
+    ],
+    "address": {
+      "completeAddress": "Dr. Cantu #300",
+      "suburb": "Los Doctores",
+      "state": "Nuevo León",
+      "town": "Monterrey",
+      "zipcode": "64710"
+    },
+    "specialities": [
+      "Diabetología",
+      "Patologías de la Tiroides",
+      "Gónadas y Reproducción",
+      "Bariatría",
+      "Enfermedades Metabólicas",
+      "Paratiroides"
+    ],
+    "socialMedia": {
+      "linkedin": "https://www.linkedin.com/in/juan-jos%C3%A9-medina-jasso-315426112/?originalSubdomain=mx"
     }
   },
   {
