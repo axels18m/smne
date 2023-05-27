@@ -2866,7 +2866,7 @@ function showDoctorsAsList(doctorsForPage) {
                                     <p class="designation">${doctor.speciality}</p>
                                 </div>
                                 <div class="col text-end" ${!doctor.hasDetails ? 'hidden' : ''}>
-                                    <button type="button" class="btn btn-sm btn-advisor" data-toggle="modal" data-target="#showDoctorModal" onclick="showDoctorModal(${doctor.id})">
+                                    <button type="button" class="btn btn-sm btn-advisor" data-toggle="modal" data-target="#showDoctorModal" onclick="showModalListener(${doctor.id})">
                                         Ver más
                                     </button>
                                 </div>
