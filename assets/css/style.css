@@ -436,9 +436,10 @@ h6,
 
 #hero h2 {
   color: #fff;
-  /* margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 900;*/
+  /*margin-bottom: 30px;*/
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 #hero p {
@@ -1788,4 +1789,12 @@ li {
 .shadow-lg,
 .shadow-lg--on-hover:hover {
   box-shadow: 0 1rem 3rem rgba(132, 138, 163, 0.1) !important;
+}
+
+.smne_latter::first-letter {
+  font-size: 5em;
+  line-height: 0.9;
+  float: left;
+  padding-right: 5px;
+  color: #1b5c93;
 }
