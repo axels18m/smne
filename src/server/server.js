@@ -23,7 +23,6 @@ app.use(bodyParser.json());
 // Route to handle the email sending
 app.post('/send-email', async (req, res) => {
     const { name, email, phone, message } = req.query;
-    console.log(name, email, phone, message);
 
     try {
         // Read the email template file

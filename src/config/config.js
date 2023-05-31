@@ -7,7 +7,7 @@ module.exports = {
 
     // Eamil
     email: {
-        host: 'thunderp.com.mx',
+        host: 'endocrinologianoreste.com',
         port: 587,
         secure: false
     },
