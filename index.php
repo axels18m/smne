@@ -29,9 +29,11 @@
   <!--Thunderp-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-  
+
 
 
 </head>
@@ -47,7 +49,8 @@
       <div class="social-links d-none d-md-block">
         <a href="https://www.facebook.com/capitulonorestesmne" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/capitulonorestene/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/capitulo-noreste-smne/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/company/capitulo-noreste-smne/" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </section>
@@ -58,7 +61,7 @@
 
       <div class="logo me-auto">
 
-        <a href="index.html"><img src="./assets/img/smnecn.svg" alt="" class="img-fluid" style="padding-top: 25px;
+        <a href="index.php"><img src="./assets/img/smnecn.svg" alt="" class="img-fluid" style="padding-top: 25px;
 "></a>
       </div>
 
@@ -94,14 +97,16 @@
           <div class="carousel-item active" style="background-image: url('assets/img/slide/slide-1.png');">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">VI Congreso Nutrición y Endocrinología del capítulo noreste 2023</h2>
+                <h2 class="animate__animated animate__fadeInDown">VI Congreso Nutrición y Endocrinología del capítulo
+                  noreste 2023</h2>
                 <p class="animate__animated animate__fadeInUp"> El VI congreso de Endocrinología se llevará a
-18 y 19 de agosto en el Pabellon M <br> de Monterrey, Nuevo León.</p>
+                  18 y 19 de agosto en el Pabellon M <br> de Monterrey, Nuevo León.</p>
                 <a href="./congreso2023.html" class="btn-get-started animate__animated animate__fadeInUp scrollto"
                   style="margin-left: 0px;">Congreso</a>
-                  <a href="https://live.eventtia.com/es/congresoendocrinologia2023" class="btn-get-started animate__animated animate__fadeInUp scrollto"
-                  style="margin-left: 0px;" target="_blank">Boletos</a>
-                  
+                <a href="https://live.eventtia.com/es/congresoendocrinologia2023"
+                  class="btn-get-started animate__animated animate__fadeInUp scrollto" style="margin-left: 0px;"
+                  target="_blank">Boletos</a>
+
               </div>
             </div>
           </div>
@@ -117,10 +122,12 @@
                   podrás encontrar información de cursos y procedimientos para ser miembro.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto"
                   style="margin-left: 0px;">Sobre nosotros</a>
-               <a href="https://www.facebook.com/capitulonorestesmne" class="btn-get-started animate__animated animate__fadeInUp scrollto"
-                  style="margin-left: 0px;" target="_blank"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/capitulonorestene/" class="btn-get-started animate__animated animate__fadeInUp scrollto"
-                  style="margin-left: 0px;" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/capitulonorestesmne"
+                  class="btn-get-started animate__animated animate__fadeInUp scrollto" style="margin-left: 0px;"
+                  target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/capitulonorestene/"
+                  class="btn-get-started animate__animated animate__fadeInUp scrollto" style="margin-left: 0px;"
+                  target="_blank"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -143,9 +150,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row no-gutters">
-          
+
           <div class="col-lg-6 d-flex flex-column about-content" style="padding-top: 0px;">
- <p style="font-family: 'Raleway', sans-serif;
+            <p style="font-family: 'Raleway', sans-serif;
     font-size: 41px;
     color: #1c5c93;
     text-transform: uppercase;
@@ -153,14 +160,14 @@
     text-align: center;
     padding-top: 20px;
     margin-bottom: 0px;">
-                Capitulo Noreste </p>
-                <span style="font-size: small; font-family: 'Raleway', sans-serif;
+              Capitulo Noreste </p>
+            <span style="font-size: small; font-family: 'Raleway', sans-serif;
     color: #1c5c93;
     text-transform: uppercase;
     font-style: normal;
-    text-align: center;" > de la Sociedad Méxicana de Nutrición y Endocrinología </span> <br>
+    text-align: center;"> de la Sociedad Méxicana de Nutrición y Endocrinología </span> <br>
             <div class="section-title">
-             
+
               <p style="font-family: 'Raleway'; color: #666; font-size: 15px; font-style: normal;" class="smne_latter">
                 Somos una asociación civil dedicada a promover y fomentar el conocimiento de la nutrición y
                 endocrinología entre sus agremiados. Nuestra misión es asegurar que la prevención y atención de
@@ -224,20 +231,22 @@
             <div class="row">
               <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
                 <div class="info-box">
-                   <a href="./index.html" target="_blank"> 
-                  <img src="./assets/img/logoSMNECN.svg" class="img-fluid" alt="">
+                  <a href="./index.php" target="_blank">
+                    <img src="./assets/img/logoSMNECN.svg" class="img-fluid" alt="">
                   </a>
                 </div>
               </div>
               <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
                 <div class="info-box">
-                  <a href="https://endocrinologia.org.mx/smne.php" target="_blank"> <img src="./assets/img/smne.svg" class="img-fluid" alt=""></a>
-                 
+                  <a href="https://endocrinologia.org.mx/smne.php" target="_blank"> <img src="./assets/img/smne.svg"
+                      class="img-fluid" alt=""></a>
+
                 </div>
               </div>
               <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
                 <div class="info-box">
-                    <a href="https://live.eventtia.com/es/congresoendocrinologia2023" target="_blank"><img src="./assets/img/smnecn23.svg" class="img-fluid" alt=""></a>
+                  <a href="https://live.eventtia.com/es/congresoendocrinologia2023" target="_blank"><img
+                      src="./assets/img/smnecn23.svg" class="img-fluid" alt=""></a>
 
                 </div>
               </div>
@@ -263,20 +272,20 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
 
             <div class="section-title">
-<p style="font-family: 'Raleway', sans-serif;
+              <p style="font-family: 'Raleway', sans-serif;
     font-size: 41px;
     color: #1c5c93;
     text-transform: uppercase;
     font-style: normal;
     text-align: center;
     margin-bottom: 0px;">
-                 VI Congreso </p>
-                <span style="font-size: small; font-family: 'Raleway', sans-serif;
+                VI Congreso </p>
+              <span style="font-size: small; font-family: 'Raleway', sans-serif;
     color: #1c5c93;
     text-transform: uppercase;
     font-style: normal;
-    text-align: center;" > endocrinología y nutrición </span> <br> <br>
-            
+    text-align: center;"> endocrinología y nutrición </span> <br> <br>
+
               <p style="font-family: 'Raleway'; color: #666; font-size: 15px; font-style: normal;">El congreso está
                 dirigido a médicos de primer contacto de atención, nutriólogos y especialistas, con el objetivo de
                 presentar actualización en temas de interés de las principales enfermedades de sus pacientes.</p>
@@ -301,12 +310,12 @@
               <p class="description">4 Talleres: Obesidad, Hígado Graso, Síndrome de Ovario Poliquístico...</p>
             </div><br>
             <div class="d-grid gap-2 d-md-block" data-aos="fade-up">
-              <a target="_blank" rel="canonical" href="./congreso2023.html"
-                class="btn btn-outline-secondary" role="button"> <i class="bi bi-border-width"></i> Más
+              <a target="_blank" rel="canonical" href="./congreso2023.html" class="btn btn-outline-secondary"
+                role="button"> <i class="bi bi-border-width"></i> Más
                 información</a>
 
-                <a target="_blank" rel="canonical" href="./congreso2023.html"
-                class="btn btn-outline-secondary" role="button"> <i class="bi bi-filetype-pdf"></i> Programa</a>
+              <a target="_blank" rel="canonical" href="./congreso2023.html" class="btn btn-outline-secondary"
+                role="button"> <i class="bi bi-filetype-pdf"></i> Programa</a>
 
               <a target="_blank" rel="canonical" href="https://live.eventtia.com/es/congresoendocrinologia2023"
                 class="btn btn-outline-secondary" role="button"><i class="bi bi-ticket"></i> Comprar Boletos</a>
@@ -317,13 +326,13 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section --> 
+    </section><!-- End About Us Section -->
 
 
-    
 
 
-    
+
+
 
     <!-- ======= About Lists Section ======= -->
     <section class="about-lists">
@@ -338,33 +347,45 @@
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
             <h4>METABOLISMO <br>MINERAL</h4>
-            <p>El metabolismo mineral regula el equilibrio de minerales en nuestro cuerpo. Absorción, transporte y distribución de minerales son controlados por hormonas y enzimas. Importantes para funciones vitales y tejidos. </p>
+            <p>El metabolismo mineral regula el equilibrio de minerales en nuestro cuerpo. Absorción, transporte y
+              distribución de minerales son controlados por hormonas y enzimas. Importantes para funciones vitales y
+              tejidos. </p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
             <h4>NEUROENDOCRINOLOGÍA<br><br></h4>
-            <p>Investigación de la relación entre el sistema nervioso y el sistema endocrino, enfocándose en la regulación hormonal y su influencia en funciones como el crecimiento, el metabolismo y el comportamiento.</p>
+            <p>Investigación de la relación entre el sistema nervioso y el sistema endocrino, enfocándose en la
+              regulación hormonal y su influencia en funciones como el crecimiento, el metabolismo y el comportamiento.
+            </p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-          
+
             <h4> TIROIDES<br><br></h4>
-            <p>Análisis de la glándula tiroides y sus hormonas, que controlan el metabolismo, el crecimiento y la regulación hormonal. Diagnóstico y tratamiento de trastornos como el hipotiroidismo y el hipertiroidismo.</p>
+            <p>Análisis de la glándula tiroides y sus hormonas, que controlan el metabolismo, el crecimiento y la
+              regulación hormonal. Diagnóstico y tratamiento de trastornos como el hipotiroidismo y el hipertiroidismo.
+            </p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
             <h4>OBESIDAD &<br> NUTRICIÓN</h4>
-            <p>Estudio de los factores relacionados con la obesidad, incluyendo la alimentación y el metabolismo. Análisis de la dieta, el impacto en la salud y desarrollo de estrategias nutricionales para prevenir y tratar la obesidad.</p>
+            <p>Estudio de los factores relacionados con la obesidad, incluyendo la alimentación y el metabolismo.
+              Análisis de la dieta, el impacto en la salud y desarrollo de estrategias nutricionales para prevenir y
+              tratar la obesidad.</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
             <h4>DIABETES<br><br></h4>
-            <p>Investigación de la enfermedad crónica caracterizada por niveles elevados de azúcar en la sangre. Estudio de la regulación de la glucosa, los factores de riesgo, diagnóstico y tratamiento, incluyendo la terapia con insulina y el manejo de la alimentación.</p>
+            <p>Investigación de la enfermedad crónica caracterizada por niveles elevados de azúcar en la sangre. Estudio
+              de la regulación de la glucosa, los factores de riesgo, diagnóstico y tratamiento, incluyendo la terapia
+              con insulina y el manejo de la alimentación.</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
             <h4>BIOLOGÍA DE LA REPRODUCCIÓN</h4>
-            <p>Análisis de los procesos biológicos relacionados con la reproducción humana y animal. Estudio de la fertilidad, el ciclo menstrual, la fecundación, el embarazo, el desarrollo fetal y los trastornos reproductivos. Diagnóstico y tratamiento de problemas de fertilidad y planificación familiar.</p>
+            <p>Análisis de los procesos biológicos relacionados con la reproducción humana y animal. Estudio de la
+              fertilidad, el ciclo menstrual, la fecundación, el embarazo, el desarrollo fetal y los trastornos
+              reproductivos. Diagnóstico y tratamiento de problemas de fertilidad y planificación familiar.</p>
           </div>
 
         </div>
@@ -383,13 +404,14 @@
     font-style: normal;
     text-align: center;
     margin-bottom: 0px;">
-                 Capitulo Noreste </p>
-                <span style="font-size: small; font-family: 'Raleway', sans-serif;
+            Capitulo Noreste </p>
+          <span style="font-size: small; font-family: 'Raleway', sans-serif;
     color: #1c5c93;
     text-transform: uppercase;
     font-style: normal;
-    text-align: center;" > Busqueda de especialistas </span> <hr>
-         
+    text-align: center;"> Busqueda de especialistas </span>
+          <hr>
+
         </div>
 
         <div class="row">
@@ -417,7 +439,8 @@
               </div>
               <div class="col-md" style="padding-top: 30px;">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button class="btn btn-outline-secondary me-md-2 mb-2" type="button" id="searchFilterBtn"> Buscar</button>
+                  <button class="btn btn-outline-secondary me-md-2 mb-2" type="button" id="searchFilterBtn">
+                    Buscar</button>
                   <button class="btn btn-outline-secondary mb-2" type="button" id="clearFiltersBtn">Limpiar</button>
                 </div>
               </div>
@@ -611,21 +634,26 @@
 
     <section id="contacto" class="contact container">
       <div class="section-title">
-        <p style="font-family: 'Raleway', sans-serif;    font-size: 28px;     color: #1c5c93; text-transform: uppercase; font-style: normal;">Contacto</p>
+        <p
+          style="font-family: 'Raleway', sans-serif;    font-size: 28px;     color: #1c5c93; text-transform: uppercase; font-style: normal;">
+          Contacto</p>
       </div>
 
       <div class="contact-container shadow-lg mt-n9">
         <div class="row no-gutters">
           <div class="col-lg-5 contact-info-form  p-5 order-lg-1">
 
-            <a href="index.html"><img src="./assets/img/logos/logo_smne.svg" alt="" class="img-fluid"
+            <a href="index.php"><img src="./assets/img/logos/logo_smne.svg" alt="" class="img-fluid"
                 width="80%"></a><br><br><br>
 
             <ul class=" contact-info-list list-style--none position-relative z-index-101">
               <li class="mb-4 pl-4">
                 Asistencia Personalizada: Estamos aquí para ayudarte
-¿Tienes preguntas o necesitas ayuda? Nuestro equipo de atención al cliente está listo para brindarte asistencia personalizada. Contáctanos y responderemos a la brevedad posible. Tu satisfacción es nuestra prioridad. ¡Esperamos poder ayudarte!            
-</li> </ul>
+                ¿Tienes preguntas o necesitas ayuda? Nuestro equipo de atención al cliente está listo para brindarte
+                asistencia personalizada. Contáctanos y responderemos a la brevedad posible. Tu satisfacción es nuestra
+                prioridad. ¡Esperamos poder ayudarte!
+              </li>
+            </ul>
           </div>
 
           <div class="col-lg-7 contact-form__wrapper p-5 order-lg-2">
@@ -671,8 +699,8 @@
                 </div>
 
                 <div class="col-sm-12 mb-3">
-                  <button type="submit" name="submit" class="btn btn-outline-secondary"
-                    onclick="submitContactForm()"> <i class="bi bi-send"></i> Enviar</button>
+                  <button type="submit" name="submit" class="btn btn-outline-secondary" onclick="submitContactForm()">
+                    <i class="bi bi-send"></i> Enviar</button>
                 </div>
 
               </div>
@@ -694,7 +722,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <a href="index.html"><img src="./assets/img/logos/logo_blanco.svg" alt="" class="img-fluid"
+            <a href="index.php"><img src="./assets/img/logos/logo_blanco.svg" alt="" class="img-fluid"
                 width="80%"></a><br><br>
 
             <br><br>
