@@ -248,6 +248,77 @@ var doctors = [
     },
   },
   {
+    id: 7,
+    hasDetails: true,
+    mainTopics: [
+      {
+        topic: "Tiroides",
+        moderator: "Karla Rodríguez Velver",
+      },
+      {
+        topic: "Taller de actualización en Diabetes",
+        moderator: "Dra. Leonor Mireles Zavala",
+      },
+    ],
+    firstName: "Leonor Guadalupe",
+    lastName: "Mireles Zavala",
+    displayName: "Leonor Guadalupe Mireles Zavala",
+    gender: "Female",
+    email: null,
+    profileImg: "assets/img/doctors/2.png",
+    phone: "8114770428",
+    speciality: "Endocrinología",
+    congress: [
+      {
+        topic: "Encefalopatía de Hashimoto",
+        from: "11:30 am",
+        to: "11:50 am",
+        duration: "20 min",
+      },
+      {
+        topic:
+          "Diabetes y cambios al estilo de vida: revisión y aplicación de las nuevas guías.",
+        from: "17:30",
+        to: "18:00",
+        duration: "30 min",
+      },
+    ],
+    address: {
+      completeAddress: "Ecuador #2331",
+      suburb: "Balcones de galerias",
+      state: "Nuevo León",
+      town: "Monterrey",
+      zipcode: "64620",
+    },
+    specialities: [
+      "Diabetología",
+      "Patologías de la Tiroides",
+      "Gónadas y Reproducción",
+      "Bariatría",
+      "Enfermedades Metabólicas",
+      "Paratiroides",
+    ],
+    socialMedia: {
+      doctoralia:
+        "https://www.doctoralia.com.mx/leonor-g-mireles-zavala/endocrinologo-internista/monterrey",
+    },
+  },
+  {
+    id: 72,
+    hasDetails: false,
+    address: {
+      town: "Monterrey",
+      state: "Nuevo León",
+    },
+    displayName: "Karla Victoria Rodríguez Velver",
+    speciality: "Endocrinología",
+    profileImg: "assets/img/logos/logo.svg",
+    email: "drakarlavelver@gmail.com",
+    phone: "8119742294",
+    firstName: "Karla Victoria",
+    lastName: "Rodríguez Velver",
+  },
+  {
     id: 19,
     hasDetails: true,
     mainTopics: [
@@ -685,62 +756,6 @@ var doctors = [
     },
     specialities: ["Diabetes tipo 2", "Hipertiroidismo", "Diabetes tipo 1"],
     socialMedia: {},
-  },
-  {
-    id: 7,
-    hasDetails: true,
-    mainTopics: [
-      {
-        topic: "Tiroides",
-        moderator: "Karla Rodríguez Velver",
-      },
-      {
-        topic: "Taller de actualización en Diabetes",
-        moderator: "Dra. Leonor Mireles Zavala",
-      },
-    ],
-    firstName: "Leonor Guadalupe",
-    lastName: "Mireles Zavala",
-    displayName: "Leonor Guadalupe Mireles Zavala",
-    gender: "Female",
-    email: null,
-    profileImg: "assets/img/doctors/2.png",
-    phone: "8114770428",
-    speciality: "Endocrinología",
-    congress: [
-      {
-        topic: "Encefalopatía de Hashimoto",
-        from: "11:30 am",
-        to: "11:50 am",
-        duration: "20 min",
-      },
-      {
-        topic:
-          "Diabetes y cambios al estilo de vida: revisión y aplicación de las nuevas guías.",
-        from: "17:30",
-        to: "18:00",
-        duration: "30 min",
-      },
-    ],
-    address: {
-      completeAddress: "Ecuador #2331",
-      suburb: "Balcones de galerias",
-      state: "Nuevo León",
-      town: "Monterrey",
-      zipcode: "64620",
-    },
-    specialities: [
-      "Diabetología",
-      "Patologías de la Tiroides",
-      "Gónadas y Reproducción",
-      "Bariatría",
-      "Enfermedades Metabólicas",
-      "Paratiroides",
-    ],
-    socialMedia: {
-      doctoralia:
-        "https://www.doctoralia.com.mx/leonor-g-mireles-zavala/endocrinologo-internista/monterrey",
-    },
   },
   {
     id: 6,
@@ -2551,21 +2566,6 @@ var doctors = [
     lastName: "Romero Villarreal",
   },
   {
-    id: 72,
-    hasDetails: false,
-    address: {
-      town: "Monterrey",
-      state: "Nuevo León",
-    },
-    displayName: "Karla Victoria Rodríguez Velver",
-    speciality: "Endocrinología",
-    profileImg: "assets/img/logos/logo.svg",
-    email: "drakarlavelver@gmail.com",
-    phone: "8119742294",
-    firstName: "Karla Victoria",
-    lastName: "Rodríguez Velver",
-  },
-  {
     id: 73,
     hasDetails: false,
     address: {
@@ -2857,9 +2857,8 @@ function loadPagination(totalPages) {
   let paginationHtml = "";
 
   for (let i = 1; i <= totalPages; i++) {
-    paginationHtml += `<li class="page-item ${
-      i === currentPage ? "active" : ""
-    }" id="on-paginate"><a class="page-link" onclick="onPaginateEvent(${i})" href="#busqueda">${i}</a></li>`;
+    paginationHtml += `<li class="page-item ${i === currentPage ? "active" : ""
+      }" id="on-paginate"><a class="page-link" onclick="onPaginateEvent(${i})" href="#busqueda">${i}</a></li>`;
   }
 
   paginationContainer.innerHTML = `
@@ -2947,23 +2946,18 @@ function showDoctorsAsList(doctorsForPage) {
             <div class="col-sm-4">
                 <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                     <!-- Team Thumb-->
-                    <div class="advisor_thumb"><img src="${
-                      doctor.profileImg
-                    }" alt="">
+                    <div class="advisor_thumb"><img src="${doctor.profileImg
+      }" alt="">
                         <!-- Social Info-->
                         <div class="social-info">
-                            <a title="${
-                              doctor.phone ? doctor.phone : "##-####-####"
-                            }" target="_blank" onclick="copyPhoneNumber(${
-      doctor.phone ? doctor.phone : null
-    })">
+                            <a title="${doctor.phone ? doctor.phone : "##-####-####"
+      }" target="_blank" onclick="copyPhoneNumber(${doctor.phone ? doctor.phone : null
+      })">
                                 <i class="bi bi-telephone-fill"></i>
                             </a>
-                            <a href="${
-                              doctoralia != null ? doctoralia : "#busqueda"
-                            }" title="${
-      doctoralia != null ? doctoralia : "#busqueda"
-    }" target="_blank">
+                            <a href="${doctoralia != null ? doctoralia : "#busqueda"
+      }" title="${doctoralia != null ? doctoralia : "#busqueda"
+      }" target="_blank">
                                 <i class="bi bi-google"></i>
                             </a>
                         </div>
@@ -2973,21 +2967,17 @@ function showDoctorsAsList(doctorsForPage) {
                         <div class="container overflow-hidden">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h6>${
-                                      doctor.gender === "Male"
-                                        ? "Dr. "
-                                        : "Dra. "
-                                    } ${doctor.displayName}</h6>
-                                    <p class="designation">${
-                                      doctor.speciality
-                                    }</p>
+                                    <h6>${doctor.gender === "Male"
+        ? "Dr. "
+        : "Dra. "
+      } ${doctor.displayName}</h6>
+                                    <p class="designation">${doctor.speciality
+      }</p>
                                 </div>
-                                <div class="col text-end" ${
-                                  !doctor.hasDetails ? "hidden" : ""
-                                }>
-                                    <button type="button" class="btn btn-sm btn-light" data-toggle="modal" data-target="#showDoctorModal" onclick="showModalListener(${
-                                      doctor.id
-                                    })">
+                                <div class="col text-end" ${!doctor.hasDetails ? "hidden" : ""
+      }>
+                                    <button type="button" class="btn btn-sm btn-light" data-toggle="modal" data-target="#showDoctorModal" onclick="showModalListener(${doctor.id
+      })">
                                         Ver más
                                     </button>
                                 </div>
@@ -3050,28 +3040,23 @@ function showDoctorsAsCards(doctorsForPage) {
 
     data += `
             <tr>
-                <th scope="row"><img src="${
-                  doctor.profileImg
-                }" class="img-fluid doctor-avatar" style="max-width: 40px;" /></th>
+                <th scope="row"><img src="${doctor.profileImg
+      }" class="img-fluid doctor-avatar" style="max-width: 40px;" /></th>
                 <td>${doctor.displayName}</td>
                 <td>${doctor.speciality}</td>
-                <td>${
-                  doctor.email === "" || doctor.email === null
-                    ? "-"
-                    : doctor.email
-                }</td>
-                <td>${
-                  doctor.phone === "" || doctor.phone === null
-                    ? "-"
-                    : doctor.phone
-                }</td>
+                <td>${doctor.email === "" || doctor.email === null
+        ? "-"
+        : doctor.email
+      }</td>
+                <td>${doctor.phone === "" || doctor.phone === null
+        ? "-"
+        : doctor.phone
+      }</td>
                 <td>${topics.join(", ")}</td>
                 <td>
-                    <button type="button" ${
-                      !doctor.hasDetails ? "hidden" : ""
-                    } class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" id="showModalListener" onClick="showModalListener(${
-      doctor.id
-    })">Ver más</button>
+                    <button type="button" ${!doctor.hasDetails ? "hidden" : ""
+      } class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showDoctorModal" id="showModalListener" onClick="showModalListener(${doctor.id
+      })">Ver más</button>
                 </td>
             </tr>
         `;
