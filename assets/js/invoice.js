@@ -6,8 +6,20 @@ $('#generate-invoice-form').submit(function (event) {
     var uuid = $('#generate-invoice-form #uuid').val();
     var email = $('#generate-invoice-form #email').val();
 
-    // Call the generateInvoice() function
-    generateInvoice(uuid, email);
+    validateUUIDAndEmailForm(uuid, email);
+
+    // Hide the submit button and show the loading button
+      $('#generate-submit-button').hide();
+      $('#generate-loading-button').show();
+
+      // Call the generateInvoice() function after a small delay (for demonstration purposes)
+      setTimeout(function() {
+        generateInvoice(uuid, email);
+
+        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
+        $('#generate-submit-button').show();
+        $('#generate-loading-button').hide();
+      }, 2000);
 });
 
 // Event listener for the search invoice form submission
@@ -15,12 +27,38 @@ $('#search-invoice-form').submit(function (event) {
     event.preventDefault(); // Prevent form submission
 
     // Get the UUID and email from the form
-    var uuid = $('#search-invoice-form #uuid').val();
-    var email = $('#search-invoice-form #email').val();
+    var uuid = $('#search-invoice-form #uuid-search').val();
+    var email = $('#search-invoice-form #email-search').val();
 
-    // Call the searchInvoice() function
-    searchInvoice(uuid, email);
+    validateUUIDAndEmailForm(uuid, email);
+
+    // Hide the submit button and show the loading button
+    $('#search-submit-button').hide();
+    $('#search-loading-button').show();
+
+    // Call the generateInvoice() function after a small delay (for demonstration purposes)
+    setTimeout(function() {
+        searchInvoice(uuid, email);
+
+        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
+        $('#search-submit-button').show();
+        $('#search-loading-button').hide();
+    }, 2000);
 });
+
+function validateUUIDAndEmailForm(uuid, email) {
+    // Validate UUID and email using regex
+    var uuidRegex = /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/i;
+    var emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+    if (!uuidRegex.test(uuid)) {
+      alert('Please enter a valid UUID.');
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+}
 
 // Function to generate an invoice
 function generateInvoice(uuid, email) {
@@ -84,30 +122,38 @@ function searchInvoice(uuid, email) {
 
 // Helper function to show input form fields for generating an invoice
 function showInvoiceForm() {
-    // Your code to show the input form fields goes here
 }
 
 // Helper function to show a warning message
 function showWarningMessage(message) {
-    // Your code to display the warning message goes here
+    // Create the alert element
+    var alertElement = $('<div>').addClass('alert alert-danger').attr('role', 'alert').html(message);
+
+    // Append the alert element to a container in your HTML
+    var alertContainer = $('#alert-container');
+    showAlert(alertContainer, alertElement);
 }
 
 // Helper function to show the option to download the invoice
 function showDownloadOption() {
-    // Your code to show the download option goes here
 }
 
 // Helper function to show a message
 function showMessage(message) {
-    // Your code to display the message goes here
+    // Create the alert element
+    var alertElement = $('<div>').addClass('alert alert-danger').attr('role', 'alert').html(message);
+
+    // Append the alert element to a container in your HTML
+    var alertContainer = $('#alert-container');
+    showAlert(alertContainer, alertElement);
 }
 
-// Example usage
-var uuid = 'example-uuid';
-var email = 'example@example.com';
+function showAlert(alertContainer, alertElement) {
+    // Append the alert element to a container in your HTML
+    alertContainer.empty().append(alertElement);
 
-// Generate invoice
-//generateInvoice(uuid, email);
-
-// Search invoice
-//searchInvoice(uuid, email);
+    // Remove the alert after the specified duration
+    setTimeout(function() {
+        alertContainer.empty();
+    }, 2000);
+}
