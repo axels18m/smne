@@ -2946,14 +2946,9 @@ function showDoctorsAsList(doctorsForPage) {
             <div class="col-sm-4">
                 <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                     <!-- Team Thumb-->
-<<<<<<< HEAD
-                    <div class="advisor_thumb"><img src="${doctor.profileImg
-      }" alt="">
-=======
                     <div class="advisor_thumb"><img src="${
                       doctor.profileImg
                     }" alt="" width="416" height="512">
->>>>>>> 9af5606 (Update congress pdf file, missing img format to update doctor progile img)
                         <!-- Social Info-->
                         <div class="social-info">
                             <a title="${doctor.phone ? doctor.phone : "##-####-####"
