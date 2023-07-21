@@ -1688,7 +1688,7 @@ li {
 }
 .single_advisor_profile:hover .advisor_thumb::after,
 .single_advisor_profile:focus .advisor_thumb::after {
-  background-color: #5389a3;
+  background-color: #1c5c93;
   color: #ffffff;
 }
 .single_advisor_profile:hover .advisor_thumb .social-info a,
@@ -1703,7 +1703,7 @@ li {
 }
 .single_advisor_profile:hover .single_advisor_details_info,
 .single_advisor_profile:focus .single_advisor_details_info {
-  background-color: #5389a3;
+  background-color: #1c5c93;
   color: #ffffff;
 }
 .single_advisor_profile:hover .single_advisor_details_info::after,
@@ -1797,4 +1797,19 @@ li {
   float: left;
   padding-right: 5px;
   color: #1b5c93;
+}
+
+.btn:hover {
+  background-color: #1c5c93;
+  border-color: #1c5c93;
+}
+
+thead th {
+  background-color: #1c5c93 !important;
+  color: white;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
 }
