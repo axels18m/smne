@@ -385,7 +385,7 @@ function showDoctorsAsList(doctorsForPage) {
                     <!-- Team Thumb-->
                     <div class="advisor_thumb"><img src="${
                       doctor.profileImg
-                    }" alt="" width="70%" height="70%">
+                    }" alt="" width="80%" height="80%">
                         <!-- Social Info-->
                         <div class="social-info">
                             <a title="${doctor.phone ? doctor.phone : "##-####-####"
