@@ -95,261 +95,273 @@
     </header>
     <!-- End Header -->
 
-    <!-- ======= Invoice ======= -->
-    <div id="alert-container" class=""></div>
-    <div class="wrapper-invoice">
-        
-        <div class="image-holder mx-4 py-2">
-            <img src="./assets/img/about.png" alt="">
-        </div>
-        
-        <div class="py-2">
-            <div class="card card-4 mx-4 pt-2" id="invoice-section-option">
-                <div class="card-body">
-                    <ul class="tab-list">
-                        <li class="tab-list__item">
-                            <a class="tab-list__link active" href="#generate-invoice" data-toggle="tab">Generar Factura</a>
-                        </li>
-                        <li class="tab-list__item">
-                            <a class="tab-list__link" href="#search-invoice" data-toggle="tab">Buscar Factura</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="generate-invoice">
-                            <form id="generate-invoice-form">
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group input-group-big">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                                class="bi bi-receipt" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z">
-                                                </path>
-                                                <path
-                                                    d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z">
-                                                </path>
-                                            </svg>
-                                            <label class="label px-2" for="uuid">Código
-                                                UUID:</label>
-                                            <input class="input--style-1" type="text" name="uuid" id="uuid" placeholder="3o0gf8"
-                                                required title="Please enter a valid UUID.">
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="">
+                    <div class="card card-4" id="invoice-section-option">
+                        <div class="card-body">
+                            <ul class="tab-list">
+                                <li class="tab-list__item active">
+                                    <a class="tab-list__link" href="#generate-invoice" data-toggle="tab">Generar Factura</a>
+                                </li>
+                                <li class="tab-list__item">
+                                    <a class="tab-list__link" href="#search-invoice" data-toggle="tab">Buscar Factura</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="generate-invoice">
+                                    <form id="generate-invoice-form">
+                                        <div class="row row-space">
+                                            <div class="col-2">
+                                                <div class="input-group input-group-big">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                                        class="bi bi-receipt" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z">
+                                                        </path>
+                                                        <path
+                                                            d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z">
+                                                        </path>
+                                                    </svg>
+                                                    <label class="label px-2" for="uuid">Código UUID:</label>
+                                                    <input class="input--style-1" type="text" name="uuid" id="uuid" placeholder="3o0gf8"
+                                                        required title="Please enter a valid UUID.">
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="input-group input-group-big">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                                        class="bi bi-envelope-check" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z">
+                                                        </path>
+                                                        <path
+                                                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z">
+                                                        </path>
+                                                    </svg>
+                                                    <label class="label px-2" for="email">Correo:</label>
+                                                    <input class="input--style-1" type="text" name="email" id="email"
+                                                        placeholder="example@example.com" required="required" required
+                                                        title="Please enter a valid email address.">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="input-group input-group-big">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                                        class="bi bi-envelope-check" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z">
+                                                        </path>
+                                                        <path
+                                                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z">
+                                                        </path>
+                                                    </svg>
+                                                    <label class="label px-2" for="rfc-generate">RFC:</label>
+                                                    <input class="input--style-1" type="text" name="rfc-generate" id="rfc-generate"
+                                                        placeholder="CUPU800825569" required="required" requiredS
+                                                        title="Please enter a valid rfc.">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="input-group input-group-big">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                                class="bi bi-envelope-check" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z">
-                                                </path>
-                                                <path
-                                                    d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z">
-                                                </path>
-                                            </svg>
-                                            <label class="label px-2" for="email">Correo:</label>
-                                            <input class="input--style-1" type="text" name="email" id="email"
-                                                placeholder="example@example.com" required="required" required
-                                                title="Please enter a valid email address.">
+                                        <div class="">
+                                            <button class="btn-submit" type="submit" id="generate-submit-button">Generar</button>
                                         </div>
-                                    </div>
+                                        <button class="btn btn-submit" type="button" id="generate-loading-button"
+                                            style="display: none;">
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                            Loading...
+                                        </button>
+                                    </form>
                                 </div>
-                                <div class="">
-                                    <button class="btn-submit" type="submit" id="generate-submit-button">Generar</button>
+                                <div class="tab-pane" id="search-invoice">
+                                    <form id="search-invoice-form">
+                                        <div class="row row-space">
+                                            <div class="col-2">
+                                                <div class="input-group input-group-big">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                                        class="bi bi-receipt" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z">
+                                                        </path>
+                                                        <path
+                                                            d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z">
+                                                        </path>
+                                                    </svg>
+                                                    <label class="label px-2" for="rfc">RFC:</label>
+                                                    <input class="input--style-1" type="text" name="rfc" id="rfc"
+                                                        placeholder="CUPU800825569" required title="Please enter a valid UUID.">
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="input-group input-group-big">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                                        class="bi bi-envelope-check" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z">
+                                                        </path>
+                                                        <path
+                                                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z">
+                                                        </path>
+                                                    </svg>
+                                                    <label class="label px-2" for="email-search">Correo:</label>
+                                                    <input class="input--style-1" type="text" name="email-search" id="email-search"
+                                                        placeholder="example@example.com" required
+                                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                                        title="Please enter a valid email address.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <button class="btn-submit" type="submit" id="search-submit-button">Buscar</button>
+                                        </div>
+                                        <button class="btn btn-submit" type="button" id="search-loading-button" style="display: none;">
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                            Loading...
+                                        </button>
+                                    </form>
                                 </div>
-                                <button class="btn btn-submit" type="button" id="generate-loading-button"
-                                    style="display: none;">
-                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    Loading...
-                                </button>
-                            </form>
+                            </div>
                         </div>
-                        <div class="tab-pane" id="search-invoice">
-                            <form id="search-invoice-form">
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group input-group-big">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                                class="bi bi-receipt" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z">
-                                                </path>
-                                                <path
-                                                    d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z">
-                                                </path>
-                                            </svg>
-                                            <label class="label px-2" for="uuid-search">Código
-                                                UUID:</label>
-                                            <input class="input--style-1" type="text" name="uuid" -search id="uuid-search"
-                                                placeholder="3o0gf8" required title="Please enter a valid UUID.">
+                    </div>
+            
+                    <div id="modal-invoice-form" style="display: none;">
+                        <form action="modal-invoice-form">
+                            <div id="wizard">
+                                <!-- SECTION 1 -->
+                                <h4></h4>
+                                <section>
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <label for="rfc">RFC</label>
+                                            <input type="text" class="form-control" id="rfc" required>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label for="email-form">Email</label>
+                                            <input type="text" class="form-control" id="email-form" required>
                                         </div>
                                     </div>
-                                    <div class="col-2">
-                                        <div class="input-group input-group-big">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                                class="bi bi-envelope-check" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z">
-                                                </path>
-                                                <path
-                                                    d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z">
-                                                </path>
-                                            </svg>
-                                            <label class="label px-2" for="email-search">Correo:</label>
-                                            <input class="input--style-1" type="text" name="email-search" id="email-search"
-                                                placeholder="example@example.com" required
-                                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                                                title="Please enter a valid email address.">
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <label for="razon-social">Razón Social</label>
+                                            <input type="text" class="form-control" id="razon-social" required>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label for="ticket-amount">Monto a facturar</label>
+                                            <input type="number" min="0", max="3000" class="form-control" id="ticket-amount" required>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <button class="btn-submit" type="submit" id="search-submit-button">Buscar</button>
-                                </div>
-                                <button class="btn btn-submit" type="button" id="search-loading-button" style="display: none;">
-                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    Loading...
-                                </button>
-                            </form>
-                        </div>
+                                </section>
+        
+                                <!-- SECTION 2 -->
+                                <h4></h4>
+                                <section>
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <label for="tipo-contribuyente">Contribuyente</label>
+                                            <select name="tipo-contribuyente" id="tipo-contribuyente" class="form-control">
+                                                <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                                <option value="0" class="option">Persona Física</option>
+                                                <option value="1" class="option">Persona Moral</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label for="regimen-fiscal">Régimen Fiscal</label>
+                                            <select name="" id="regimen-fiscal" class="form-control">
+                                                <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="uso-cfdi">Uso CFDI Predefinido</label>
+                                        <div class="form-holder">
+                                            <select name="" id="uso-cfdi" class="form-control">
+                                                <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </section>
+                
+                                <!-- SECTION 3 -->
+                                <h4></h4>
+                                <section>
+                                    <div class="form-row">
+                                        <label for="state">Estado</label>
+                                        <select name="state" id="state" class="form-control">
+                                            <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                            <option value="1" class="option">Aguascalientes</option>
+                                            <option value="2" class="option">Baja California</option>
+                                            <option value="3" class="option">Baja California Sur</option>
+                                            <option value="4" class="option">Campeche</option>
+                                            <option value="5" class="option">Coahuila de Zaragoza</option>
+                                            <option value="6" class="option">Colima</option>
+                                            <option value="7" class="option">Chiapas</option>
+                                            <option value="8" class="option">Chihuahua</option>
+                                            <option value="9" class="option">Distrito Federal</option>
+                                            <option value="10" class="option">Durango</option>
+                                            <option value="11" class="option">Guanajuato</option>
+                                            <option value="12" class="option">Guerrero</option>
+                                            <option value="13" class="option">Hidalgo</option>
+                                            <option value="14" class="option">Jalisco</option>
+                                            <option value="15" class="option">México</option>
+                                            <option value="16" class="option">Michoacán de Ocampo</option>
+                                            <option value="17" class="option">Morelos</option>
+                                            <option value="18" class="option">Nayarit</option>
+                                            <option value="19" class="option">Nuevo León</option>
+                                            <option value="20" class="option">Oaxaca</option>
+                                            <option value="21" class="option">Puebla</option>
+                                            <option value="22" class="option">Querétaro</option>
+                                            <option value="23" class="option">Quintana Roo</option>
+                                            <option value="24" class="option">San Luis Potosí</option>
+                                            <option value="25" class="option">Sinaloa</option>
+                                            <option value="26" class="option">Sonora</option>
+                                            <option value="27" class="option">Tabasco</option>
+                                            <option value="28" class="option">Tamaulipas</option>
+                                            <option value="29" class="option">Tlaxcala</option>
+                                            <option value="30" class="option">Veracruz de Ignacio de la Llave</option>
+                                            <option value="31" class="option">Yucatán</option>
+                                            <option value="32" class="option">Zacatecas</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="town">Municipio</label>
+                                        <select name="town" id="town" class="form-control">
+                                            <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="neighborhood">Colonia</label>
+                                        <select name="neighborhood" id="neighborhood" class="form-control">
+                                            <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <label for="zipcode">Zipcode</label>
+                                            <input type="text" class="form-control" id="zipcode" required>
+                                        </div>
+        
+                                        <div class="form-holder">
+                                            <label for="house-number">House Number</label>
+                                            <input type="text" class="form-control" id="house-number" required placeholder="#100">
+                                        </div>
+                                    </div>
+                                </section>
+        
+                                <!-- SECTION 4 -->
+                                <h4></h4>
+                                <section>
+                                </section>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-    
-            <div id="modal-invoice-form" style="display: none;">
-                <form action="modal-invoice-form">
-                    <div id="wizard">
-                        <!-- SECTION 1 -->
-                        <h4></h4>
-                        <section>
-                            <div class="form-row form-group">
-                                <div class="form-holder">
-                                    <label for="rfc">RFC</label>
-                                    <input type="text" class="form-control" id="rfc" required>
-                                </div>
-                                <div class="form-holder">
-                                    <label for="email-form">Email</label>
-                                    <input type="text" class="form-control" id="email-form" required>
-                                </div>
-                            </div>
-                            <div class="form-row form-group">
-                                <div class="form-holder">
-                                    <label for="razon-social">Razón Social</label>
-                                    <input type="text" class="form-control" id="razon-social" required>
-                                </div>
-                                <div class="form-holder">
-                                    <label for="ticket-amount">Monto a facturar</label>
-                                    <input type="number" min="0", max="3000" class="form-control" id="ticket-amount" required>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- SECTION 2 -->
-                        <h4></h4>
-                        <section>
-                            <div class="form-row form-group">
-                                <div class="form-holder">
-                                    <label for="tipo-contribuyente">Contribuyente</label>
-                                    <select name="tipo-contribuyente" id="tipo-contribuyente" class="form-control">
-                                        <option value="-" selected="selected" disabled class="option">Select an option</option>
-                                        <option value="0" class="option">Persona Física</option>
-                                        <option value="1" class="option">Persona Moral</option>
-                                    </select>
-                                </div>
-                                <div class="form-holder">
-                                    <label for="regimen-fiscal">Régimen Fiscal</label>
-                                    <select name="" id="regimen-fiscal" class="form-control">
-                                        <option value="-" selected="selected" disabled class="option">Select an option</option>
-                                        
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <label for="uso-cfdi">Uso CFDI Predefinido</label>
-                                <div class="form-holder">
-                                    <select name="" id="uso-cfdi" class="form-control">
-                                        <option value="-" selected="selected" disabled class="option">Select an option</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </section>
-        
-                        <!-- SECTION 3 -->
-                        <h4></h4>
-                        <section>
-                            <div class="form-row">
-                                <label for="state">Estado</label>
-                                <select name="state" id="state" class="form-control">
-                                    <option value="-" selected="selected" disabled class="option">Select an option</option>
-                                    <option value="1" class="option">Aguascalientes</option>
-                                    <option value="2" class="option">Baja California</option>
-                                    <option value="3" class="option">Baja California Sur</option>
-                                    <option value="4" class="option">Campeche</option>
-                                    <option value="5" class="option">Coahuila de Zaragoza</option>
-                                    <option value="6" class="option">Colima</option>
-                                    <option value="7" class="option">Chiapas</option>
-                                    <option value="8" class="option">Chihuahua</option>
-                                    <option value="9" class="option">Distrito Federal</option>
-                                    <option value="10" class="option">Durango</option>
-                                    <option value="11" class="option">Guanajuato</option>
-                                    <option value="12" class="option">Guerrero</option>
-                                    <option value="13" class="option">Hidalgo</option>
-                                    <option value="14" class="option">Jalisco</option>
-                                    <option value="15" class="option">México</option>
-                                    <option value="16" class="option">Michoacán de Ocampo</option>
-                                    <option value="17" class="option">Morelos</option>
-                                    <option value="18" class="option">Nayarit</option>
-                                    <option value="19" class="option">Nuevo León</option>
-                                    <option value="20" class="option">Oaxaca</option>
-                                    <option value="21" class="option">Puebla</option>
-                                    <option value="22" class="option">Querétaro</option>
-                                    <option value="23" class="option">Quintana Roo</option>
-                                    <option value="24" class="option">San Luis Potosí</option>
-                                    <option value="25" class="option">Sinaloa</option>
-                                    <option value="26" class="option">Sonora</option>
-                                    <option value="27" class="option">Tabasco</option>
-                                    <option value="28" class="option">Tamaulipas</option>
-                                    <option value="29" class="option">Tlaxcala</option>
-                                    <option value="30" class="option">Veracruz de Ignacio de la Llave</option>
-                                    <option value="31" class="option">Yucatán</option>
-                                    <option value="32" class="option">Zacatecas</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <label for="town">Municipio</label>
-                                <select name="town" id="town" class="form-control">
-                                    <option value="-" selected="selected" disabled class="option">Select an option</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <label for="neighborhood">Colonia</label>
-                                <select name="neighborhood" id="neighborhood" class="form-control">
-                                    <option value="-" selected="selected" disabled class="option">Select an option</option>
-                                </select>
-                            </div>
-                            <div class="form-row form-group">
-                                <div class="form-holder">
-                                    <label for="zipcode">Zipcode</label>
-                                    <input type="text" class="form-control" id="zipcode" required>
-                                </div>
-
-                                <div class="form-holder">
-                                    <label for="house-number">House Number</label>
-                                    <input type="text" class="form-control" id="house-number" required placeholder="#100">
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- SECTION 4 -->
-                        <h4></h4>
-                        <section>
-                        </section>
-                    </div>
-                </form>
-            </div>
         </div>
-        
     </div>
-    <!-- ======= End of Invoice ======= -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="py-4">
@@ -414,7 +426,7 @@
                 ® 2023 - <b>Capítulo Noreste</b> Sociedad Mexicana de Nutrición y Endocrinología
             </div>
             <div class="credits">
-                Designed by <a href="https://Thunderp.com.mx/">Thunderp</a>
+                Designed by <a href="https://thunderp.com.mx/">Thunderp</a>
             </div>
         </div>
     </footer>

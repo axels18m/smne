@@ -1,652 +1,774 @@
-@font-face {
-  font-family: "Poppins-Regular";
-  src: url("../fonts/poppins/Poppins-Regular.ttf");
-}
 
-@font-face {
-  font-family: "Poppins-SemiBold";
-  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
-}
-
-@font-face {
-  font-family: "Poppins-Medium";
-  src: url("../fonts/poppins/Poppins-Medium.ttf");
-}
-
-@font-face {
-  font-family: "Muli-Bold";
-  src: url("../fonts/muli/Muli-Bold.ttf");
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-:focus {
-  outline: none;
-}
-
-textarea {
-  resize: none;
-}
-
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-textarea {
-  resize: none;
-}
-
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  border: none;
-}
-
-select option[value=""][disabled] {
-  display: none;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-
-.wrapper-invoice {
-  max-width: 1400px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper-invoice .image-holder {
-  width: 51%;
-}
-
-.wrapper-invoice form {
-  width: auto;
-}
-
-.wizard>.steps .current-info,
-.wizard>.steps .number {
-  display: none;
-}
-
-#wizard {
-  background: #fff;
-  margin-right: 60px;
-  padding: 107px 75px 65px;
-}
-
-.steps {
-  margin-bottom: 30px;
-}
-
-.steps ul {
-  display: flex;
-  position: relative;
-}
-
-.steps ul li {
-  width: 20.16%;
-  margin-right: 10px;
-}
-
-.steps ul li a {
-  display: inline-block;
-  width: 100%;
-  height: 7px;
-  background: #e6e6e6;
-  border-radius: 3.5px;
-}
-
-.steps ul li.first a,
-.steps ul li.checked a {
-  background: #5b758d;
-  transition: all 0.5s ease;
-}
-
-.steps ul:before {
-  content: "SAT Information";
-  font-size: 22px;
-  font-family: "Poppins-SemiBold";
-  color: #333;
-  top: -38px;
-  position: absolute;
-}
-
-.steps ul.step-2:before {
-  content: "SAT Information";
-}
-
-.steps ul.step-3:before {
-  content: "Address Information";
-}
-
-.steps ul.step-4:before {
-  content: "Review";
-}
-
-h3 {
-  font-family: "Poppins-SemiBold";
-}
-
-.form-row {
-  margin-bottom: 24px;
-}
-
-.form-row label {
-  margin-bottom: 8px;
-  display: block;
-}
-
-.form-row.form-group {
-  display: flex;
-}
-
-.form-row.form-group .form-holder {
-  width: 50%;
-  margin-right: 21px;
-}
-
-.form-row.form-group .form-holder:last-child {
-  margin-right: 0;
-}
-
-.form-holder {
-  position: relative;
-}
-
-.form-holder i {
-  position: absolute;
-  top: 11px;
-  right: 19px;
-  font-size: 17px;
-  color: #5b758d;
-}
-
-.form-control {
-  height: 42px;
-  border: 1px solid #e6e6e6;
-  background: none;
-  width: 100%;
-  padding: 0 18px;
-}
-
-.form-control:focus {
-  border-color: #5b758d;
-}
-
-.form-control::-webkit-input-placeholder {
-  color: #5b758d;
-  font-size: 13px;
-}
-
-.form-control::-moz-placeholder {
-  color: #5b758d;
-  font-size: 13px;
-}
-
-.form-control:-ms-input-placeholder {
-  color: #5b758d;
-  font-size: 13px;
-}
-
-.form-control:-moz-placeholder {
-  color: #5b758d;
-  font-size: 13px;
-}
-
-textarea.form-control {
-  padding-top: 11px;
-  padding-bottom: 11px;
-}
-
-.option {
-  color: #5b758d;
-}
-
-.actions ul {
-  display: flex;
-  margin-top: 30px;
-  justify-content: space-between;
-}
-
-.actions ul.step-last {
-  justify-content: flex-end;
-}
-
-.actions ul.step-last li:first-child {
-  display: none;
-}
-
-.actions li a {
-  padding: 0;
-  border: none;
-  display: inline-flex;
-  height: 51px;
-  width: 135px;
-  align-items: center;
-  background: #5b758d;
-  cursor: pointer;
-  position: relative;
-  padding-left: 41px;
-  color: #0e0e0e;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  font-weight: 400;
-}
-
-.actions li a:before {
-  content: '\f2ee';
-  position: absolute;
-  right: 41px;
-  font-family: Material-Design-Iconic-Font;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.actions li a:hover {
-  background: #1c5c93;
-}
-
-.actions li a:hover:before {
-  -webkit-animation-name: hvr-icon-wobble-horizontal;
-  animation-name: hvr-icon-wobble-horizontal;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-.actions li[aria-disabled="true"] a {
-  display: none;
-}
-
-.actions li:first-child a {
-  background: #e6e6e6;
-  padding-left: 48px;
-}
-
-.actions li:first-child a:before {
-  content: '\f2ea';
-  left: 26px;
-}
-
-.actions li:first-child a:hover {
-  background: #ccc;
-}
-
-.actions li:last-child a {
-  padding-left: 29px;
-  width: 167px;
-  font-weight: 400;
-}
-
-.actions li:last-child a:before {
-  right: 30px;
-}
-
-.checkbox {
-  position: relative;
-}
-
-.checkbox label {
-  padding-left: 21px;
-  cursor: pointer;
-  color: #5b758d;
-}
-
-.checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkbox input:checked~.checkmark:after {
-  display: block;
-}
-
-.checkmark {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 12px;
-  width: 13px;
-  border-radius: 2px;
-  background-color: #ebebeb;
-  border: 1px solid #ccc;
-  font-family: Material-Design-Iconic-Font;
-  color: #000;
-  font-size: 10px;
-  font-weight: bolder;
-}
-
-.checkmark:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  content: '\f26b';
-}
-
-.checkbox-circle {
-  margin-top: 41px;
-  margin-bottom: 46px;
-}
-
-.checkbox-circle label {
-  cursor: pointer;
-  padding-left: 26px;
-  color: #5b758d;
-  display: block;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.checkbox-circle label.active .tooltip {
-  display: block;
-}
-
-.checkbox-circle input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkbox-circle input:checked~.checkmark:after {
-  display: block;
-}
-
-.checkbox-circle .checkmark {
-  position: absolute;
-  top: 11px;
-  left: 0;
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
-  background: #ebebeb;
-  border: 1px solid #cdcdcd;
-}
-
-.checkbox-circle .checkmark:after {
-  content: "";
-  top: 6px;
-  left: 6px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #1c5c93;
-  position: absolute;
-  display: none;
-}
-
-.checkbox-circle .tooltip {
-  padding: 9px 22px;
-  background: #f2f2f2;
-  line-height: 1.8;
-  position: relative;
-  margin-top: 16px;
-  margin-bottom: 28px;
-  display: none;
-}
-
-.checkbox-circle .tooltip:before {
-  content: "";
-  border-bottom: 10px solid #f2f2f2;
-  border-right: 9px solid transparent;
-  border-left: 9px solid transparent;
-  position: absolute;
-  bottom: 100%;
-}
-
-.product {
-  margin-bottom: 33px;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 30px;
-}
-
-.item:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border: none;
-}
-
-.item .left {
-  display: flex;
-  align-items: center;
-}
-
-.item .thumb {
-  display: inline-flex;
-  width: 100px;
-  height: 90px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #f2f2f2;
-}
-
-.item .purchase {
-  display: inline-block;
-  margin-left: 21px;
-}
-
-.item .purchase h6 {
-  font-family: "Poppins-Medium";
-  font-size: 16px;
-  margin-bottom: 4px;
-  font-weight: 500;
-}
-
-.item .purchase h6 a {
-  color: #333;
-}
-
-.item .price {
-  font-size: 16px;
-}
-
-.checkout {
-  margin-bottom: 44px;
-}
-
-.checkout span.heading {
-  font-family: "Poppins-Medium";
-  font-weight: 500;
-  margin-right: 5px;
-}
-
-.checkout .subtotal {
-  margin-bottom: 18px;
-}
-
-.checkout .shipping {
-  margin-bottom: 19px;
-}
-
-.checkout .shipping span.heading {
-  margin-right: 4px;
-}
-
-.checkout .total-price {
-  font-family: "Muli-Bold";
-  color: #333;
-  font-weight: 700;
-}
-
-@-webkit-keyframes hvr-icon-wobble-horizontal {
-  16.65% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+   .font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
   }
-
-  33.3% {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px);
+  
+  /* ==========================================================================
+     #GRID
+     ========================================================================== */
+  .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-
-  49.95% {
-    -webkit-transform: translateX(4px);
-    transform: translateX(4px);
+  
+  .row-space {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
-
-  66.6% {
-    -webkit-transform: translateX(-2px);
-    transform: translateX(-2px);
+  
+  .col-2 {
+    width: -webkit-calc((100% - 60px) / 2);
+    width: -moz-calc((100% - 60px) / 2);
+    width: calc((100% - 60px) / 2);
   }
-
-  83.25% {
-    -webkit-transform: translateX(1px);
-    transform: translateX(1px);
+  
+  @media (max-width: 767px) {
+    .col-2 {
+      width: 100%;
+    }
   }
-
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+  
+  /* ==========================================================================
+     #BOX-SIZING
+     ========================================================================== */
+  /**
+   * More sensible default box-sizing:
+   * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+   */
+  html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
-}
-
-@keyframes hvr-icon-wobble-horizontal {
-  16.65% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
+  
+  * {
+    padding: 0;
+    margin: 0;
   }
-
-  33.3% {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px);
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
   }
-
-  49.95% {
-    -webkit-transform: translateX(4px);
-    transform: translateX(4px);
+  
+  /* ==========================================================================
+     #RESET
+     ========================================================================== */
+  /**
+   * A very simple reset that sits on top of Normalize.css.
+   */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  blockquote, p, pre,
+  dl, dd, ol, ul,
+  figure,
+  hr,
+  fieldset, legend {
+    margin: 0;
+    padding: 0;
   }
-
-  66.6% {
-    -webkit-transform: translateX(-2px);
-    transform: translateX(-2px);
+  
+  /**
+   * Remove trailing margins from nested lists.
+   */
+  li > ol,
+  li > ul {
+    margin-bottom: 0;
   }
-
-  83.25% {
-    -webkit-transform: translateX(1px);
-    transform: translateX(1px);
+  
+  /**
+   * Remove default table spacing.
+   */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
   }
-
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+  
+  /**
+   * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+   *    on fieldsets.
+   */
+  fieldset {
+    min-width: 0;
+    /* [1] */
+    border: 0;
   }
-}
-
-@media (max-width: 1500px) {
-  .wrapper-invoice {
-    height: auto;
+  
+  button {
+    outline: none;
+    background: none;
+    border: none;
   }
-}
-
-@media (max-width: 1199px) {
-  .wrapper-invoice {
-    height: 100vh;
+  
+  /* ==========================================================================
+     #PAGE WRAPPER
+     ========================================================================== */
+  .page-wrapper {
+    min-height: 100vh;
   }
-
-  #wizard {
-    margin-right: 40px;
-    min-height: 500px;
-    padding-left: 60px;
-    padding-right: 60px;
+  
+  body {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
   }
-}
-
-@media (max-width: 991px) {
-  .wrapper-invoice {
-    justify-content: center;
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
   }
-
-  .wrapper-invoice .image-holder {
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+  
+  h5 {
+    font-size: 15px;
+  }
+  
+  h6 {
+    font-size: 13px;
+  }
+  
+  /* ==========================================================================
+     #BACKGROUND
+     ========================================================================== */
+  .bg-blue {
+    background: #1c5c93;
+  }
+  
+  /* ==========================================================================
+     #SPACING
+     ========================================================================== */
+  .p-t-100 {
+    padding-top: 100px;
+  }
+  
+  .p-t-20 {
+    padding-top: 20px;
+  }
+  
+  .p-b-100 {
+    padding-bottom: 100px;
+  }
+  
+  /* ==========================================================================
+     #WRAPPER
+     ========================================================================== */
+  .wrapper {
+    margin: 0 auto;
+  }
+  
+  .wrapper--w680 {
+    max-width: 1000px;
+  }
+  
+  /* ==========================================================================
+     #BUTTON
+     ========================================================================== */
+  .btn {
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 25px;
+    cursor: pointer;
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    color: #fff;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .btn--radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  
+  .btn--green {
+    background: #57b846;
+  }
+  
+  .btn--green:hover {
+    background: #4dae3c;
+  }
+  
+  /* ==========================================================================
+     #DATE PICKER
+     ========================================================================== */
+  td.active {
+    background-color: #1c5c93;
+  }
+  
+  input[type="date" i] {
+    padding: 14px;
+  }
+  
+  .table-condensed td, .table-condensed th {
+    font-size: 14px;
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+  
+  .daterangepicker td {
+    width: 40px;
+    height: 30px;
+  }
+  
+  .daterangepicker {
+    border: none;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    display: none;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+  }
+  
+  .daterangepicker::after, .daterangepicker::before {
     display: none;
   }
-
-  .wrapper-invoice form {
-    width: 60%;
+  
+  .daterangepicker thead tr th {
+    padding: 10px 0;
+  }
+  
+  .daterangepicker .table-condensed th select {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px;
+    outline: none;
+  }
+  
+  /* ==========================================================================
+     #FORM
+     ========================================================================== */
+  input {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .input-icon {
+    position: absolute;
+    font-size: 18px;
+    color: #ccc;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .input--style-1 {
+    padding: 9px 0;
+    color: #666;
+  }
+  
+  .input--style-1::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #555;
+  }
+  
+  .input--style-1:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #555;
+    opacity: 1;
+  }
+  
+  .input--style-1::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #555;
+    opacity: 1;
+  }
+  
+  .input--style-1:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #555;
+  }
+  
+  .input--style-1:-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #555;
+  }
+  
+  /* ==========================================================================
+     #SELECT2
+     ========================================================================== */
+  .select--no-search .select2-search {
+    display: none !important;
+  }
+  
+  .rs-select2 .select2-container {
+    width: 100% !important;
+    outline: none;
+  }
+  
+  .rs-select2 .select2-container .select2-selection--single {
+    outline: none;
+    border: none;
+    height: 34px;
+  }
+  
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 34px;
+    padding-left: 0;
+    color: #555;
+  }
+  
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow {
+    height: 32px;
+    right: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow b {
+    display: none;
+  }
+  
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after {
+    font-family: "Material-Design-Iconic-Font";
+    content: '\f2f9';
+    font-size: 18px;
+    color: #ccc;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  
+  .rs-select2 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  
+  .select2-container--open .select2-dropdown--below {
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  
+  /* ==========================================================================
+     #TITLE
+     ========================================================================== */
+  .title {
+    margin-bottom: 37px;
+  }
+  
+  /* ==========================================================================
+     #CARD
+     ========================================================================== */
+  .card {
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+  }
+  
+  .card-1 {
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-1 .card-heading {
+    background: url("../img/invoice/group.jpeg") center center/cover no-repeat;
+    padding-top: 300px !important;
+    height: 70% !important;
+    width: auto;
+  }
+  
+  .card-1 .card-body {
+    padding: 0 90px;
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+  
+  @media (max-width: 767px) {
+    .card-1 .card-body {
+      padding: 0 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
-  #wizard {
-    margin-right: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+.tab-list .active .tab-list__link {
+    color: #1c5c93;
 }
 
-@media (max-width: 767px) {
-  .wrapper-invoice {
-    height: auto;
-    display: block;
-  }
+.tab-list .tab-list__link:hover{
+  color: black;
+}
+  
 
-  .wrapper-invoice .image-holder {
-    width: 100%;
-    display: block;
+/* Invoice form */
+.wrapper-invoice form {
+    width: auto;
   }
-
-  .wrapper-invoice form {
-    width: 100%;
+  
+  .wizard>.steps .current-info,
+  .wizard>.steps .number {
+    display: none;
   }
-
+  
   #wizard {
-    min-height: auto;
-    padding: 70px 20px 40px;
+    background: #fff;
+    margin-right: 60px;
+    padding: 107px 75px 65px;
   }
-
-  .form-row.form-group {
-    display: block;
+  
+  .steps {
+    margin-bottom: 30px;
   }
-
-  .form-row.form-group .form-holder {
+  
+  .steps ul {
+    display: flex;
+    position: relative;
+  }
+  
+  .steps ul li {
+    width: 20.16%;
+    margin-right: 10px;
+  }
+  
+  .steps ul li a {
+    display: inline-block;
     width: 100%;
-    margin-right: 0;
+    height: 7px;
+    background: #e6e6e6;
+    border-radius: 3.5px;
+  }
+  
+  .steps ul li.first a,
+  .steps ul li.checked a {
+    background: #5b758d;
+    transition: all 0.5s ease;
+  }
+  
+  .steps ul:before {
+    content: "SAT Information";
+    font-size: 22px;
+    font-family: "Poppins-SemiBold";
+    color: #333;
+    top: -38px;
+    position: absolute;
+  }
+  
+  .steps ul.step-2:before {
+    content: "SAT Information";
+  }
+  
+  .steps ul.step-3:before {
+    content: "Address Information";
+  }
+  
+  .steps ul.step-4:before {
+    content: "Review";
+  }
+  
+
+  h3 {
+    font-family: "Poppins-SemiBold";
+  }
+  
+  .form-row {
     margin-bottom: 24px;
   }
-
-  .item .purchase {
-    margin-left: 11px;
+  
+  .form-row label {
+    margin-bottom: 8px;
+    display: block;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  
+  .form-row.form-group {
+    display: flex;
+  }
+  
+  .form-row.form-group .form-holder {
+    width: 50%;
+    margin-right: 21px;
+  }
+  
+  .form-row.form-group .form-holder:last-child {
+    margin-right: 0;
+  }
+  
+  .form-holder {
+    position: relative;
+  }
+  
+  .form-holder i {
+    position: absolute;
+    top: 11px;
+    right: 19px;
+    font-size: 17px;
+    color: #5b758d;
+  }
+  
+  .form-control {
+    height: 42px;
+    border: 1px solid #e6e6e6;
+    background: none;
+    width: 100%;
+    padding: 0 18px;
+  }
+  
+  .form-control:focus {
+    border-color: #5b758d;
+  }
+  
+  .form-control::-webkit-input-placeholder {
+    color: #5b758d;
+    font-size: 13px;
+  }
+  
+  .form-control::-moz-placeholder {
+    color: #5b758d;
+    font-size: 13px;
+  }
+  
+  .form-control:-ms-input-placeholder {
+    color: #5b758d;
+    font-size: 13px;
+  }
+  
+  .form-control:-moz-placeholder {
+    color: #5b758d;
+    font-size: 13px;
+  }
+  
+  textarea.form-control {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  
+  .option {
+    color: #5b758d;
+  }
+  
+  .actions ul {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  
+  .actions ul.step-last {
+    justify-content: space-between;
+  }
+  
+  .actions li a {
+    padding: 0;
+    border: none;
+    display: inline-flex;
+    height: 51px;
+    width: 135px;
+    align-items: center;
+    background: #5b758d;
+    cursor: pointer;
+    position: relative;
+    padding-left: 41px;
+    color: #0e0e0e;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    font-weight: 400;
+  }
+  
+  .actions li a:before {
+    content: '\f2ee';
+    position: absolute;
+    right: 41px;
+    font-family: Material-Design-Iconic-Font;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .actions li a:hover {
+    background: #1c5c93;
+  }
+  
+  .actions li a:hover:before {
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+  
+  .actions li:first-child a {
+    background: #e6e6e6;
+    padding-left: 48px;
+  }
+  
+  .actions li:first-child a:before {
+    content: '\f2ea';
+    left: 26px;
+  }
+  
+  .actions li:first-child a:hover {
+    background: #ccc;
+  }
+  
+  .actions li:last-child a {
+    padding-left: 29px;
+    width: 167px;
+    font-weight: 400;
+  }
+  
+  .actions li:last-child a:before {
+    right: 30px;
+  }
+  
+  .checkbox {
+    position: relative;
+  }
+  
+  .checkbox label {
+    padding-left: 21px;
+    cursor: pointer;
+    color: #5b758d;
+  }
+  
+  
+@media (max-width: 1500px) {
+    .wrapper-invoice {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .wrapper-invoice {
+      height: 100vh;
+    }
+  
+    #wizard {
+      margin-right: 40px;
+      min-height: 500px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .wrapper-invoice {
+      justify-content: center;
+    }
+  
+    .wrapper-invoice .image-holder {
+      display: none;
+    }
+  
+    .wrapper-invoice form {
+      width: 60%;
+    }
+  
+    #wizard {
+      margin-right: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .wrapper-invoice {
+      height: auto;
+      display: block;
+    }
+  
+    .wrapper-invoice .image-holder {
+      width: 100%;
+      display: block;
+    }
+  
+    .wrapper-invoice form {
+      width: 100%;
+    }
+  
+    #wizard {
+      min-height: auto;
+      padding: 70px 20px 40px;
+    }
+  
+    .form-row.form-group {
+      display: block;
+    }
+  
+    .form-row.form-group .form-holder {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }

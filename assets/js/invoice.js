@@ -1,7 +1,16 @@
+// EVENTIA
 const EVENTIA_API           = "https://connect.eventtia.com/api/v3";
 const EVENTIA_AUTH          = "/auth";
 const EVENTIA_EVENT         = "/events/congresoendocrinologia2023";
 const EVENTIA_SEARCH_BY_ID  = "/attendees/{{attendee_id}}";
+// FACTURAMA
+const FACTURAMA_API         = "https://apisandbox.facturama.mx"; //https://api.facturama.mx/
+const FACTURAMA_RFC_STATUS  = "/Client/status?rfc={{rfc}}";
+const FACTURAMA_ADD_CLIENT  = "/Client";
+const FACTURAMA_INVOICE     = "";
+const FACTURAMA_USER_AGENT  = "pruebas";
+const FACTURAMA_TOKEN       = "cHJ1ZWJhczpwcnVlYmFzMjAxMQ==";
+
 var EVENTIA_AUTH_KEY        = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFzcyI6IlVzZXIiLCJhdXRoZW50aWNhdGlvbl9rZXkiOiJjZXNhci5yaXZhc0B0aHVuZGVycC5jb20ubXgiLCJ3aGl0ZV9sYWJlbCI6ZmFsc2UsImV4cCI6MTY5NzQ5NDgzMn0.2_UclWb2GEZI9rQoRg9yVlQFqNrxcqNUZ1BObxKpzVo";
 var mexicoJson              = {};
 var stateFilter             = [];
@@ -12,7 +21,6 @@ window.onload = function () {
     getEventiaAuthKey();
     loadMexicoData();
 };
-
 
 function loadMexicoData() {
     // all data mexico.js
@@ -33,6 +41,7 @@ $('#generate-invoice-form').submit(function (event) {
     // Get the UUID and email from the form
     var uuid = $('#generate-invoice-form #uuid').val();
     var email = $('#generate-invoice-form #email').val();
+    var rfc = $('#generate-invoice-form #rfc-generate').val();
 
     validateEmail(email);
 
@@ -42,11 +51,7 @@ $('#generate-invoice-form').submit(function (event) {
 
     // Call the generateInvoice() function after a small delay (for demonstration purposes)
     setTimeout(async function () {
-        await showInvoiceForm();//await generateInvoice(uuid, email);
-
-        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
-        $('#generate-submit-button').show();
-        $('#generate-loading-button').hide();
+        await validateUserData(uuid, email, rfc);
     }, 1000);
 });
 
@@ -55,7 +60,7 @@ $('#search-invoice-form').submit(function (event) {
     event.preventDefault(); // Prevent form submission
 
     // Get the UUID and email from the form
-    var uuid = $('#search-invoice-form #uuid-search').val();
+    var uuid = $('#search-invoice-form #rfc').val();
     var email = $('#search-invoice-form #email-search').val();
 
     validateEmail(email);
@@ -106,41 +111,6 @@ function validateEmail(email) {
         alert('Please enter a valid email address.');
         return;
     }
-}
-
-// 30eb4c -> pago, 9241bc -> no pago
-// Function to generate an invoice
-function generateInvoice(uuid, email) {
-    // Make an AJAX request to retrieve data
-    $.ajax({
-        url: EVENTIA_API + EVENTIA_EVENT + EVENTIA_SEARCH_BY_ID.replace("{{attendee_id}}", '30eb4c'),
-        method: 'GET',
-        dataType: "json",
-        crossDomain: true,
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', 'Bearer ' + EVENTIA_AUTH_KEY);
-        },
-        success: function (response) {
-            // Check if uuid and email exist
-            if (response?.data && response.data?.attributes) {
-                // Validate payment status
-                if (response.data.attributes.status === "confirmed" && response.data.attributes.paid) {
-                    // Show input form fields to generate the invoice
-                    showInvoiceForm();
-                } else {
-                    // Show warning message if payment status is not completed
-                    showWarningMessage('Payment status is not completed.');
-                }
-            } else {
-                // Show warning message if uuid or email do not exist
-                showWarningMessage('UUID or email does not exist.');
-            }
-        },
-        error: function (response) {
-            // Show error message if the API request fails
-            showWarningMessage('Error occurred while retrieving data.');
-        }
-    });
 }
 
 // Update contribuyente type on select options
@@ -332,3 +302,105 @@ function generateInvoiceForm() {
 function updateEventiaAuthToken() {
 
 }
+
+async function validateUserData(uuid, email, rfc) {
+    // Validate uuid and status in Eventia
+    const eventiaValidation = await validateUUIDEventia(uuid);
+    console.log(eventiaValidation);
+    // Validate valid RFC
+    const rfcValidation = await validateClientRFC(rfc);
+    console.log(rfcValidation)
+
+    if(eventiaValidation && rfcValidation) {
+        showInvoiceForm();
+
+        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
+        $('#generate-submit-button').show();
+        $('#generate-loading-button').hide();
+    }
+}
+
+async function validateUUIDEventia(uuid) {
+    var eventia = false;
+    // Make an AJAX request to retrieve data
+    await $.ajax({
+        // replace -> uuid
+        url: EVENTIA_API + EVENTIA_EVENT + EVENTIA_SEARCH_BY_ID.replace("{{attendee_id}}", '30eb4c'),
+        method: 'GET',
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        crossDomain: true,
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + EVENTIA_AUTH_KEY);
+        },
+        success: function (response) {
+            // Check if uuid and email exist
+            if (response?.data && response.data?.attributes) {
+                // Validate payment status
+                if (response.data.attributes.paid) {
+                    eventia = true;
+                } else {
+                    // Show warning message if payment status is not completed
+                    showWarningMessage('Payment status is not completed.');
+                }
+            } else {
+                // Show warning message if uuid or email do not exist
+                showWarningMessage('UUID or email does not exist.');
+            }
+        },
+        error: function (response) {
+            // Show error message if the API request fails
+            showWarningMessage('Error occurred while retrieving data.');
+        }
+    });
+    return eventia;
+}
+
+async function validateClientRFC(rfc) {
+    var facturama = false;
+    await $.ajax({
+        // replace -> rfc
+        url: FACTURAMA_API + FACTURAMA_RFC_STATUS.replace("{{rfc}}", rfc),
+        method: 'GET',
+        dataType: "json",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', `Bearer ${FACTURAMA_TOKEN}`);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('User-Agent', 'pruebas');
+        },
+        success: function (response) {
+            // If success response, return ok
+            if(response.RfcLocalizado) {
+                facturama = true;
+            } else {
+                showWarningMessage(response.Message);
+            }
+        },
+        error: function (response) {
+            // Show error message if the API request fails
+            showWarningMessage(response.Message);
+        }
+    });
+    return facturama;
+}
+
+// 30eb4c -> pago, 9241bc -> no pago
+// Function to generate an invoice
+async function generateInvoice() {
+    const razonSocial = $('#generate-invoice-form #razon-social').val();
+    const rfc = $('#generate-invoice-form #rfc-generate').val();
+    const email = $('#generate-invoice-form #email').val();
+    const zipCode = $('#generate-invoice-form #zipcode').val();
+    const usoCfdi = $('#uso-cfdi option:selected').val();
+    const regimenFiscal = $('#regimen-fiscal option:selected').val();
+    const montoFacturacion = $('#generate-invoice-form #ticket-amount').val();
+    const stateSelection = $("#state option:selected").val();
+    const townSelection = $("#town option:selected").val();
+    const neighborhoodSelection = $("#neighborhood option:selected").val();
+    const houseNumber = $('#generate-invoice-form #house-number').val();
+
+}
+
+function generateFacturamaUser() {
+}
+  

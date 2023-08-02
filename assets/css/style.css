@@ -1813,3 +1813,12 @@ th, td {
   text-align: center;
   vertical-align: middle;
 }
+
+.card-1 .card-heading {
+  background: url("../img/invoice/group.png") center center/cover no-repeat;
+  padding-top: 250px !important;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+}
