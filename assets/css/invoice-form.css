@@ -524,11 +524,11 @@
   }
   
   .steps ul.step-2:before {
-    content: "SAT Information";
+    content: "Address Information";
   }
   
   .steps ul.step-3:before {
-    content: "Address Information";
+    content: "Review";
   }
   
   .steps ul.step-4:before {

@@ -1,41 +1,53 @@
 // EVENTIA
-const EVENTIA_API           = "https://connect.eventtia.com/api/v3";
-const EVENTIA_AUTH          = "/auth";
-const EVENTIA_EVENT         = "/events/congresoendocrinologia2023";
-const EVENTIA_SEARCH_BY_ID  = "/attendees/{{attendee_id}}";
+const EVENTIA_API = "https://connect.eventtia.com/api/v3";
+const EVENTIA_AUTH = "/auth";
+const EVENTIA_EVENT = "/events/congresoendocrinologia2023";
+const EVENTIA_SEARCH_BY_ID = "/attendees/{{attendee_id}}";
 // FACTURAMA
-const FACTURAMA_API         = "https://apisandbox.facturama.mx"; //https://api.facturama.mx/
-const FACTURAMA_RFC_STATUS  = "/Client/status?rfc={{rfc}}";
-const FACTURAMA_ADD_CLIENT  = "/Client";
-const FACTURAMA_INVOICE     = "";
-const FACTURAMA_USER_AGENT  = "pruebas";
-const FACTURAMA_TOKEN       = "cHJ1ZWJhczpwcnVlYmFzMjAxMQ==";
+const FACTURAMA_API = "https://apisandbox.facturama.mx"; //https://api.facturama.mx/
+const FACTURAMA_STATES = "/catalogs/States?countryCode=MEX";
+const FACTURAMA_TOWNS = "/catalogs/Municipalities?stateCode={{stateCode}}";
+const FACTURAMA_LOCALITIES = "/catalogs/localities?stateCode={{stateCode}}";
+const FACTURA_REGIMEN_FISCAL = "/Catalogs/FiscalRegimens?rfc={{rfc}}";
+const FACTURA_CFDI_TYPES = "/Catalogs/CfdiTypes";
+const FACTURAMA_ZIPCODE = "catalogs/PostalCodes?keyword={{zipcode}}"
+const FACTURAMA_RFC_STATUS = "/Client/status?rfc={{rfc}}";
+const FACTURAMA_ADD_CLIENT = "/Client";
 
-var EVENTIA_AUTH_KEY        = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFzcyI6IlVzZXIiLCJhdXRoZW50aWNhdGlvbl9rZXkiOiJjZXNhci5yaXZhc0B0aHVuZGVycC5jb20ubXgiLCJ3aGl0ZV9sYWJlbCI6ZmFsc2UsImV4cCI6MTY5NzQ5NDgzMn0.2_UclWb2GEZI9rQoRg9yVlQFqNrxcqNUZ1BObxKpzVo";
-var mexicoJson              = {};
-var stateFilter             = [];
+const FACTURAMA_INVOICE = "";
+const FACTURAMA_USER_AGENT = "pruebas";
+const FACTURAMA_TOKEN = "cHJ1ZWJhczpwcnVlYmFzMjAxMQ==";
 
-const invoiceRegisterOptions = { "0": { "605": { "desc": "Sueldos y Salarios e Ingresos Asimilados a Salarios", "options": ["S01 - Sin Efectos fiscales"] }, "606": { "desc": "Arrendamiento", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "607": { "desc": "Régimen de Enajenación o Adquisición de Bienes", "options": ["S01 - Sin Efectos fiscales",] }, "608": { "desc": "Demás ingresos", "options": ["S01 - Sin Efectos fiscales", 6] }, "610": { "desc": "Residentes en el Extranjero sin Establecimiento Permanente en Méxic", "options": ["S01 - Sin Efectos fiscales",] }, "611": { "desc": "Ingresos por Dividendos (socios y accionistas)", "options": ["S01 - Sin Efectos fiscales",] }, "612": { "desc": "Personas Físicas con Actividades Empresariales y Profesionales", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "614": { "desc": "Ingresos por intereses", "options": ["S01 - Sin Efectos fiscales",] }, "615": { "desc": "Régimen de los ingresos por obtención de premios", "options": ["S01 - Sin Efectos fiscales",] }, "621": { "desc": "Incorporación Fiscal", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "626": { "desc": "Régimen Simplificado de Confianz", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] } }, "1": { "601": { "desc": "General de Ley Personas Morales", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "603": { "desc": "Personas Morales con Fines no Lucrativos ", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "610": { "desc": "Residentes en el Extranjero sin Establecimiento Permanente en México", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "622": { "desc": "Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "623": { "desc": "Opcional para Grupos de Sociedades", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "624": { "desc": "Coordinados", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] }, "626": { "desc": "Régimen Simplificado de Confianza", "options": ["S01 - Sin Efectos fiscales", "G01 - Adquisición de mercancías", "G03 - Gastos en general"] } } };
+const baseOption = '<option value="-" selected="selected" disabled class="option">Select an option</option>';
+
+var EVENTIA_AUTH_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFzcyI6IlVzZXIiLCJhdXRoZW50aWNhdGlvbl9rZXkiOiJjZXNhci5yaXZhc0B0aHVuZGVycC5jb20ubXgiLCJ3aGl0ZV9sYWJlbCI6ZmFsc2UsImV4cCI6MTY5NzQ5NDgzMn0.2_UclWb2GEZI9rQoRg9yVlQFqNrxcqNUZ1BObxKpzVo";
+
+/*
+    @ToDO
+    - On generate-invoice form:
+        - Create user within Facturama on submit form
+        - Generate invoice with user data form
+        - Send invoice via email
+        - Show option to download invoice
+
+    - Download acuse sat (check this step)
+
+    - On search-invoice form, validate:
+        - User exits
+        - Has invoice, if not -> create one
+        - download and send via email
+
+    - Move code to nodejs to hide credentials and path
+
+    - Validate invalid data on submit/response 
+*/
 
 window.onload = function () {
-    getEventiaAuthKey();
-    loadMexicoData();
+    getEventiaApiKey();
 };
 
-function loadMexicoData() {
-    // all data mexico.js
-    fetch('assets/js/mexico.json')
-        .then(response => response.json())
-        .then(data => {
-            mexicoJson = data;
-        })
-        .catch(error => {
-            console.error('Error fetching JSON:', error);
-        });
-}
-
 // Event listener for the generate invoice form submission
-$('#generate-invoice-form').submit(function (event) {
+$('#generate-invoice-form').submit(async function (event) {
     event.preventDefault(); // Prevent form submission
 
     // Get the UUID and email from the form
@@ -43,7 +55,7 @@ $('#generate-invoice-form').submit(function (event) {
     var email = $('#generate-invoice-form #email').val();
     var rfc = $('#generate-invoice-form #rfc-generate').val();
 
-    validateEmail(email);
+    await validateEmail(email);
 
     // Hide the submit button and show the loading button
     $('#generate-submit-button').hide();
@@ -79,30 +91,6 @@ $('#search-invoice-form').submit(function (event) {
     }, 2000);
 });
 
-// Get api key before generate/download an invoice
-function getEventiaAuthKey() {
-    // Make an AJAX request to retrieve data
-    if (EVENTIA_AUTH_KEY === "") {
-        $.ajax({
-            url: EVENTIA_API + EVENTIA_AUTH + '?email=cesar.rivas@thunderp.com.mx&password=Experience2023!!!',
-            method: 'POST',
-            dataType: "json",
-            crossDomain: true,
-            success: function (response) {
-                // Check if uuid and email exist
-                if (response?.auth_token && response?.username) {
-                    EVENTIA_AUTH_KEY = response?.auth_token;
-
-                }
-            },
-            error: function (response) {
-                // Show error message if the API request fails
-                showWarningMessage("Can not get eventia API data.");
-            }
-        });
-    }
-
-}
 
 function validateEmail(email) {
     // Validate UUID and email using regex
@@ -113,113 +101,38 @@ function validateEmail(email) {
     }
 }
 
-// Update contribuyente type on select options
-$('#tipo-contribuyente').on('change', function () {
-    var selectVal = $("#tipo-contribuyente option:selected").val();
-
-    // Clear previous options
-    $("#uso-cfdi").empty();
-    $("#regimen-fiscal").empty();
-    var usoCFDIOptions = [];
-    var regimenOptions = [];
-
-    const baseOption = '<option value="-" selected="selected" disabled class="option">Select an option</option>';
-    regimenOptions.push(baseOption);
-    usoCFDIOptions.push(baseOption);
-
-    for (const [key, value] of Object.entries(invoiceRegisterOptions[selectVal])) {
-        regimenOptions.push(`<option value="${key}" class="option">${value.desc}</option>`);
-    };
-    if (selectVal === "1") {
-        usoCFDIOptions.push(`<option value="S01" class="option">Sin Efectos fiscales</option>`)
-        usoCFDIOptions.push(`<option value="G01" class="option">Adquisición de mercancías</option>`)
-        usoCFDIOptions.push(`<option value="G03" class="option">Gastos generales</option>`)
-    }
-
-    // Append the option element to the select element
-    $("#regimen-fiscal").append(regimenOptions);
-    $("#uso-cfdi").append(usoCFDIOptions);
-});
-
-// Update CFDI type
-$('#regimen-fiscal').on('change', function () {
-    var selectVal = $("#tipo-contribuyente option:selected").val();
-    var regimen = $("#regimen-fiscal option:selected").val();
-
-    if (selectVal === "0" && regimen != "-") {
-        // Clear previous options
-        $("#uso-cfdi").empty();
-        var cfdiOptions = [];
-
-        const baseOption = '<option value="-" selected="selected" disabled class="option">Select an option</option>';
-        cfdiOptions.push(baseOption);
-
-        invoiceRegisterOptions[selectVal][regimen]["options"].forEach(value => {
-            var [code, desc] = value.split(" - ")
-            console.log(code + ", " + desc)
-            cfdiOptions.push(`<option value="${code}" class="option">${desc}</option>`);
-        });
-
-        // Append the option element to the select element
-        $("#uso-cfdi").append(cfdiOptions);
-    }
-});
-
 // Update Address states type
 $('#state').on('change', function () {
     var stateSelection = $("#state option:selected").val();
 
     $("#town").empty();
     var townOptions = [];
-
-    const baseOption = '<option value="-" selected="selected" disabled class="option">Select an option</option>';
     townOptions.push(baseOption);
 
-    // Filter 1: data["clave"] equals desiredClave
-    stateFilter = mexicoJson.filter(function(item) {
-        return item.clave === stateSelection;
-    });
-
-    stateFilter[0]["municipios"].forEach(item => {
-        townOptions.push(`<option value="${item.clave}" class="option">${item.nombre}</option>`);
-    });
-
-    // Append the option element to the select element
-    $("#town").append(townOptions);
-});
-
-// Update Address neighborhoods type
-$('#town').on('change', function () {
-    var stateSelection = $("#state option:selected").val();
-    var townSelection = $("#town option:selected").val();
-
-    $("#neighborhood").empty();
-    var neighborhoodsOptions = [];
-
-    const baseOption = '<option value="-" selected="selected" disabled class="option">Select an option</option>';
-    neighborhoodsOptions.push(baseOption);
-    // Filter 1: data["clave"] equals desiredClave
-    // Filter 2: data["clave"]["localidades"] equals desiredLocalidadesClave
-    var filter = mexicoJson.filter(function(item) {
-        return item.clave === stateSelection;
-      }).map(function(item) {
-        var matchingMunicipio = item.municipios.find(function(municipio) {
-          return municipio.clave === townSelection;
+    return callFacturamaApi(FACTURAMA_TOWNS.replace("{{stateCode}}", stateSelection), 'GET')
+    .done(function(data) {
+        data.forEach(state => {
+            townOptions.push(`<option value="${state.Value}" class="option">${state.Name}</option>`);
         });
-        return {
-          clave: item.clave,
-          localidades: matchingMunicipio.localidades
-        };
-      });
-
-    //Update missing colonias
-    filter[0]["localidades"].forEach(item => {
-        neighborhoodsOptions.push(`<option value="${item.clave}" class="option">${item.nombre}</option>`);
+        // Append the option element to the select element
+        $("#town").append(townOptions);
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Error fetching state town:', error);
+        showWarningMessage("Error fetching state data");
     });
-
-    // Append the option element to the select element
-    $("#neighborhood").append(neighborhoodsOptions);
 });
+
+function validateZipcode(zipcode) {
+    return callFacturamaApi(FACTURAMA_ZIPCODE.replace("{{zipcode}}", zipcode), 'GET')
+    .done(function(data) {
+        return data.length > 0;
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Error fetching zipcode data:', error);
+        showWarningMessage("Error fetching zipcode data");
+    });
+}
 
 // Function to search for an invoice
 function searchInvoice(uuid, email) {
@@ -238,21 +151,63 @@ function searchInvoice(uuid, email) {
                 showDownloadOption();
             } else {
                 // Show message to generate an invoice
-                showMessage('Invoice does not exist. Generate one.');
+                showWarningMessage('Invoice does not exist. Generate one.');
             }
         },
         error: function () {
             // Show error message if the API request fails
-            showMessage('Error occurred while retrieving data.');
+            showWarningMessage('Error occurred while retrieving data.');
         }
     });
 }
 
 // Helper function to show input form fields for generating an invoice
-function showInvoiceForm() {
+async function showInvoiceForm() {
     $('#invoice-section-option').hide();
     $('#modal-invoice-form').show();
+    await loadStatesData();
+    await loadUsoCfdi();
 }
+
+async function loadStatesData() {
+    // Clear any existing options
+    $("#state").empty();
+    var stateOptions = [];
+    stateOptions.push(baseOption);
+
+    // Make the Ajax request to the API endpoint
+    return await callFacturamaApi(FACTURAMA_STATES, 'GET')
+    .done(function(data) {
+        data.forEach(state => {
+            stateOptions.push(`<option value="${state.Value}" class="option">${state.Name}</option>`);
+        });
+        $("#state").append(stateOptions);
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Error fetching state data:', error);
+        showWarningMessage("Error fetching state data");
+    });
+}
+
+async function loadUsoCfdi() {
+    $("#uso-cfdi").empty();
+    var cfdiOptions = [];
+    cfdiOptions.push(baseOption);
+
+    // Make the Ajax request to the API endpoint
+    return await callFacturamaApi(FACTURA_CFDI_TYPES, 'GET')
+    .done(function(data) {
+        data.forEach(state => {
+            cfdiOptions.push(`<option value="${state.Value}" class="option">${state.Name}</option>`);
+        });
+        $("#uso-cfdi").append(cfdiOptions);
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Error fetching state data:', error);
+        showWarningMessage("Error fetching state data");
+    });
+}
+
 
 // Helper function to show a warning message
 function showWarningMessage(message) {
@@ -268,50 +223,31 @@ function showWarningMessage(message) {
 function showDownloadOption() {
 }
 
-// Helper function to show a message
-function showMessage(message) {
-    // Create the alert element
-    var alertElement = $('<div>').addClass('alert alert-danger').attr('role', 'alert').html(message);
-
-    // Append the alert element to a container in your HTML
-    var alertContainer = $('#alert-container');
-    showAlert(alertContainer, alertElement);
-}
-
 function showAlert(alertContainer, alertElement) {
     // Append the alert element to a container in your HTML
     alertContainer.empty().append(alertElement);
 
     // Remove the alert after the specified duration
-    setTimeout(function () {
-        alertContainer.empty();
-    }, 2000);
+    setTimeout(function () { alertContainer.empty(); }, 2000);
 }
 
-function validateInvoice() {
-
-}
+function validateInvoice() {}
 
 function generateInvoiceForm() {
     // success on submitting invoice to facturama
     $('#invoice-section-option').show();
     // show option to download
-
 }
 
-function updateEventiaAuthToken() {
-
-}
+function updateEventiaAuthToken() {}
 
 async function validateUserData(uuid, email, rfc) {
     // Validate uuid and status in Eventia
     const eventiaValidation = await validateUUIDEventia(uuid);
-    console.log(eventiaValidation);
     // Validate valid RFC
     const rfcValidation = await validateClientRFC(rfc);
-    console.log(rfcValidation)
 
-    if(eventiaValidation && rfcValidation) {
+    if (eventiaValidation && rfcValidation) {
         showInvoiceForm();
 
         // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
@@ -357,31 +293,39 @@ async function validateUUIDEventia(uuid) {
 }
 
 async function validateClientRFC(rfc) {
-    var facturama = false;
-    await $.ajax({
-        // replace -> rfc
-        url: FACTURAMA_API + FACTURAMA_RFC_STATUS.replace("{{rfc}}", rfc),
-        method: 'GET',
-        dataType: "json",
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', `Bearer ${FACTURAMA_TOKEN}`);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.setRequestHeader('User-Agent', 'pruebas');
-        },
-        success: function (response) {
-            // If success response, return ok
-            if(response.RfcLocalizado) {
-                facturama = true;
-            } else {
-                showWarningMessage(response.Message);
-            }
-        },
-        error: function (response) {
-            // Show error message if the API request fails
-            showWarningMessage(response.Message);
-        }
+    // Make the Ajax request to the API endpoint
+    const validRFC = await callFacturamaApi(FACTURAMA_RFC_STATUS.replace("{{rfc}}", rfc), 'GET')
+    .done(function(response) {
+        return response.RfcLocalizado;
+    })
+    .fail(function(xhr, status, error) {
+        console.error('RFC is not valid: ', error);
+        showWarningMessage("RFC is not valid.");
     });
-    return facturama;
+
+    if(validRFC) {
+        getRegimenFiscal(rfc);
+    }
+    return validRFC;
+}
+
+async function getRegimenFiscal(rfc) {
+    $("#regimen-fiscal").empty();
+    var regimenFiscalOptions = [];
+    regimenFiscalOptions.push(baseOption);
+
+    await callFacturamaApi(FACTURA_REGIMEN_FISCAL.replace("{{rfc}}", rfc), 'GET')
+    .done(function(data) {
+        data.forEach(state => {
+            regimenFiscalOptions.push(`<option value="${state.Value}" class="option">${state.Name}</option>`);
+        });
+        // Append the option element to the select element
+        $("#regimen-fiscal").append(regimenFiscalOptions);
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Can not get regimen fiscal data: ', error);
+        showWarningMessage("Can not get regimen fiscal data");
+    });
 }
 
 // 30eb4c -> pago, 9241bc -> no pago
@@ -401,6 +345,44 @@ async function generateInvoice() {
 
 }
 
+async function getEventiaApiKey(){
+    if (EVENTIA_AUTH_KEY === "") {
+        await callEventiaApi()
+        .done(function(response) {
+            if (response?.auth_token && response?.username) {
+                EVENTIA_AUTH_KEY = response?.auth_token;
+            }
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Can not get eventia API data:', error);
+            showWarningMessage("Can not get eventia API data.");
+        });
+    }
+}
+
 function generateFacturamaUser() {
 }
-  
+
+function callFacturamaApi(apiPath, method, data = null) {
+    return $.ajax({
+        url: FACTURAMA_API + apiPath,
+        method: method,
+        data: data ? JSON.stringify(data) : null,
+        dataType: 'json',
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', `Basic ${FACTURAMA_TOKEN}`);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+        },
+    });
+}
+
+// Get api key before generate/download an invoice
+function callEventiaApi() {
+    // Make an AJAX request to retrieve data
+    $.ajax({
+        url: EVENTIA_API + EVENTIA_AUTH + '?email=cesar.rivas@thunderp.com.mx&password=Experience2023!!!',
+        method: 'POST',
+        dataType: "json",
+        crossDomain: true
+    });
+}
