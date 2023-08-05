@@ -12,7 +12,7 @@ const FACTURA_REGIMEN_FISCAL = "/Catalogs/FiscalRegimens?rfc={{rfc}}";
 const FACTURA_CFDI_TYPES = "/Catalogs/CfdiTypes";
 const FACTURAMA_ZIPCODE = "catalogs/PostalCodes?keyword={{zipcode}}"
 const FACTURAMA_RFC_STATUS = "/Client/status?rfc={{rfc}}";
-const FACTURAMA_ADD_CLIENT = "/Client";
+const FACTURAMA_CLIENT = "/Client";
 
 const FACTURAMA_INVOICE = "";
 const FACTURAMA_USER_AGENT = "pruebas";
@@ -23,7 +23,7 @@ const baseOption = '<option value="-" selected="selected" disabled class="option
 var EVENTIA_AUTH_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFzcyI6IlVzZXIiLCJhdXRoZW50aWNhdGlvbl9rZXkiOiJjZXNhci5yaXZhc0B0aHVuZGVycC5jb20ubXgiLCJ3aGl0ZV9sYWJlbCI6ZmFsc2UsImV4cCI6MTY5NzQ5NDgzMn0.2_UclWb2GEZI9rQoRg9yVlQFqNrxcqNUZ1BObxKpzVo";
 
 /*
-    @ToDO
+    @ToDo
     - On generate-invoice form:
         - Create user within Facturama on submit form
         - Generate invoice with user data form
@@ -38,8 +38,8 @@ var EVENTIA_AUTH_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFzcyI6IlVzZXI
         - download and send via email
 
     - Move code to nodejs to hide credentials and path
-
     - Validate invalid data on submit/response 
+    - Update preview data when form data is set
 */
 
 window.onload = function () {
@@ -247,49 +247,37 @@ async function validateUserData(uuid, email, rfc) {
     // Validate valid RFC
     const rfcValidation = await validateClientRFC(rfc);
 
-    if (eventiaValidation && rfcValidation) {
-        showInvoiceForm();
+    const isRegistered = await isFacturamaUserAlreadyCreated(email);
 
-        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
-        $('#generate-submit-button').show();
-        $('#generate-loading-button').hide();
+    // If client is not register inside facturama yet
+    if(!isRegistered) {
+        if (eventiaValidation && rfcValidation) {
+            showInvoiceForm();
+    
+            // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
+            $('#generate-submit-button').show();
+            $('#generate-loading-button').hide();
+        }
     }
+
+    // Show section to download file
 }
 
 async function validateUUIDEventia(uuid) {
-    var eventia = false;
+    var validate = false;
     // Make an AJAX request to retrieve data
-    await $.ajax({
-        // replace -> uuid
-        url: EVENTIA_API + EVENTIA_EVENT + EVENTIA_SEARCH_BY_ID.replace("{{attendee_id}}", '30eb4c'),
-        method: 'GET',
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        crossDomain: true,
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', 'Bearer ' + EVENTIA_AUTH_KEY);
-        },
-        success: function (response) {
-            // Check if uuid and email exist
-            if (response?.data && response.data?.attributes) {
-                // Validate payment status
-                if (response.data.attributes.paid) {
-                    eventia = true;
-                } else {
-                    // Show warning message if payment status is not completed
-                    showWarningMessage('Payment status is not completed.');
-                }
-            } else {
-                // Show warning message if uuid or email do not exist
-                showWarningMessage('UUID or email does not exist.');
+    await callEventiaApi('GET', EVENTIA_EVENT + EVENTIA_SEARCH_BY_ID.replace("{{attendee_id}}", '30eb4c'))
+        .done(function(response) {
+            if (!response.data.attributes.paid) {
+                showWarningMessage('Payment status is not completed.');
             }
-        },
-        error: function (response) {
-            // Show error message if the API request fails
-            showWarningMessage('Error occurred while retrieving data.');
-        }
-    });
-    return eventia;
+            validate = response.data.attributes.paid;
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Can not get eventia API data:', error);
+            showWarningMessage("Can not get eventia API data.");
+        });
+    return validate;
 }
 
 async function validateClientRFC(rfc) {
@@ -363,6 +351,22 @@ async function getEventiaApiKey(){
 function generateFacturamaUser() {
 }
 
+async function isFacturamaUserAlreadyCreated(email) {
+    var found = false;
+    await callFacturamaApi(FACTURAMA_CLIENT)
+        .done(function(response) {
+            var found = false;
+            response.forEach(client => {
+                if(client.Email === email) { found = true; }
+            });
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Client has not been register in facturama: ', error);
+            showWarningMessage("Client has not been register in facturama");
+        });
+    return found;
+}
+
 function callFacturamaApi(apiPath, method, data = null) {
     return $.ajax({
         url: FACTURAMA_API + apiPath,
@@ -377,11 +381,24 @@ function callFacturamaApi(apiPath, method, data = null) {
 }
 
 // Get api key before generate/download an invoice
-function callEventiaApi() {
+function callEventiaApi(httpType = 'POST', path = null) {
+
+    if(path != null) {
+        return $.ajax({
+            url: EVENTIA_API + path,
+            method: httpType,
+            dataType: "json",
+            crossDomain: true,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', `Bearer ${EVENTIA_AUTH_KEY}`);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+            },
+        });
+    }
     // Make an AJAX request to retrieve data
-    $.ajax({
+    return $.ajax({
         url: EVENTIA_API + EVENTIA_AUTH + '?email=cesar.rivas@thunderp.com.mx&password=Experience2023!!!',
-        method: 'POST',
+        method: httpType,
         dataType: "json",
         crossDomain: true
     });
