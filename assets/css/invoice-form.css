@@ -524,11 +524,11 @@
   }
   
   .steps ul.step-2:before {
-    content: "Address Information";
+    content: "Payment Information";
   }
   
   .steps ul.step-3:before {
-    content: "Review";
+    content: "Address Information";
   }
   
   .steps ul.step-4:before {

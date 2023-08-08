@@ -101,6 +101,7 @@
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="">
+                    <div class="pt-2" id="alert-container"></div>
                     <div class="card card-4" id="invoice-section-option">
                         <div class="card-body">
                             <ul class="tab-list">
@@ -151,17 +152,17 @@
                                             <div class="col">
                                                 <div class="input-group input-group-big">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                                        class="bi bi-envelope-check" viewBox="0 0 16 16">
+                                                        class="bi bi-receipt" viewBox="0 0 16 16">
                                                         <path
-                                                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z">
+                                                            d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z">
                                                         </path>
                                                         <path
-                                                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z">
+                                                            d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z">
                                                         </path>
                                                     </svg>
-                                                    <label class="label px-2" for="rfc-generate">RFC:</label>
-                                                    <input class="input--style-1" type="text" name="rfc-generate" id="rfc-generate"
-                                                        placeholder="CUPU800825569" required="required" requiredS
+                                                    <label class="label px-2" for="rfc">RFC:</label>
+                                                    <input class="input--style-1" type="text" name="rfc" id="rfc"
+                                                        placeholder="CUPU800825569" required="required" required
                                                         title="Please enter a valid rfc.">
                                                 </div>
                                             </div>
@@ -173,6 +174,11 @@
                                             style="display: none;">
                                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                             Loading...
+                                        </button>
+
+                                        <button class="btn btn-submit" type="button" id="download-invoice-btn" style="display: none;" onclick="downloadInvoice()">
+                                            <span class="spinner-border spinner-border-sm" id="download-invoice-spinner" role="status" style="display: none;"></span>
+                                            Descargar Factura
                                         </button>
                                     </form>
                                 </div>
@@ -209,7 +215,6 @@
                                                     <label class="label px-2" for="email-search">Correo:</label>
                                                     <input class="input--style-1" type="text" name="email-search" id="email-search"
                                                         placeholder="example@example.com" required
-                                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                                                         title="Please enter a valid email address.">
                                                 </div>
                                             </div>
@@ -220,6 +225,11 @@
                                         <button class="btn btn-submit" type="button" id="search-loading-button" style="display: none;">
                                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                             Loading...
+                                        </button>
+
+                                        <button class="btn btn-submit" type="button" id="download-invoice-search-btn" style="display: none;" onclick="downloadInvoice()">
+                                            <span class="spinner-border spinner-border-sm" id="download-invoice-search-spinner" role="status" style="display: none;"></span>
+                                            Descargar Factura
                                         </button>
                                     </form>
                                 </div>
@@ -233,6 +243,10 @@
                                 <!-- SECTION 1 -->
                                 <h4></h4>
                                 <section>
+                                    <div class="form-row">
+                                        <label for="fullName">Nombre Completo</label>
+                                        <input type="text" id="fullName" class="form-control" required></select>
+                                    </div>
                                     <div class="form-row form-group">
                                         <div class="form-holder">
                                             <label for="razon-social">Razón Social</label>
@@ -246,23 +260,40 @@
                                     <div class="form-row form-group">
                                         <div class="form-holder">
                                             <label for="regimen-fiscal">Régimen Fiscal</label>
-                                            <select name="" id="regimen-fiscal" class="form-control"></select>
+                                            <select name="" id="regimen-fiscal" class="form-control" required></select>
                                         </div>
                                         <div class="form-holder">
                                             <label for="uso-cfdi">Uso CFDI Predefinido</label>
-                                            <div class="form-holder">
-                                                <select name="" id="uso-cfdi" class="form-control"></select>
-                                            </div>
+                                            <select name="" id="uso-cfdi" class="form-control" required>
+                                            </select>
                                         </div>
                                     </div>
                                 </section>
                 
-                                <!-- SECTION 2 -->
+                                 <!-- SECTION 2 -->
+                                 <h4></h4>
+                                 <section>
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <label for="payment-form">Forma de pago</label>
+                                            <select class="form-control" id="payment-form" required> </select>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label for="payment-type">Tipo de pago</label>
+                                            <select class="form-control" id="payment-type" required>
+                                                <option value="-" selected="selected" disabled class="option">Select an option</option>
+                                                <option value="PUE" class="option">Pago en una sola exhibición</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                 </section>
+
+                                <!-- SECTION 3 -->
                                 <h4></h4>
                                 <section>
                                     <div class="form-row">
                                         <label for="state">Estado</label>
-                                        <select name="state" id="state" class="form-control"></select>
+                                        <select name="state" id="state" class="form-control" required></select>
                                     </div>
                                     <div class="form-row">
                                         <label for="town">Municipio</label>
@@ -271,20 +302,24 @@
                                     </div>
                                     <div class="form-row form-group">
                                         <div class="form-holder">
-                                            <label for="zipcode">Zipcode</label>
-                                            <input type="text" class="form-control" id="zipcode" required>
+                                            <label for="zipcode">Código postal</label>
+                                            <input type="number" pattern="^\d{5}$" class="form-control" id="zipcode" required>
                                         </div>
         
                                         <div class="form-holder">
-                                            <label for="house-number">House Number</label>
-                                            <input type="text" class="form-control" id="house-number" required placeholder="#100">
+                                            <label for="house-number">Número de Casa</label>
+                                            <input type="number" class="form-control" id="house-number" required placeholder="#100">
                                         </div>
                                     </div>
                                 </section>
         
-                                <!-- SECTION 3 -->
+                                <!-- SECTION 4 -->
                                 <h4></h4>
                                 <section>
+                                    <div class="form-row">
+                                        <label for="fullNamePreview">Nombre Completo</label>
+                                        <select name="fullNamePreview" id="fullNamePreview" class="form-control" required></select>
+                                    </div>
                                     <div class="form-row form-group">
                                         <div class="form-holder">
                                             <label for="rfc-preview">RFC</label>
@@ -308,12 +343,23 @@
 
                                     <div class="form-row form-group">
                                         <div class="form-holder">
-                                            <label for="regimen-social-preview">Régimen Fiscal</label>
-                                            <input type="text" class="form-control" id="regimen-social-preview" disabled>
+                                            <label for="payment-form-preview">Forma de pago</label>
+                                            <input type="text" class="form-control" id="payment-form-preview" disabled>
                                         </div>
                                         <div class="form-holder">
-                                            <label for="cfdi-preview">Uso CFDI Predeterminado</label>
-                                            <input type="number" min="0", max="3000" class="form-control" id="cfdi-preview" disabled>
+                                            <label for="payment-type-preview">Tipo de pago</label>
+                                            <input type="number" min="0", max="3000" class="form-control" id="payment-type-preview" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <label for="regimen-fiscal-preview">Régimen Fiscal</label>
+                                            <input type="text" class="form-control" id="regimen-fiscal-preview" disabled>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label for="uso-cfdi-preview">Uso CFDI Predeterminado</label>
+                                            <input type="number" min="0", max="3000" class="form-control" id="uso-cfdi-preview" disabled>
                                         </div>
                                     </div>
 

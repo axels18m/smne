@@ -1,7 +1,3 @@
-$('#modal-invoice-form').submit(function (event) {
-    event.preventDefault(); 
-})
-
 $("#wizard").steps({
     headerTag: "h4",
     bodyTag: "section",
@@ -29,8 +25,11 @@ $("#wizard").steps({
         }
         return true; 
     },
+    onFinished: async function(event, currentIndex) {
+        await generateInvoice();
+    },
     labels: {
-        finish: "Place Holder",
+        finish: "Generate Invoice",
         next: "Next",
         previous: "Previous"
     }

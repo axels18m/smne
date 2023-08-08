@@ -10,37 +10,23 @@ const FACTURAMA_TOWNS = "/catalogs/Municipalities?stateCode={{stateCode}}";
 const FACTURAMA_LOCALITIES = "/catalogs/localities?stateCode={{stateCode}}";
 const FACTURA_REGIMEN_FISCAL = "/Catalogs/FiscalRegimens?rfc={{rfc}}";
 const FACTURA_CFDI_TYPES = "/Catalogs/CfdiTypes";
+const FACTURA_CFDI_USES =  "/catalogs/CfdiUses";
 const FACTURAMA_ZIPCODE = "catalogs/PostalCodes?keyword={{zipcode}}"
 const FACTURAMA_RFC_STATUS = "/Client/status?rfc={{rfc}}";
+const FACTURAMA_PAYMENT_FORMS = "/catalogs/PaymentForms";
 const FACTURAMA_CLIENT = "/Client";
-
-const FACTURAMA_INVOICE = "";
+const FACTURAMA_INVOICE = "/3/cfdis";
+const FACTURAMA_SEARCH_INVOICE = "/cfdi?type=Issued&status=Active&rfc={{rfc}}";
+const FACTURAMA_SEND_INVOICE = "/Cfdi?cfdiType=issued&cfdiId={{invoiceIssued}}&email={{email}}"
+const FACTURAMA_FIND_ISSUED_ID = "/cfdi?type=Issued&status=Active&rfc={{rfc}}"
+const FACTURAMA_GET_INVOICE_BY_ISSUED_ID = "/Cfdi/pdf/issued/{{issuedId}}"
 const FACTURAMA_USER_AGENT = "pruebas";
 const FACTURAMA_TOKEN = "cHJ1ZWJhczpwcnVlYmFzMjAxMQ==";
 
 const baseOption = '<option value="-" selected="selected" disabled class="option">Select an option</option>';
-
 var EVENTIA_AUTH_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFzcyI6IlVzZXIiLCJhdXRoZW50aWNhdGlvbl9rZXkiOiJjZXNhci5yaXZhc0B0aHVuZGVycC5jb20ubXgiLCJ3aGl0ZV9sYWJlbCI6ZmFsc2UsImV4cCI6MTY5NzQ5NDgzMn0.2_UclWb2GEZI9rQoRg9yVlQFqNrxcqNUZ1BObxKpzVo";
-
-/*
-    @ToDo
-    - On generate-invoice form:
-        - Create user within Facturama on submit form
-        - Generate invoice with user data form
-        - Send invoice via email
-        - Show option to download invoice
-
-    - Download acuse sat (check this step)
-
-    - On search-invoice form, validate:
-        - User exits
-        - Has invoice, if not -> create one
-        - download and send via email
-
-    - Move code to nodejs to hide credentials and path
-    - Validate invalid data on submit/response 
-    - Update preview data when form data is set
-*/
+var issuedId = "";
+var isSearch = false;
 
 window.onload = function () {
     getEventiaApiKey();
@@ -48,12 +34,13 @@ window.onload = function () {
 
 // Event listener for the generate invoice form submission
 $('#generate-invoice-form').submit(async function (event) {
+    isSearch = false;
     event.preventDefault(); // Prevent form submission
 
     // Get the UUID and email from the form
     var uuid = $('#generate-invoice-form #uuid').val();
     var email = $('#generate-invoice-form #email').val();
-    var rfc = $('#generate-invoice-form #rfc-generate').val();
+    var rfc = $('#generate-invoice-form #rfc').val();
 
     await validateEmail(email);
 
@@ -69,10 +56,11 @@ $('#generate-invoice-form').submit(async function (event) {
 
 // Event listener for the search invoice form submission
 $('#search-invoice-form').submit(function (event) {
+    isSearch = true;
     event.preventDefault(); // Prevent form submission
 
     // Get the UUID and email from the form
-    var uuid = $('#search-invoice-form #rfc').val();
+    var rfc = $('#search-invoice-form #rfc').val();
     var email = $('#search-invoice-form #email-search').val();
 
     validateEmail(email);
@@ -83,14 +71,9 @@ $('#search-invoice-form').submit(function (event) {
 
     // Call the generateInvoice() function after a small delay (for demonstration purposes)
     setTimeout(async function () {
-        await searchInvoice(uuid, email);
-
-        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
-        $('#search-submit-button').show();
-        $('#search-loading-button').hide();
-    }, 2000);
+        await searchInvoice(rfc, email);
+    }, 1000);
 });
-
 
 function validateEmail(email) {
     // Validate UUID and email using regex
@@ -104,6 +87,9 @@ function validateEmail(email) {
 // Update Address states type
 $('#state').on('change', function () {
     var stateSelection = $("#state option:selected").val();
+
+    $("#state-preview").val(stateSelection);
+    $("#state-preview").prop('disabled', true);
 
     $("#town").empty();
     var townOptions = [];
@@ -123,42 +109,19 @@ $('#state').on('change', function () {
     });
 });
 
-function validateZipcode(zipcode) {
-    return callFacturamaApi(FACTURAMA_ZIPCODE.replace("{{zipcode}}", zipcode), 'GET')
-    .done(function(data) {
-        return data.length > 0;
-    })
-    .fail(function(xhr, status, error) {
-        console.error('Error fetching zipcode data:', error);
-        showWarningMessage("Error fetching zipcode data");
-    });
-}
-
 // Function to search for an invoice
-function searchInvoice(uuid, email) {
-    // Make an AJAX request to retrieve data
-    $.ajax({
-        url: 'https://api.facturama.mx/invoices',
-        method: 'GET',
-        data: {
-            uuid: uuid,
-            email: email
-        },
-        success: function (response) {
-            // Check if invoice exists
-            if (response.invoiceExists) {
-                // Show option to download the invoice
-                showDownloadOption();
-            } else {
-                // Show message to generate an invoice
-                showWarningMessage('Invoice does not exist. Generate one.');
-            }
-        },
-        error: function () {
-            // Show error message if the API request fails
-            showWarningMessage('Error occurred while retrieving data.');
-        }
-    });
+async function searchInvoice(rfc, email) {
+    // Validate valid RFC
+    const isRegistered = await isFacturamaUserAlreadyCreated(email);
+
+    if(isRegistered) {
+        await findIssuedIdByRfc(rfc);
+        // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
+        $('#search-loading-button').hide();
+        $('#download-invoice-search-btn').show();
+    } else {
+        showWarningMessage("Email could not been found on facturama.")
+    }
 }
 
 // Helper function to show input form fields for generating an invoice
@@ -167,6 +130,27 @@ async function showInvoiceForm() {
     $('#modal-invoice-form').show();
     await loadStatesData();
     await loadUsoCfdi();
+    await loadPaymentForms();
+}
+
+async function loadPaymentForms() {
+    // Clear any existing options
+    $("#payment-form").empty();
+    var paymentOptions = [];
+    paymentOptions.push(baseOption);
+
+    // Make the Ajax request to the API endpoint
+    return await callFacturamaApi(FACTURAMA_PAYMENT_FORMS, 'GET')
+    .done(function(data) {
+        data.forEach(payment => {
+            paymentOptions.push(`<option value="${payment.Value}" class="option">${payment.Name}</option>`);
+        });
+        $("#payment-form").append(paymentOptions);
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Error fetching payment data:', error);
+        showWarningMessage("Error fetching payment data");
+    });
 }
 
 async function loadStatesData() {
@@ -195,7 +179,7 @@ async function loadUsoCfdi() {
     cfdiOptions.push(baseOption);
 
     // Make the Ajax request to the API endpoint
-    return await callFacturamaApi(FACTURA_CFDI_TYPES, 'GET')
+    return await callFacturamaApi(FACTURA_CFDI_USES, 'GET')
     .done(function(data) {
         data.forEach(state => {
             cfdiOptions.push(`<option value="${state.Value}" class="option">${state.Name}</option>`);
@@ -208,7 +192,6 @@ async function loadUsoCfdi() {
     });
 }
 
-
 // Helper function to show a warning message
 function showWarningMessage(message) {
     // Create the alert element
@@ -219,27 +202,13 @@ function showWarningMessage(message) {
     showAlert(alertContainer, alertElement);
 }
 
-// Helper function to show the option to download the invoice
-function showDownloadOption() {
-}
-
 function showAlert(alertContainer, alertElement) {
     // Append the alert element to a container in your HTML
     alertContainer.empty().append(alertElement);
 
     // Remove the alert after the specified duration
-    setTimeout(function () { alertContainer.empty(); }, 2000);
+    setTimeout(function () { alertContainer.empty(); }, 3000);
 }
-
-function validateInvoice() {}
-
-function generateInvoiceForm() {
-    // success on submitting invoice to facturama
-    $('#invoice-section-option').show();
-    // show option to download
-}
-
-function updateEventiaAuthToken() {}
 
 async function validateUserData(uuid, email, rfc) {
     // Validate uuid and status in Eventia
@@ -252,21 +221,28 @@ async function validateUserData(uuid, email, rfc) {
     // If client is not register inside facturama yet
     if(!isRegistered) {
         if (eventiaValidation && rfcValidation) {
-            showInvoiceForm();
-    
+
+            $("#rfc-preview").val(rfc);
+            $("#rfc-preview").prop('disabled', true);
+            $("#email-preview").val(email);
+            $("#email-preview").prop('disabled', true);
+            
+            await showInvoiceForm();
             // Show the submit button and hide the loading button after the function execution (for demonstration purposes)
             $('#generate-submit-button').show();
             $('#generate-loading-button').hide();
         }
+    } else {
+        $('#generate-loading-button').hide();
+        $('#download-invoice-btn').show();
     }
-
-    // Show section to download file
 }
 
+// 30eb4c -> pago, 9241bc -> no pago
 async function validateUUIDEventia(uuid) {
     var validate = false;
     // Make an AJAX request to retrieve data
-    await callEventiaApi('GET', EVENTIA_EVENT + EVENTIA_SEARCH_BY_ID.replace("{{attendee_id}}", '30eb4c'))
+    await callEventiaApi('GET', EVENTIA_EVENT + EVENTIA_SEARCH_BY_ID.replace("{{attendee_id}}", uuid))
         .done(function(response) {
             if (!response.data.attributes.paid) {
                 showWarningMessage('Payment status is not completed.');
@@ -316,23 +292,7 @@ async function getRegimenFiscal(rfc) {
     });
 }
 
-// 30eb4c -> pago, 9241bc -> no pago
 // Function to generate an invoice
-async function generateInvoice() {
-    const razonSocial = $('#generate-invoice-form #razon-social').val();
-    const rfc = $('#generate-invoice-form #rfc-generate').val();
-    const email = $('#generate-invoice-form #email').val();
-    const zipCode = $('#generate-invoice-form #zipcode').val();
-    const usoCfdi = $('#uso-cfdi option:selected').val();
-    const regimenFiscal = $('#regimen-fiscal option:selected').val();
-    const montoFacturacion = $('#generate-invoice-form #ticket-amount').val();
-    const stateSelection = $("#state option:selected").val();
-    const townSelection = $("#town option:selected").val();
-    const neighborhoodSelection = $("#neighborhood option:selected").val();
-    const houseNumber = $('#generate-invoice-form #house-number').val();
-
-}
-
 async function getEventiaApiKey(){
     if (EVENTIA_AUTH_KEY === "") {
         await callEventiaApi()
@@ -348,26 +308,268 @@ async function getEventiaApiKey(){
     }
 }
 
-function generateFacturamaUser() {
+async function generateInvoice() {
+    const name = $('#fullName').val();
+    const razonSocial = $('#razon-social').text();
+    const rfc = $('#rfc').val();
+    const email = $('#email').val();
+    const usoCfdi = $('#uso-cfdi option:selected').val();
+    const regimenFiscal = $('#regimen-fiscal option:selected').val();
+    const amount = $('#ticket-amount').val();
+    const stateSelection = $("#state option:selected").text();
+    const townSelection =  $("#town option:selected").text();
+    const houseNumber = $('#house-number').val();
+    const zipCode = $('#zipcode').val();
+    const paymentForm = $('#payment-form').val();
+
+    const facturamaUserId = await generateFacturamaUser(name, rfc, regimenFiscal, email, usoCfdi, stateSelection, townSelection, houseNumber, zipCode);
+    const invoiceGenerated = await generateFacturamaInvoice(name, email, rfc, usoCfdi, zipCode, regimenFiscal, paymentForm, amount, facturamaUserId);
+
+    if(invoiceGenerated) {
+        // Hide invoice form and show option menu
+        $('#invoice-section-option').show();
+        $('#modal-invoice-form').hide();
+
+        // Hide option submit btn and show download option btn
+        $('#generate-submit-button').hide();
+        $('#download-invoice-btn').show();
+    }
 }
 
-async function isFacturamaUserAlreadyCreated(email) {
-    var found = false;
-    await callFacturamaApi(FACTURAMA_CLIENT)
+// Move project to AWS, LB -> EC2 -> nodejs
+// Unidad -> E48 Unidad de servicio
+// Clave de producto -> 80141902
+// Objeto de impuesto -> Si objeto de impuesto
+// iva 16%
+// checar pago por id de eventia -> https://docs.eventtia.com/#list-of-attendee-payments
+async function generateFacturamaInvoice(name, email, rfc, cfdi, zipcode, regimenFiscal, paymentForm, amount, facturamaUserId){
+    var completed = false;
+    const invoice = {
+        "Currency": "MXN",
+        "CfdiType": "I",
+        "PaymentForm": paymentForm,
+        "PaymentMethod": "PUE",
+        "OrderNumber": "SMNE-" + facturamaUserId,
+        "ExpeditionPlace": "64060",
+        "Date": new Date().toISOString(),
+        "Exportation": "01",
+        "Receiver": {
+            "Rfc": rfc,
+            "Name": name,
+            "CfdiUse": cfdi,
+            "TaxZipCode": zipcode,
+            "FiscalRegime": regimenFiscal
+        },
+        "Items": [
+            {
+              "ProductCode": "80141902",
+              "Description": "Boletio Eventia SMNE",
+              "Unit": "NO APLICA",
+              "UnitCode": "E48",
+              "UnitPrice": amount,
+              "Quantity": 1.0,
+              "TaxObject":"02",
+              "Taxes": [
+                {
+                  "Total": 16,
+                  "Name": "IVA",
+                  "Base": amount,
+                  "Rate": 0.16,
+                  "IsRetention": false
+                }
+              ],
+              "Total": amount + (amount * 0.16)
+            },
+        ]
+    }
+
+    await callFacturamaApi(FACTURAMA_INVOICE, 'POST', invoice)
         .done(function(response) {
-            var found = false;
-            response.forEach(client => {
-                if(client.Email === email) { found = true; }
-            });
+            issuedId = response.Id;
+            completed = true;
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Can not generate invoice: ', error);
+            showWarningMessage("Can not generate invoice");
+        })
+    return completed;
+}
+
+async function generateFacturamaUser(name, rfc, regimen, email, cfdiUseType, state, town, houseNumber, zipCode) {
+    var id = "";
+    const user = {
+        "Rfc": rfc,
+        "Name": name,
+        "FiscalRegime": regimen,
+        "Email": email,
+        "CfdiUse": cfdiUseType,
+        "Address": {
+            "ExteriorNumber": houseNumber,
+            "InteriorNumber": houseNumber,
+            "ZipCode": zipcode,
+            "Locality": state,
+            "ZipCode": zipCode,
+            "Municipality": town,
+            "State": state,
+            "Country": "Mex"
+        }
+    };
+
+    await callFacturamaApi(FACTURAMA_CLIENT, 'POST', user)
+        .done(function(response) {
+            id = response.Id;
         })
         .fail(function(xhr, status, error) {
             console.error('Client has not been register in facturama: ', error);
             showWarningMessage("Client has not been register in facturama");
         });
-    return found;
+
+    return id;
 }
 
-function callFacturamaApi(apiPath, method, data = null) {
+async function isFacturamaUserAlreadyCreated(email) {
+    var data = [];
+    await callFacturamaApi(FACTURAMA_CLIENT, 'GET')
+        .done(function(response) {
+            data = response.filter(obj => obj.Email === email);
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Client has not been register in facturama: ', error);
+            showWarningMessage("Client has not been register in facturama");
+        });
+    return data.length > 0;
+}
+
+async function downloadInvoice() {
+    if(isSearch) {
+        $('#download-invoice-search-spinner').show();
+    } else {
+        $('#download-invoice-spinner').show();
+    }
+
+    const rfc = $('#rfc').val();
+    const email = $('#email').val();
+    var content = "";
+
+    // Send invoice via email
+    if(issuedId == "") { await findIssuedIdByRfc(rfc); }
+    callFacturamaApi(FACTURAMA_SEND_INVOICE.replace("{{invoiceIssued}}", issuedId).replace("{{email}}", email), 'POST')
+    .done(function(response) {
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Can not send invoice via email: ', error);
+        showWarningMessage("Can not send invoice via email");
+    })
+
+    // Download invoice
+    await callFacturamaApi(FACTURAMA_GET_INVOICE_BY_ISSUED_ID.replace("{{issuedId}}", issuedId), 'GET')
+    .done(function(response) {
+        content = response.Content;
+        downloadPDF(content);
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Could not download invoice: ', error);
+        showWarningMessage("Could not download invoice.");
+    });
+
+    if(isSearch) {
+        $('#download-invoice-search-btn').hide();
+        $('#search-submit-button').show();
+    } else {
+        $('#download-invoice-btn').hide();
+        $('#generate-submit-button').show();
+    }
+}
+
+async function downloadPDF(content) {
+    const linkSource = `data:application/pdf;base64,${content}`;
+    const downloadLink = document.createElement("a");
+    const fileName = "invoice.pdf";
+    downloadLink.href = linkSource;
+    downloadLink.download = fileName;
+    downloadLink.click();
+}
+
+async function findIssuedIdByRfc(rfc){
+    await callFacturamaApi(FACTURAMA_FIND_ISSUED_ID.replace("{{rfc}}", rfc), 'GET')
+    .done(function(response) {
+        var data = response;
+        issuedId = data.filter(invoice => invoice.IsActive)[0].Id;
+    })
+    .fail(function(xhr, status, error) {
+        console.error('Could get any invoice data: ', error);
+        showWarningMessage("Could get any invoice data.");
+    });
+}
+
+// On change states ------------------------------------------------------------
+// Full name
+$('#fullName').on('input', function () {
+    $("#fullNamePreview").val($("#fullName").val());
+    $("#fullNamePreview").prop('disabled', true);
+});
+
+// Razon social
+$('#razon-social').on('input', function () {
+    $("#razon-social-preview").val($("#razon-social").val());
+    $("#razon-social-preview").prop('disabled', true);
+});
+
+// Monto a facturar
+$('#ticket-amount').on('input', function () {
+    $("#ticket-amount-preview").val($("#ticket-amount").val());
+    $("#ticket-amount-preview").prop('disabled', true);
+});
+
+// Regimen fiscal
+$('#regimen-fiscal').on('change', function () {
+    $("#regimen-fiscal-preview").val($("#regimen-fiscal option:selected").text());
+    $("#regimen-fiscal-preview").prop('disabled', true);
+});
+
+// Uso CFDI
+$('#uso-cfdi').on('change', function () {
+    $("#uso-cfdi-preview").val($("#uso-cfdi option:selected").text());
+    $("#uso-cfdi-preview").prop('disabled', true);
+});
+
+//Payment form
+$('#payment-form').on('change', function () {
+    $("#payment-form-preview").val($("#payment-form option:selected").text());
+    $("#payment-form-preview").prop('disabled', true);
+});
+
+// Payment type
+$('#payment-type').on('change', function () {
+    $("#payment-type-preview").val($("#payment-type option:selected").text());
+    $("#payment-type-preview").prop('disabled', true);
+});
+
+// State
+$('#state').on('change', function () {
+    $("#state-preview").val($("#state option:selected").text());
+    $("#state-preview").prop('disabled', true);
+});
+
+// Town
+$('#town').on('change', function () {
+    $("#town-preview").val($("#town option:selected").val());
+    $("#town-preview").prop('disabled', true);
+});
+
+// Zipcode
+$('#zipcode').on('input', function () {
+    $("#zipcode-preview").val($("#zipcode").val());
+    $("#zipcode-preview").prop('disabled', true);
+});
+
+// House number
+$('#house-number').on('input', function () {
+    $("#house-number-preview").val($("#house-number").val());
+    $("#house-number-preview").prop('disabled', true);
+});
+
+function callFacturamaApi(apiPath, method = 'GET', data = null) {
     return $.ajax({
         url: FACTURAMA_API + apiPath,
         method: method,
